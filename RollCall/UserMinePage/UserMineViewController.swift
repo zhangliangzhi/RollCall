@@ -1,9 +1,9 @@
 //
 //  UserMineViewController.swift
-//  Swift3.0_tabBarController
+//  RollCall
 //
-//  Created by DavikChen on 2016/10/21.
-//  Copyright © 2016年 davikchen. All rights reserved.
+//  Created by ZhangLiangZhi on 2016/11/24.
+//  Copyright © 2016年 xigk. All rights reserved.
 //
 
 import Foundation

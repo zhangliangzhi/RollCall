@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class ShopCarViewController: UIViewController {
+class MemberViewController: UIViewController {
     override func viewDidLoad() {
         
         

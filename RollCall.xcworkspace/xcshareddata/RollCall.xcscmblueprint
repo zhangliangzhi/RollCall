@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9917AA4DB4052FE494B671D9164F088611312EFF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0E26BC212192B73D2F4B7F3B14E91A1F98FF82B0" : 9223372036854775807,
+    "9917AA4DB4052FE494B671D9164F088611312EFF" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B76929F7-64F1-41E8-B0EE-4796A45A77E2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0E26BC212192B73D2F4B7F3B14E91A1F98FF82B0" : "..\/test\/Swift3.0_tabBarController",
+    "9917AA4DB4052FE494B671D9164F088611312EFF" : "RollCall\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RollCall",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RollCall.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DavikChen\/Swift3.0_tabBarController",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0E26BC212192B73D2F4B7F3B14E91A1F98FF82B0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zhangliangzhi\/RollCall",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9917AA4DB4052FE494B671D9164F088611312EFF"
+    }
+  ]
+}
