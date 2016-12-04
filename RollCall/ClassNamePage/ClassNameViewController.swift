@@ -10,6 +10,7 @@ import UIKit
 
 class ClassNameViewController: UITableViewController {
 
+    @IBOutlet weak var cnTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +19,15 @@ class ClassNameViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        self.title = "班级列表"
+        
+        let unib = UINib(nibName: "ClassNameTableViewCell", bundle: nil)
+        cnTableView.register(unib, forCellReuseIdentifier: "cncell")
+
+       
+
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,23 +39,32 @@ class ClassNameViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 10
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "classNameCellIdentifier", for: indexPath)
+        
 
+        
         // Configure the cell...
+//        cell.textLabel?.text = String(indexPath.row)
+        
+
+        
+        // 数据源
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cncell", for: indexPath) as! ClassNameTableViewCell
+        cell.mName.text = "hi"
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

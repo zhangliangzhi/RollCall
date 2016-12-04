@@ -11,7 +11,7 @@ import  UIKit
 class HomePageViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var mTableList: UITableView!
-    var items: [String] = ["We", "Heart", "Swift"]
+    var items: [String] = ["11", "22", "33"]
     
     override func viewDidLoad() {
         self.title = "首页"

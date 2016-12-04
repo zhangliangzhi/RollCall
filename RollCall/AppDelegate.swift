@@ -39,13 +39,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mHomeNavController.tabBarItem = mHomeTabBarItem
         
         
+        // 班级列表
+        let mClassNameVeiwController = UIStoryboard(name: "ClassName", bundle: nil).instantiateViewController(withIdentifier: "ClassName") as! ClassNameViewController
+        let mClassNameNavCtontroller = UINavigationController(rootViewController: mClassNameVeiwController)
+        let mClassNameNormalImage = UIImage(named: "main_bottom_feedback_n")?.withRenderingMode(.alwaysOriginal)
+        let mClassNameSelectedImage = UIImage(named: "main_bottom_feedback_p")?.withRenderingMode(.alwaysOriginal)
+        let mClassNameTabBarItem = UITabBarItem(title: "班级列表", image: mClassNameNormalImage, selectedImage: mClassNameSelectedImage)
+        mClassNameNavCtontroller.tabBarItem = mClassNameTabBarItem
+
+        
+        
         
         // 分类页
         let mCategoryViewController = UIStoryboard(name: "CategoryPage", bundle: nil).instantiateViewController(withIdentifier: "CategoryPage") as! CategoryPageViewController
         let mCategoryNavController = UINavigationController(rootViewController: mCategoryViewController)
         let mCategoryNormalImage = UIImage(named: "main_bottom_feedback_n")?.withRenderingMode(.alwaysOriginal)
         let mCategorySelectedImage = UIImage(named: "main_bottom_feedback_p")?.withRenderingMode(.alwaysOriginal)
-        let mCategoryTabBarItem = UITabBarItem(title: "班级", image: mCategoryNormalImage, selectedImage: mCategorySelectedImage)
+        let mCategoryTabBarItem = UITabBarItem(title: "课程", image: mCategoryNormalImage, selectedImage: mCategorySelectedImage)
         mCategoryTabBarItem.setTitleTextAttributes(attributes, for: .normal)
         if #available(iOS 9.0, *) {
             mCategoryTabBarItem.setTitleTextAttributes(attributesPressed, for: .focused)
@@ -84,7 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // 导航控制器
-        let mTabArray = [mHomeNavController,mCategoryNavController,mMemberNavController,mUserMineNavController]
+        let mTabArray = [mHomeNavController,mClassNameNavCtontroller,mCategoryNavController,mMemberNavController,mUserMineNavController]
         let mTabBarController = UITabBarController()
         mTabBarController.viewControllers = mTabArray
         
