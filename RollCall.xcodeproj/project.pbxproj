@@ -27,7 +27,9 @@
 		0B4BAC1C1DE71CCA000636CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4BAC1B1DE71CCA000636CB /* ViewController.swift */; };
 		0B4BAC1F1DE71CCA000636CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4BAC1D1DE71CCA000636CB /* Main.storyboard */; };
 		0B4BAC241DE71CCA000636CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4BAC221DE71CCA000636CB /* LaunchScreen.storyboard */; };
-		0B5B59011DEDA5100075E267 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5B59001DEDA5100075E267 /* CloudKit.framework */; };
+		0B4C85DC1DF95C5E0038DC85 /* RollCall.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85DA1DF95C5E0038DC85 /* RollCall.xcdatamodeld */; };
+		0B4C85E21DF962230038DC85 /* AddClassNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85E11DF962230038DC85 /* AddClassNameViewController.swift */; };
+		0BB4ACC91DF40E99003B1C91 /* BootstrapBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB4ACC81DF40E99003B1C91 /* BootstrapBtn.swift */; };
 		0BBBFFBE1DE9254400EFAE9E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBFFBD1DE9254400EFAE9E /* MainTableViewController.swift */; };
 		0BBBFFC01DE93F6F00EFAE9E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBFFBF1DE93F6F00EFAE9E /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
@@ -54,8 +56,10 @@
 		0B4BAC1E1DE71CCA000636CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B4BAC231DE71CCA000636CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B4BAC251DE71CCA000636CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B4C85DB1DF95C5E0038DC85 /* RollCall.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RollCall.xcdatamodel; sourceTree = "<group>"; };
+		0B4C85E11DF962230038DC85 /* AddClassNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassNameViewController.swift; sourceTree = "<group>"; };
 		0B5B58FD1DED97B10075E267 /* RollCall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RollCall.entitlements; sourceTree = "<group>"; };
-		0B5B59001DEDA5100075E267 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		0BB4ACC81DF40E99003B1C91 /* BootstrapBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapBtn.swift; sourceTree = "<group>"; };
 		0BBBFFBD1DE9254400EFAE9E /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		0BBBFFBF1DE93F6F00EFAE9E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		6EAC734C6F5D923349E592BB /* Pods_RollCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B5B59011DEDA5100075E267 /* CloudKit.framework in Frameworks */,
 				0770892378D6F84659D7DF52 /* Pods_RollCall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +132,7 @@
 				0B152B101DF3E80400915B81 /* ClassName.storyboard */,
 				0B152B121DF3F02600915B81 /* ClassNameTableViewCell.swift */,
 				0B152B131DF3F02600915B81 /* ClassNameTableViewCell.xib */,
+				0B4C85E11DF962230038DC85 /* AddClassNameViewController.swift */,
 			);
 			path = ClassNamePage;
 			sourceTree = "<group>";
@@ -169,6 +173,8 @@
 				0B4BAC251DE71CCA000636CB /* Info.plist */,
 				0BBBFFBD1DE9254400EFAE9E /* MainTableViewController.swift */,
 				0BBBFFBF1DE93F6F00EFAE9E /* SwiftyJSON.swift */,
+				0BB4ACC81DF40E99003B1C91 /* BootstrapBtn.swift */,
+				0B4C85DA1DF95C5E0038DC85 /* RollCall.xcdatamodeld */,
 			);
 			path = RollCall;
 			sourceTree = "<group>";
@@ -176,7 +182,6 @@
 		0B5B58FA1DED93180075E267 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0B5B59001DEDA5100075E267 /* CloudKit.framework */,
 				6EAC734C6F5D923349E592BB /* Pods_RollCall.framework */,
 			);
 			name = Frameworks;
@@ -332,7 +337,9 @@
 			files = (
 				0B152B0A1DF2D24A00915B81 /* MemberViewController.swift in Sources */,
 				0B4BAC1C1DE71CCA000636CB /* ViewController.swift in Sources */,
+				0B4C85E21DF962230038DC85 /* AddClassNameViewController.swift in Sources */,
 				0B152B031DF2BA5200915B81 /* UserMineViewController.swift in Sources */,
+				0BB4ACC91DF40E99003B1C91 /* BootstrapBtn.swift in Sources */,
 				0BBBFFBE1DE9254400EFAE9E /* MainTableViewController.swift in Sources */,
 				0B152AFE1DF2BA5200915B81 /* HomePageViewController.swift in Sources */,
 				0B4BAC1A1DE71CCA000636CB /* AppDelegate.swift in Sources */,
@@ -340,6 +347,7 @@
 				0BBBFFC01DE93F6F00EFAE9E /* SwiftyJSON.swift in Sources */,
 				0B152AFC1DF2BA5200915B81 /* CategoryPageViewController.swift in Sources */,
 				0B152B0F1DF3E7E700915B81 /* ClassNameViewController.swift in Sources */,
+				0B4C85DC1DF95C5E0038DC85 /* RollCall.xcdatamodeld in Sources */,
 				0B152AFF1DF2BA5200915B81 /* SearchPageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,7 +479,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = RollCall/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xigk.RollCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,7 +499,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = RollCall/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xigk.RollCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,6 +529,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0B4C85DA1DF95C5E0038DC85 /* RollCall.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0B4C85DB1DF95C5E0038DC85 /* RollCall.xcdatamodel */,
+			);
+			currentVersion = 0B4C85DB1DF95C5E0038DC85 /* RollCall.xcdatamodel */;
+			path = RollCall.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0B4BAC0E1DE71CCA000636CB /* Project object */;
 }

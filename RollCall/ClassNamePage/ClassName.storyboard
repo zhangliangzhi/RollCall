@@ -30,5 +30,46 @@
             </objects>
             <point key="canvasLocation" x="372" y="-234"/>
         </scene>
+        <!--Add Class Name View Controller-->
+        <scene sceneID="QHt-ej-gIj">
+            <objects>
+                <viewController storyboardIdentifier="AddClassNamePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ree-Nl-mfL" customClass="AddClassNameViewController" customModule="RollCall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nlp-Wd-mwe"/>
+                        <viewControllerLayoutGuide type="bottom" id="QIY-AM-M9K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Pm-o4-if6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="新增班级名字" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eE5-EN-trH">
+                                <rect key="frame" x="40" y="70" width="295" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHA-nc-Har">
+                                <rect key="frame" x="146.5" y="192" width="82" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="添加班级">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eE5-EN-trH" firstAttribute="centerX" secondItem="3Pm-o4-if6" secondAttribute="centerX" id="2kb-2J-yzn"/>
+                            <constraint firstItem="oHA-nc-Har" firstAttribute="top" secondItem="eE5-EN-trH" secondAttribute="bottom" constant="92" id="AkY-1P-i3b"/>
+                            <constraint firstItem="oHA-nc-Har" firstAttribute="centerX" secondItem="eE5-EN-trH" secondAttribute="centerX" id="DCd-gL-1vU"/>
+                            <constraint firstAttribute="trailing" secondItem="eE5-EN-trH" secondAttribute="trailing" constant="40" id="GH6-1S-jK4"/>
+                            <constraint firstItem="eE5-EN-trH" firstAttribute="top" secondItem="nlp-Wd-mwe" secondAttribute="bottom" constant="50" id="IEm-y7-LMa"/>
+                            <constraint firstItem="eE5-EN-trH" firstAttribute="leading" secondItem="3Pm-o4-if6" secondAttribute="leading" constant="40" id="lGV-WZ-oei"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ML5-nK-TFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093.5999999999999" y="-234.33283358320841"/>
+        </scene>
     </scenes>
 </document>

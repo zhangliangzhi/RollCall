@@ -31,6 +31,8 @@ class HomePageViewController: UIViewController , UITableViewDelegate, UITableVie
         mTableList.separatorInset = UIEdgeInsets.zero
         mTableList.layoutMargins = UIEdgeInsets.zero
         
+
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
