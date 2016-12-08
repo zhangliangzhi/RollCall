@@ -8,12 +8,16 @@
 
 import UIKit
 
+// coreData数据库操作接口
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+let contextData = appDelegate.persistentContainer.viewContext
+// coreData里的数据库内容
+var arrClassData:[ClassData] = []
+
 class ClassNameViewController: UITableViewController {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    var arrData = [1,2,3,4,5,6,7,8]
-    // coreData里的数据库内容
-    var arrClassData:[ClassData] = []
+    
+
     
     @IBOutlet weak var cnTableView: UITableView!
     override func viewDidLoad() {
@@ -26,12 +30,14 @@ class ClassNameViewController: UITableViewController {
         
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
 
+        
         self.title = "班级列表"
         // add
         let mSearchButtonRight = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(ClassNameViewController.addClassNamePage))
         self.navigationItem.rightBarButtonItem = mSearchButtonRight
         // edit
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
         
         let unib = UINib(nibName: "ClassNameTableViewCell", bundle: nil)
         cnTableView.register(unib, forCellReuseIdentifier: "cncell")
@@ -41,11 +47,11 @@ class ClassNameViewController: UITableViewController {
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        getCoreData()
+        cnTableView.reloadData()
     }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -55,7 +61,7 @@ class ClassNameViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return arrData.count
+        return arrClassData.count
     }
 
     
@@ -74,9 +80,9 @@ class ClassNameViewController: UITableViewController {
         
         // 右侧按钮图片
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
-//        cell.detailTextLabel?.text = "aaa"
+
         
-        cell.mName.text = String(arrData[indexPath.row])
+        cell.mName.text = arrClassData[indexPath.row].classname
 
         return cell
     }
@@ -94,18 +100,14 @@ class ClassNameViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            arrData.remove(at: indexPath.row)
+            
+            let oneClassName = arrClassData[indexPath.row]
+            contextData.delete(oneClassName)
+            appDelegate.saveContext()
+            
+            arrClassData.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-//            arrData.append(00)
-//            let ip = IndexPath(row: 1, section: 0)
-//            tableView.insertRows(at: [ip], with: .automatic)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-            arrData.append(00)
-            let ip = IndexPath(row: 1, section: 0)
-            tableView.insertRows(at: [ip], with: .automatic)
-        }    
+        }
     }
     
 
@@ -113,6 +115,7 @@ class ClassNameViewController: UITableViewController {
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
+        print(fromIndexPath.row, to.row)
     }
     
 
@@ -138,8 +141,15 @@ class ClassNameViewController: UITableViewController {
         let mAddClassNamePage = UIStoryboard(name: "ClassName", bundle: nil).instantiateViewController(withIdentifier: "AddClassNamePage") as! AddClassNameViewController
         self.tabBarController?.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(mAddClassNamePage, animated: true)
-        
-        
+    }
+    
+    // 获取coreData数据
+    func getCoreData() {
+        do{
+            arrClassData = try contextData.fetch(ClassData.fetchRequest())
+        }catch{
+            print("fetch core data error")
+        }
         
     }
 

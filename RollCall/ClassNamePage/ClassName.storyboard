@@ -54,6 +54,9 @@
                                 <state key="normal" title="添加班级">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addClassName:" destination="ree-Nl-mfL" eventType="touchUpInside" id="sPe-8d-aaK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -66,6 +69,9 @@
                             <constraint firstItem="eE5-EN-trH" firstAttribute="leading" secondItem="3Pm-o4-if6" secondAttribute="leading" constant="40" id="lGV-WZ-oei"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="eE5-EN-trH" id="6wl-Gh-mEG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ML5-nK-TFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

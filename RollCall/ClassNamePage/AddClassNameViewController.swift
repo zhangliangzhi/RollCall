@@ -9,12 +9,37 @@
 import UIKit
 
 class AddClassNameViewController: UIViewController {
-
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        
         
     }
+    
+    @IBAction func addClassName(_ sender: Any) {
+        // 班级名字不为空
+        if textField.text == "" {
+            print("empty class name")
+            TipsSwift.showCenterWithText("班级名字不能为空")
+            return
+        }
+        
+        // 加入一个班级名字
+        let oneClassData = ClassData(context: contextData)
+        oneClassData.classname = textField.text
+        oneClassData.classmember = "{}"
+        oneClassData.randomdata = "{}"
+        
+        contextData.insert(oneClassData)
+        appDelegate.saveContext()
+        
+        // 跳转上个界面
+        navigationController!.popViewController(animated: true)
+    }
+    
+
 
 
 

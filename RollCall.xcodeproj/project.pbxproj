@@ -29,6 +29,7 @@
 		0B4BAC241DE71CCA000636CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4BAC221DE71CCA000636CB /* LaunchScreen.storyboard */; };
 		0B4C85DC1DF95C5E0038DC85 /* RollCall.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85DA1DF95C5E0038DC85 /* RollCall.xcdatamodeld */; };
 		0B4C85E21DF962230038DC85 /* AddClassNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85E11DF962230038DC85 /* AddClassNameViewController.swift */; };
+		0B4C85E41DF9AA9E0038DC85 /* TipsSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85E31DF9AA9E0038DC85 /* TipsSwift.swift */; };
 		0BB4ACC91DF40E99003B1C91 /* BootstrapBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB4ACC81DF40E99003B1C91 /* BootstrapBtn.swift */; };
 		0BBBFFBE1DE9254400EFAE9E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBFFBD1DE9254400EFAE9E /* MainTableViewController.swift */; };
 		0BBBFFC01DE93F6F00EFAE9E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBFFBF1DE93F6F00EFAE9E /* SwiftyJSON.swift */; };
@@ -58,6 +59,7 @@
 		0B4BAC251DE71CCA000636CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B4C85DB1DF95C5E0038DC85 /* RollCall.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RollCall.xcdatamodel; sourceTree = "<group>"; };
 		0B4C85E11DF962230038DC85 /* AddClassNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassNameViewController.swift; sourceTree = "<group>"; };
+		0B4C85E31DF9AA9E0038DC85 /* TipsSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsSwift.swift; sourceTree = "<group>"; };
 		0B5B58FD1DED97B10075E267 /* RollCall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RollCall.entitlements; sourceTree = "<group>"; };
 		0BB4ACC81DF40E99003B1C91 /* BootstrapBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapBtn.swift; sourceTree = "<group>"; };
 		0BBBFFBD1DE9254400EFAE9E /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				0BBBFFBF1DE93F6F00EFAE9E /* SwiftyJSON.swift */,
 				0BB4ACC81DF40E99003B1C91 /* BootstrapBtn.swift */,
 				0B4C85DA1DF95C5E0038DC85 /* RollCall.xcdatamodeld */,
+				0B4C85E31DF9AA9E0038DC85 /* TipsSwift.swift */,
 			);
 			path = RollCall;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			files = (
 				0B152B0A1DF2D24A00915B81 /* MemberViewController.swift in Sources */,
 				0B4BAC1C1DE71CCA000636CB /* ViewController.swift in Sources */,
+				0B4C85E41DF9AA9E0038DC85 /* TipsSwift.swift in Sources */,
 				0B4C85E21DF962230038DC85 /* AddClassNameViewController.swift in Sources */,
 				0B152B031DF2BA5200915B81 /* UserMineViewController.swift in Sources */,
 				0BB4ACC91DF40E99003B1C91 /* BootstrapBtn.swift in Sources */,

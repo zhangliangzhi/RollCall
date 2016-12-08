@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ClassData" representedClassName="ClassData" syncable="YES" codeGenerationType="class">
         <attribute name="classmember" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="classname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="classname" attributeType="String" syncable="YES"/>
         <attribute name="randomdata" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
