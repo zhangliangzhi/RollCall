@@ -5,8 +5,9 @@
         <attribute name="course" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="member" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="record" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sortID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ClassData" positionX="-45" positionY="0" width="128" height="105"/>
+        <element name="ClassData" positionX="-45" positionY="0" width="128" height="120"/>
     </elements>
 </model>

@@ -83,6 +83,13 @@ class ClassNameViewController: UITableViewController {
 
         
         cell.mName.text = arrClassData[indexPath.row].classname
+        
+       
+//        print(arrClassData[indexPath.row].classname)
+//        print(arrClassData[indexPath.row].member)
+//        print(arrClassData[indexPath.row].record)
+//        print(arrClassData[indexPath.row].course)
+//        print(arrClassData[indexPath.row].sortID)
 
         return cell
     }
@@ -114,8 +121,24 @@ class ClassNameViewController: UITableViewController {
     
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-        print(fromIndexPath.row, to.row)
+        
+        // 注意不是只调换2个排序id，而是改变自己的排序id，然后所有排名都变了。坑！
+        if fromIndexPath.row > to.row {
+            // 往上移+1 大到小排序
+            arrClassData[fromIndexPath.row].sortID = arrClassData[to.row].sortID + 1
+            for i in 0..<to.row {
+                arrClassData[i].sortID += 1
+            }
+        }else{
+            // 往下移-1 大到小排序
+            arrClassData[fromIndexPath.row].sortID = arrClassData[to.row].sortID - 1
+            for i in to.row+1..<arrClassData.count {
+                arrClassData[i].sortID -= 1
+            }
+        }
+        
+        arrClassData.sort(by: {$0.sortID > $1.sortID})
+        appDelegate.saveContext()
     }
     
 
@@ -147,6 +170,7 @@ class ClassNameViewController: UITableViewController {
     func getCoreData() {
         do{
             arrClassData = try contextData.fetch(ClassData.fetchRequest())
+            arrClassData.sort(by: { $0.sortID > $1.sortID })
         }catch{
             print("fetch core data error")
         }

@@ -28,6 +28,8 @@ class AddClassNameViewController: UIViewController {
         // 加入一个班级名字
         let oneClassData = ClassData(context: contextData)
         oneClassData.classname = textField.text
+        oneClassData.sortID = Int64(Date().timeIntervalSince1970 * 10000)
+        
 
         
         contextData.insert(oneClassData)
