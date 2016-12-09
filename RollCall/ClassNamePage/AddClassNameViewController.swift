@@ -30,8 +30,16 @@ class AddClassNameViewController: UIViewController, UITextFieldDelegate {
         oneClassData.classname = textField.text
         oneClassData.sortID = Int64(Date().timeIntervalSince1970 * 10000)
         
+        // 用json格式保存 课程类别
+        let arrCourse = ["英语","数学","语文"]
+        let courseData = try! JSONSerialization.data(withJSONObject: arrCourse, options: .prettyPrinted)
+        let strCourseJson:String = String(data: courseData, encoding: String.Encoding.utf8)!
+        oneClassData.course = strCourseJson
 
+//        print(strJson)
         
+        
+        // 数据处理
         contextData.insert(oneClassData)
         appDelegate.saveContext()
         

@@ -83,12 +83,13 @@ class ClassNameViewController: UITableViewController {
 
         
         cell.mName.text = arrClassData[indexPath.row].classname
+
         
-       
 //        print(arrClassData[indexPath.row].classname)
 //        print(arrClassData[indexPath.row].member)
 //        print(arrClassData[indexPath.row].record)
 //        print(arrClassData[indexPath.row].course)
+//        print(JSON(arrClassData[indexPath.row].course))
 //        print(arrClassData[indexPath.row].sortID)
 
         return cell
