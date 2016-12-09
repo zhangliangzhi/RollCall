@@ -8,28 +8,30 @@
 
 import UIKit
 
-class AddClassMemberViewController: UIViewController {
+class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var textNum: UITextField!
+    @IBOutlet weak var textName: UITextField!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        textNum.delegate = self
+        textName.delegate = self
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == textNum {
+            textName.becomeFirstResponder()
+        }else if textField == textName {
+            textField.resignFirstResponder()
+        }
+        return true
     }
-    */
 
+    @IBAction func addOneMember(_ sender: Any) {
+        
+    }
+    
 }
