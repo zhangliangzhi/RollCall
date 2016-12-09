@@ -8,13 +8,13 @@
 
 import UIKit
 
-class AddClassNameViewController: UIViewController {
+class AddClassNameViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        textField.delegate = self
         
     }
     
@@ -39,6 +39,10 @@ class AddClassNameViewController: UIViewController {
         navigationController!.popViewController(animated: true)
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
 
 
