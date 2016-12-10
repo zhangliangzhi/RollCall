@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddClassNameViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!
@@ -26,7 +27,16 @@ class AddClassNameViewController: UIViewController, UITextFieldDelegate {
         }
         
         // 加入一个班级名字
-        let oneClassData = ClassData(context: contextData)
+//        let oneClassData = ClassData(context: contextData)
+        let oneClassData = NSEntityDescription.insertNewObject(forEntityName: "ClassData", into: contextData) as! ClassData
+        do {
+            try contextData.save()
+            print("insert saved!")
+        } catch let error as NSError  {
+            print("Could not insert save \(error), \(error.userInfo)")
+        } catch {
+        }
+        
         oneClassData.classname = textField.text
         oneClassData.sortID = Int64(Date().timeIntervalSince1970 * 10000)
         
