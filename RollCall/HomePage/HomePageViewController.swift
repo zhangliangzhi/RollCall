@@ -20,8 +20,13 @@ class HomePageViewController: UIViewController , UITableViewDelegate, UITableVie
     
     @IBOutlet weak var mTableList: UITableView!
     var items: [String] = ["11", "22", "33"]
-    
+
     override func viewDidLoad() {
+        
+
+        
+        
+        
         self.title = "首页"
         // 搜索按钮
         let mSearchButtonRight = UIBarButtonItem(title: "搜索", style: .plain, target: self, action: #selector(HomePageViewController.goSearchPage))
@@ -44,7 +49,7 @@ class HomePageViewController: UIViewController , UITableViewDelegate, UITableVie
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print(self.navigationController!.viewControllers.count)
+//        print(self.navigationController!.viewControllers.count)
         if (self.navigationController!.viewControllers.count > 1) { // 这里的 navigationController count 指当前APP 页面控制器出现的数量
             self.tabBarController?.tabBar.isHidden = true //隐藏tabbar
             self.automaticallyAdjustsScrollViewInsets = false //移除隐藏后留下的空白

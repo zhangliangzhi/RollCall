@@ -11,6 +11,9 @@ import UIKit
 class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
+    // 班级序列号
+    var mIndexClass = 0
+    
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -29,12 +32,22 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        let strMembers:String = arrClassData[mIndexClass].course!
+        let membersJsonData = strMembers.data(using: .utf8)
+        let arrMembers = JSON(data:membersJsonData!)
+        
+        return arrMembers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = String(indexPath.row)
+        
+        let strMembers:String = arrClassData[mIndexClass].course!
+        let membersJsonData = strMembers.data(using: .utf8)
+        let arrMembers = JSON(data:membersJsonData!)
+        
+        let member:String = arrMembers[indexPath.row].string!
+        cell.textLabel?.text = member
         
         return cell
     }
@@ -43,5 +56,15 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let mAddClassNamePage = UIStoryboard(name: "Member", bundle: nil).instantiateViewController(withIdentifier: "AddClassMemberPage") as! AddClassMemberViewController
         self.tabBarController?.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(mAddClassNamePage, animated: true)
+    }
+    
+    // 获取coreData数据
+    func getCoreData() {
+        do{
+            arrClassData = try contextData.fetch(ClassData.fetchRequest())
+            arrClassData.sort(by: { $0.sortID > $1.sortID })
+        }catch{
+            print("fetch core data error")
+        }
     }
 }
