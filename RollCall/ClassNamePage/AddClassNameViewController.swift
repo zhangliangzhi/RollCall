@@ -47,6 +47,10 @@ class AddClassNameViewController: UIViewController, UITextFieldDelegate {
         let courseData = try! JSONSerialization.data(withJSONObject: arrCourse, options: .prettyPrinted)
         let strCourseJson:String = String(data: courseData, encoding: String.Encoding.utf8)!
         oneClassData.course = strCourseJson
+        
+        // 其他的先设置为json格式的
+        oneClassData.member = "[]"
+        oneClassData.record = "[]"
 
 //        print(strJson)
         

@@ -14,6 +14,10 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // 班级序列号
     var mIndexClass = 0
     
+    override func viewWillDisappear(_ animated: Bool) {
+        getCoreData()
+    }
+    
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -32,7 +36,11 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let strMembers:String = arrClassData[mIndexClass].course!
+        if arrClassData.count == 0 {
+            TipsSwift.showCenterWithText("请先创建班级!")
+            return 0
+        }
+        let strMembers:String = arrClassData[mIndexClass].member!
         let membersJsonData = strMembers.data(using: .utf8)
         let arrMembers = JSON(data:membersJsonData!)
         
@@ -42,7 +50,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        let strMembers:String = arrClassData[mIndexClass].course!
+        let strMembers:String = arrClassData[mIndexClass].member!
         let membersJsonData = strMembers.data(using: .utf8)
         let arrMembers = JSON(data:membersJsonData!)
         
@@ -53,10 +61,17 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func addClassMemberPage() {
+        if arrClassData.count == 0 {
+            TipsSwift.showCenterWithText("请先创建班级!")
+            return
+        }
+        
         let mAddClassNamePage = UIStoryboard(name: "Member", bundle: nil).instantiateViewController(withIdentifier: "AddClassMemberPage") as! AddClassMemberViewController
         self.tabBarController?.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(mAddClassNamePage, animated: true)
     }
+    
+
     
     // 获取coreData数据
     func getCoreData() {
