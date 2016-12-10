@@ -8,11 +8,6 @@
 
 import UIKit
 
-// coreData数据库操作接口
-let appDelegate = UIApplication.shared.delegate as! AppDelegate
-let contextData = appDelegate.persistentContainer.viewContext
-// coreData里的数据库内容
-var arrClassData:[ClassData] = []
 
 class ClassNameViewController: UITableViewController {
     
@@ -175,7 +170,6 @@ class ClassNameViewController: UITableViewController {
         }catch{
             print("fetch core data error")
         }
-        
     }
 
 }
