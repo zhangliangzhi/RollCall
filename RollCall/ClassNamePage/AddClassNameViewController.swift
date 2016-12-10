@@ -29,13 +29,15 @@ class AddClassNameViewController: UIViewController, UITextFieldDelegate {
         // 加入一个班级名字
 //        let oneClassData = ClassData(context: contextData)
         let oneClassData = NSEntityDescription.insertNewObject(forEntityName: "ClassData", into: contextData) as! ClassData
-        do {
-            try contextData.save()
-            print("insert saved!")
-        } catch let error as NSError  {
-            print("Could not insert save \(error), \(error.userInfo)")
-        } catch {
-        }
+        // 老版本保存方法,现在不需要了
+
+//        do {
+//            try contextData.save()
+//            print("insert saved!")
+//        } catch let error as NSError  {
+//            print("Could not insert save \(error), \(error.userInfo)")
+//        }
+
         
         oneClassData.classname = textField.text
         oneClassData.sortID = Int64(Date().timeIntervalSince1970 * 10000)
@@ -52,6 +54,7 @@ class AddClassNameViewController: UIViewController, UITextFieldDelegate {
         // 数据处理
         contextData.insert(oneClassData)
         appDelegate.saveContext()
+        
         
         // 跳转上个界面
         navigationController!.popViewController(animated: true)
