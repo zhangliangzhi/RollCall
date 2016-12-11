@@ -24,8 +24,6 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
         let membersJsonData = strMembers.data(using: .utf8)
         let arrMembers = JSON(data:membersJsonData!)
         textNum.text = String(arrMembers.count+1)
-        
-        textNum.becomeFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

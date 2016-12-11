@@ -70,6 +70,29 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // 删除一个成员
+            let strMembers:String = arrClassData[mIndexClass].member!
+            let membersJsonData = strMembers.data(using: .utf8)
+            var arrMembers = JSON(data:membersJsonData!)
+//            print(arrMembers.description)
+            arrMembers[indexPath.row] = ""
+            var newStrMember = "["
+            for i in 0..<arrMembers.count {
+                let strOneJson:String = arrMembers[i].description
+                if strOneJson != "" {
+                    if i == arrMembers.count - 1 {
+                        newStrMember = newStrMember + arrMembers[i].description
+                    } else {
+                        newStrMember = newStrMember + arrMembers[i].description + ","
+                    }
+                }
+            }
+            newStrMember += "]"
+            
+
+            print(newStrMember)
+            arrClassData[mIndexClass].member = newStrMember
+            appDelegate.saveContext()
+            tableView.deleteRows(at: [indexPath], with: .bottom)
         }
     }
     
