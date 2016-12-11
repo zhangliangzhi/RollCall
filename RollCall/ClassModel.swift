@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+struct CMember {
+    let name: String
+    let id: Int32
+}
+
+struct CRecord {
+    
+}

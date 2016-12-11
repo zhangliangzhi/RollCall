@@ -23,7 +23,10 @@ class HomePageViewController: UIViewController , UITableViewDelegate, UITableVie
 
     override func viewDidLoad() {
         
-
+//        let sessionId = "this is a test"
+//        let index = sessionId.index(sessionId.endIndex, offsetBy: -1)
+//        let suffix = sessionId.substring(to: index)
+//        print(suffix)
         
         
         

@@ -13,6 +13,7 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textNum: UITextField!
     @IBOutlet weak var textName: UITextField!
 
+    var mIndexClass = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,27 +46,33 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
             return
         }
 
-        
-        let indexClass = 0
-        let oneClassData = arrClassData[indexClass]
 
-        
         // 修改 成员名字
-        
+        let strOneMem = "{\"id\":\"" + textNum.text! + "\",\"name\":\"" + textName.text! + "\"}"
         
         // 用json格式保存 课程类别
-        let arrMember = ["英语","数学","语文"]
-        let memberData = try! JSONSerialization.data(withJSONObject: arrMember, options: .prettyPrinted)
-        let strMemberJson:String = String(data: memberData, encoding: String.Encoding.utf8)!
+        let oneClassData = arrClassData[mIndexClass]
+        let strMembers:String = oneClassData.member!
+        
+        print(strMembers)
+        let indexstr = strMembers.index(strMembers.endIndex, offsetBy: -1)
+        let tmpstr1 = strMembers.substring(to: indexstr)
+        var strMemberJson:String = ""
+        if strMembers == "[]" {
+            strMemberJson = tmpstr1 + strOneMem + "]"
+        }else{
+            strMemberJson = tmpstr1 + "," + strOneMem + "]"
+        }
+        print(strMemberJson)
+        
+//        let membersJsonData = strMembers.data(using: .utf8)
+//        let arrMembers = JSON(data:membersJsonData!)
+        
         oneClassData.member = strMemberJson
-        
-        //        print(strJson)
-        
+
         
         // 数据处理
-//        oneClassData.willSave()
-
-//        appDelegate.saveContext()
+        appDelegate.saveContext()
         
         // 跳转上个界面
         navigationController!.popViewController(animated: true)

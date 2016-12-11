@@ -14,8 +14,9 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // 班级序列号
     var mIndexClass = 0
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         getCoreData()
+        tableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -54,7 +55,8 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let membersJsonData = strMembers.data(using: .utf8)
         let arrMembers = JSON(data:membersJsonData!)
         
-        let member:String = arrMembers[indexPath.row].string!
+        // coreData里的member字段格式 {"id":1, "name":"a1"}
+        let member:String = arrMembers[indexPath.row]["name"].string!
         cell.textLabel?.text = member
         
         return cell
