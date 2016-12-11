@@ -16,6 +16,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewWillAppear(_ animated: Bool) {
         getCoreData()
+        
         tableView.reloadData()
     }
     

@@ -20,6 +20,10 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
         textNum.delegate = self
         textName.delegate = self
         
+        let strMembers:String = arrClassData[mIndexClass].member!
+        let membersJsonData = strMembers.data(using: .utf8)
+        let arrMembers = JSON(data:membersJsonData!)
+        textNum.text = String(arrMembers.count+1)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -32,9 +36,6 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func addOneMember(_ sender: Any) {
-        let num = Int32(textNum.text!)
-        print(num)
-        
         // 名字不为空
         if textName.text == "" {
             TipsSwift.showCenterWithText("名字不能为空")
@@ -45,7 +46,12 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
             TipsSwift.showCenterWithText("学号不能为空")
             return
         }
-
+        //  学号为是数字
+        let num = Int32(textNum.text!)
+        if num == nil {
+            TipsSwift.showCenterWithText("学号只能为数字")
+            return
+        }
 
         // 修改 成员名字
         let strOneMem = "{\"id\":\"" + textNum.text! + "\",\"name\":\"" + textName.text! + "\"}"
@@ -54,7 +60,7 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
         let oneClassData = arrClassData[mIndexClass]
         let strMembers:String = oneClassData.member!
         
-        print(strMembers)
+//        print(strMembers)
         let indexstr = strMembers.index(strMembers.endIndex, offsetBy: -1)
         let tmpstr1 = strMembers.substring(to: indexstr)
         var strMemberJson:String = ""
@@ -63,14 +69,11 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
         }else{
             strMemberJson = tmpstr1 + "," + strOneMem + "]"
         }
-        print(strMemberJson)
+//        print(strMemberJson)
         
-//        let membersJsonData = strMembers.data(using: .utf8)
-//        let arrMembers = JSON(data:membersJsonData!)
-        
+        // 修改数据
         oneClassData.member = strMemberJson
 
-        
         // 数据处理
         appDelegate.saveContext()
         
