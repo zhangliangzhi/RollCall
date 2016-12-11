@@ -63,6 +63,16 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // 删除一个成员
+        }
+    }
+    
     func addClassMemberPage() {
         if arrClassData.count == 0 {
             TipsSwift.showCenterWithText("请先创建班级!")

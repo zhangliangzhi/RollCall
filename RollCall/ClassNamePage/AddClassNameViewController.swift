@@ -17,6 +17,7 @@ class AddClassNameViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         textField.delegate = self
         
+        textField.becomeFirstResponder()
     }
     
     @IBAction func addClassName(_ sender: Any) {
