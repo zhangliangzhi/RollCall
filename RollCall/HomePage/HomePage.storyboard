@@ -12,7 +12,6 @@
         <!--Home Page View Controller-->
         <scene sceneID="grw-y8-96Z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JKB-fd-m6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="HomePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fjG-4n-nOT" customClass="HomePageViewController" customModule="RollCall" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ceW-LJ-EXm"/>
@@ -21,24 +20,10 @@
                     <view key="view" contentMode="scaleToFill" id="CLl-k4-y6x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ffW-gJ-E1H">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ffW-gJ-E1H" secondAttribute="trailing" id="9Ut-Ke-DdY"/>
-                            <constraint firstItem="ffW-gJ-E1H" firstAttribute="top" secondItem="CLl-k4-y6x" secondAttribute="top" id="HPV-Ls-0dx"/>
-                            <constraint firstItem="L1W-Zp-8Zh" firstAttribute="top" secondItem="ffW-gJ-E1H" secondAttribute="bottom" id="XgW-zR-hev"/>
-                            <constraint firstItem="ffW-gJ-E1H" firstAttribute="leading" secondItem="CLl-k4-y6x" secondAttribute="leading" id="s0z-hE-pSv"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="mTableList" destination="ffW-gJ-E1H" id="G5E-9j-aJv"/>
-                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JKB-fd-m6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-330.39999999999998" y="-718.29085457271367"/>
         </scene>
