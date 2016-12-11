@@ -91,7 +91,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //            print(newStrMember)
             arrClassData[mIndexClass].member = newStrMember
             appDelegate.saveContext()
-            tableView.deleteRows(at: [indexPath], with: .bottom)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
