@@ -23,7 +23,12 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
         let strMembers:String = arrClassData[mIndexClass].member!
         let membersJsonData = strMembers.data(using: .utf8)
         let arrMembers = JSON(data:membersJsonData!)
-        textNum.text = String(arrMembers.count+1)
+        let lastId = arrMembers[arrMembers.count-1]["id"]
+        var iLastID:Int32 = 1
+        if lastId != JSON.null {
+            iLastID = Int32(lastId.description)! + 1
+        }
+        textNum.text = String(iLastID)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

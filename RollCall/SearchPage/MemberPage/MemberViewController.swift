@@ -88,8 +88,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
             newStrMember += "]"
             
-
-            print(newStrMember)
+//            print(newStrMember)
             arrClassData[mIndexClass].member = newStrMember
             appDelegate.saveContext()
             tableView.deleteRows(at: [indexPath], with: .bottom)
