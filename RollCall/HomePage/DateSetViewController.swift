@@ -10,6 +10,7 @@ import UIKit
 
 class DateSetViewController: UIViewController {
 
+    @IBOutlet weak var timePicker: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,7 +18,8 @@ class DateSetViewController: UIViewController {
     }
 
     @IBAction func timeChange(_ sender: Any) {
-        
+        let data = timePicker.date
+        print(data)
     }
 
 }

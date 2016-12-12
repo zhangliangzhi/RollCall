@@ -236,6 +236,9 @@
                             <constraint firstItem="1Dl-2f-VDb" firstAttribute="centerX" secondItem="8YR-OV-QkD" secondAttribute="centerX" id="OwE-Sn-jKo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timePicker" destination="1Dl-2f-VDb" id="9Bp-bQ-1Dq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5BY-TR-2fq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

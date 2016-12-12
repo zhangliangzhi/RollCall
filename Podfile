@@ -5,5 +5,5 @@ use_frameworks!
 
 target 'RollCall' do
 	pod 'Alamofire'
-	pod 'RAMAnimatedTabBarController', "~> 2.0.13"  swift 3
+	pod 'SwiftDate', '~> 4.0'
 end

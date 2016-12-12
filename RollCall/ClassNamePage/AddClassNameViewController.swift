@@ -52,6 +52,10 @@ class AddClassNameViewController: UIViewController, UITextFieldDelegate {
         // 其他的先设置为json格式的
         oneClassData.member = "[]"
         oneClassData.record = "[]"
+        
+//        oneClassData.dataStart = Data()
+//        oneClassData.endStart = Data()
+        print(oneClassData.dataStart)
 
 //        print(strJson)
         
