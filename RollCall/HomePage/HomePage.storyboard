@@ -56,7 +56,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDm-sy-ufP" id="cfZ-sb-v9y">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uB0-Pu-Wgv" userLabel="mLabel">
@@ -118,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="-330.39999999999998" y="-718.29085457271367"/>
         </scene>
-        <!--View Controller-->
+        <!--Data Show View Controller-->
         <scene sceneID="vGn-i8-123">
             <objects>
-                <viewController id="9Yh-Qf-pLr" sceneMemberID="viewController">
+                <viewController id="9Yh-Qf-pLr" customClass="DataShowViewController" customModule="RollCall" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tLw-9i-ndU"/>
                         <viewControllerLayoutGuide type="bottom" id="iir-ay-Fnj"/>
@@ -140,6 +140,7 @@
                                 <rect key="frame" x="161" y="141" width="92" height="30"/>
                                 <state key="normal" title="设置开始时间"/>
                                 <connections>
+                                    <action selector="setStartTime:" destination="9Yh-Qf-pLr" eventType="touchUpInside" id="gg9-tV-3Gh"/>
                                     <segue destination="wN6-ZV-AhI" kind="show" id="1av-9l-uOi"/>
                                 </connections>
                             </button>
@@ -147,6 +148,7 @@
                                 <rect key="frame" x="161" y="261" width="92" height="30"/>
                                 <state key="normal" title="设置结束时间"/>
                                 <connections>
+                                    <action selector="setEndTime:" destination="9Yh-Qf-pLr" eventType="touchUpInside" id="63F-m0-5Aq"/>
                                     <segue destination="wN6-ZV-AhI" kind="show" id="ZAf-Ml-lAA"/>
                                 </connections>
                             </button>
@@ -185,6 +187,10 @@
                             <constraint firstItem="iir-ay-Fnj" firstAttribute="top" secondItem="XDT-2X-sJ7" secondAttribute="bottom" constant="50" id="wA3-xy-nIL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="endLabel" destination="fcI-dx-JCt" id="2lk-VD-AuS"/>
+                        <outlet property="startLabel" destination="1St-PO-sYg" id="5Pa-IL-lZA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Xl-O4-oDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,6 +217,9 @@
                                     <!--2016-01-01 11:00:00 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="zh"/>
+                                <connections>
+                                    <action selector="timeChange:" destination="wN6-ZV-AhI" eventType="valueChanged" id="Wem-iS-bSI"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iec-l5-nDQ">
                                 <rect key="frame" x="172" y="229" width="70" height="21"/>

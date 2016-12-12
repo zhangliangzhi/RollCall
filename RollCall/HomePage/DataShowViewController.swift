@@ -10,11 +10,21 @@ import UIKit
 
 class DataShowViewController: UIViewController {
 
+    @IBOutlet weak var startLabel: UILabel!
+    @IBOutlet weak var endLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
-
+    
+    // 设置截止日期
+    @IBAction func setEndTime(_ sender: Any) {
+    }
+    
+    // 设置开始日期
+    @IBAction func setStartTime(_ sender: Any) {
+    }
 
 }

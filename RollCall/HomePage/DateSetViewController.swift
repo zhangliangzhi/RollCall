@@ -13,9 +13,11 @@ class DateSetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func timeChange(_ sender: Any) {
+        
+    }
 
 }
