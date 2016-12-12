@@ -16,26 +16,23 @@ let contextData = appDelegate.persistentContainer.viewContext
 
 var arrClassData:[ClassData] = []
 
-
-class HomePageViewController: UIViewController {
+class HomePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var curClassName: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         
-//        let sessionId = "this is a test"
-//        let index = sessionId.index(sessionId.endIndex, offsetBy: -1)
-//        let suffix = sessionId.substring(to: index)
-//        print(suffix)
+
         
-        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         self.title = "西瓜点名"
         // 右侧按钮
         let mRightButton = UIBarButtonItem(title: "帮助", style: .plain, target: self, action: #selector(HomePageViewController.goSearchPage))
         self.navigationItem.rightBarButtonItem = mRightButton
 
-
-        
     }
     
     // 第一级目录不显示导航按钮
@@ -50,6 +47,7 @@ class HomePageViewController: UIViewController {
 
         }
         getCoreData()
+        tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,8 +55,26 @@ class HomePageViewController: UIViewController {
         
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrClassData.count
+    }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "homecell", for: indexPath) as! HomeTableViewCell
+        
+        cell.nameLabel.text = arrClassData[indexPath.row].classname
+//        cell.textLabel?.text = String(indexPath.row)
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let className = arrClassData[indexPath.row].classname
+        curClassName.titleLabel?.text = className
+    }
 
     // 获取coreData数据
     func getCoreData() {
