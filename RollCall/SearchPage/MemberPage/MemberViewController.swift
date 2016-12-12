@@ -11,9 +11,7 @@ import UIKit
 class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
-    // 班级序列号
-    var mIndexClass = 0
-    
+
     override func viewWillAppear(_ animated: Bool) {
         getCoreData()
         
@@ -42,7 +40,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
             TipsSwift.showCenterWithText("请先创建班级!")
             return 0
         }
-        let strMembers:String = arrClassData[mIndexClass].member!
+        let strMembers:String = arrClassData[gIndexClass].member!
         let membersJsonData = strMembers.data(using: .utf8)
         let arrMembers = JSON(data:membersJsonData!)
         
@@ -52,7 +50,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        let strMembers:String = arrClassData[mIndexClass].member!
+        let strMembers:String = arrClassData[gIndexClass].member!
         let membersJsonData = strMembers.data(using: .utf8)
         let arrMembers = JSON(data:membersJsonData!)
         
@@ -70,7 +68,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // 删除一个成员
-            let strMembers:String = arrClassData[mIndexClass].member!
+            let strMembers:String = arrClassData[gIndexClass].member!
             let membersJsonData = strMembers.data(using: .utf8)
             var arrMembers = JSON(data:membersJsonData!)
 //            print(arrMembers.description)
@@ -89,7 +87,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
             newStrMember += "]"
             
 //            print(newStrMember)
-            arrClassData[mIndexClass].member = newStrMember
+            arrClassData[gIndexClass].member = newStrMember
             appDelegate.saveContext()
             tableView.deleteRows(at: [indexPath], with: .fade)
         }

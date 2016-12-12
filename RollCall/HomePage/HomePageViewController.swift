@@ -16,7 +16,7 @@ let contextData = appDelegate.persistentContainer.viewContext
 var arrClassData:[ClassData] = []
 
 // 班级序列号
-var mIndexClass = 0
+var gIndexClass = 0
 
 class HomePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -75,7 +75,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
 
     // 选中班级
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        mIndexClass = indexPath.row
+        gIndexClass = indexPath.row
         let className:String = arrClassData[indexPath.row].classname!
         
         curNameLabel.text = className
@@ -92,8 +92,8 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             print("fetch core data error")
         }
         
-        if mIndexClass < arrClassData.count {
-            curNameLabel.text = arrClassData[mIndexClass].classname
+        if gIndexClass < arrClassData.count {
+            curNameLabel.text = arrClassData[gIndexClass].classname
         } else {
             curNameLabel.text = "还没有创建班级"
         }

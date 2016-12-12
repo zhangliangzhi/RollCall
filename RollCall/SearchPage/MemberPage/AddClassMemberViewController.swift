@@ -13,14 +13,13 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textNum: UITextField!
     @IBOutlet weak var textName: UITextField!
 
-    var mIndexClass = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         textNum.delegate = self
         textName.delegate = self
         
-        let strMembers:String = arrClassData[mIndexClass].member!
+        let strMembers:String = arrClassData[gIndexClass].member!
         let membersJsonData = strMembers.data(using: .utf8)
         let arrMembers = JSON(data:membersJsonData!)
         let lastId = arrMembers[arrMembers.count-1]["id"]
@@ -62,7 +61,7 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
         let strOneMem = "{\"id\":\"" + textNum.text! + "\",\"name\":\"" + textName.text! + "\"}"
         
         // 用json格式保存 课程类别
-        let oneClassData = arrClassData[mIndexClass]
+        let oneClassData = arrClassData[gIndexClass]
         let strMembers:String = oneClassData.member!
         
 //        print(strMembers)
