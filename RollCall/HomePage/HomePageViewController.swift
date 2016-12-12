@@ -13,13 +13,15 @@ import  UIKit
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 let contextData = appDelegate.persistentContainer.viewContext
 // coreData里的数据库内容
-
 var arrClassData:[ClassData] = []
+
+// 班级序列号
+var mIndexClass = 0
 
 class HomePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var curClassName: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var curNameLabel: UILabel!
     
     override func viewDidLoad() {
         
@@ -32,7 +34,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         // 右侧按钮
         let mRightButton = UIBarButtonItem(title: "帮助", style: .plain, target: self, action: #selector(HomePageViewController.goSearchPage))
         self.navigationItem.rightBarButtonItem = mRightButton
-
+        
     }
     
     // 第一级目录不显示导航按钮
@@ -71,9 +73,15 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
 
+    // 选中班级
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let className = arrClassData[indexPath.row].classname
-        curClassName.titleLabel?.text = className
+        mIndexClass = indexPath.row
+        let className:String = arrClassData[indexPath.row].classname!
+        
+        curNameLabel.text = className
+        
+        
+        print(className)
     }
 
     // 获取coreData数据
@@ -83,6 +91,10 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             arrClassData.sort(by: { $0.sortID > $1.sortID })
         }catch{
             print("fetch core data error")
+        }
+        
+        if mIndexClass < arrClassData.count {
+            curNameLabel.text = arrClassData[mIndexClass].classname
         }
     }
     
