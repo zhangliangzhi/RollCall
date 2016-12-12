@@ -13,12 +13,13 @@ import  UIKit
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 let contextData = appDelegate.persistentContainer.viewContext
 // coreData里的数据库内容
+
 var arrClassData:[ClassData] = []
 
 
 class HomePageViewController: UIViewController {
     
-
+    
     override func viewDidLoad() {
         
 //        let sessionId = "this is a test"
@@ -48,7 +49,7 @@ class HomePageViewController: UIViewController {
             self.automaticallyAdjustsScrollViewInsets = true
 
         }
-        
+        getCoreData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,14 +60,31 @@ class HomePageViewController: UIViewController {
     
 
 
+    // 获取coreData数据
+    func getCoreData() {
+        do{
+            arrClassData = try contextData.fetch(ClassData.fetchRequest())
+            arrClassData.sort(by: { $0.sortID > $1.sortID })
+        }catch{
+            print("fetch core data error")
+        }
+    }
     
     func goSearchPage() {
         
         let mSearchPage = UIStoryboard(name: "SearchPage", bundle: nil).instantiateViewController(withIdentifier: "SearchPage") as! SearchPageController
          self.tabBarController?.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(mSearchPage, animated: true)
-       
-        
+
+    }
+    
+    @IBAction func goRandom(_ sender: Any) {
+        // 随机点名
+        if arrClassData.count == 0 {
+            TipsSwift.showCenterWithText("需要先创建班级")
+            return
+        }
+        // 没有成员
         
     }
 }

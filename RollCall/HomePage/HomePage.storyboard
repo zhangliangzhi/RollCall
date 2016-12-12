@@ -20,7 +20,25 @@
                     <view key="view" contentMode="scaleToFill" id="CLl-k4-y6x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyv-es-fSX">
+                                <rect key="frame" x="150" y="583" width="74" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="5RR-Nv-f26"/>
+                                    <constraint firstAttribute="width" constant="74" id="Lgg-8B-DJ6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="随机点名"/>
+                                <connections>
+                                    <action selector="goRandom:" destination="fjG-4n-nOT" eventType="touchUpInside" id="YHp-j0-YFB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96136551883095678" green="0.98191314449698963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fyv-es-fSX" firstAttribute="centerX" secondItem="CLl-k4-y6x" secondAttribute="centerX" id="a0s-WW-zCg"/>
+                            <constraint firstItem="L1W-Zp-8Zh" firstAttribute="top" secondItem="fyv-es-fSX" secondAttribute="bottom" constant="50" id="u8v-NR-xPU"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKB-fd-m6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
