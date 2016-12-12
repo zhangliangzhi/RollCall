@@ -81,7 +81,6 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         curNameLabel.text = className
         
         
-        print(className)
     }
 
     // 获取coreData数据
@@ -95,6 +94,8 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         
         if mIndexClass < arrClassData.count {
             curNameLabel.text = arrClassData[mIndexClass].classname
+        } else {
+            curNameLabel.text = "还没有创建班级"
         }
     }
     
