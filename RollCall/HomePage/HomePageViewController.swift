@@ -114,6 +114,31 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             return
         }
         // 没有成员
+        let strMembers:String = arrClassData[gIndexClass].member!
+        let membersJsonData = strMembers.data(using: .utf8)
+        let arrMembers = JSON(data:membersJsonData!)
+        let iCount = arrMembers.count
+        if iCount == 0 {
+            TipsSwift.showCenterWithText("先增加班级成员")
+            return
+        }
+        let nCount:UInt32 = UInt32(iCount)
+        let strRandom:String = String(arc4random_uniform(nCount))
+//        print(strRandom)
+        let iRandom:Int = Int(strRandom)!
+        let pathName: [JSONSubscriptType] = [iRandom,"name"]
+        let pathID: [JSONSubscriptType] = [iRandom,"id"]
+        let name = arrMembers[pathName].string
+        let id:Int32 = arrMembers[pathID].int32Value
+
+        TipsSwift.showCenterWithText("点名：" + name!)
+        
+        // 保存一条记录
+        let now = Data()
+        print(Date().timeIntervalSince1970)
+        print(Data().description)
+        let record = CRecord(time: Data(), ctype: "我的", mid: id)
+        print(record)
         
     }
 }

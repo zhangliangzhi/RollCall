@@ -14,5 +14,7 @@ struct CMember {
 }
 
 struct CRecord {
-    
+    let time: Data
+    let ctype: String
+    let mid: Int32
 }
