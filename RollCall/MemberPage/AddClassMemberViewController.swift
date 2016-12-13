@@ -53,19 +53,26 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
         }
         //  学号为是数字
         let num = Int32(textNum.text!)
-        if num == nil {
+        if num == nil || num! < 0 {
             TipsSwift.showCenterWithText("学号只能为数字")
             return
+        }
+        
+        let strMembers:String = arrClassData[gIndexClass].member!
+        let membersJsonData = strMembers.data(using: .utf8)
+        let arrMembers = JSON(data:membersJsonData!)
+        // 学号不能重复
+        for i in 0..<arrMembers.count {
+            if num == arrMembers[i]["id"].int32Value {
+                TipsSwift.showCenterWithText("学号不能重复")
+                return
+            }
         }
 
         // 修改 成员名字
         let strOneMem = "{\"id\":\"" + textNum.text! + "\",\"name\":\"" + textName.text! + "\"}"
         
         // 用json格式保存 课程类别
-        let oneClassData = arrClassData[gIndexClass]
-        let strMembers:String = oneClassData.member!
-        
-//        print(strMembers)
         let indexstr = strMembers.index(strMembers.endIndex, offsetBy: -1)
         let tmpstr1 = strMembers.substring(to: indexstr)
         var strMemberJson:String = ""
@@ -77,7 +84,7 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
 //        print(strMemberJson)
         
         // 修改数据
-        oneClassData.member = strMemberJson
+        arrClassData[gIndexClass].member = strMemberJson
 
         // 数据处理
         appDelegate.saveContext()

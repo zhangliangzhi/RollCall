@@ -86,7 +86,12 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let strCourses:String = arrClassData[gIndexClass].course!
             let coursesJsonData = strCourses.data(using: .utf8)
             var arrCourses = JSON(data:coursesJsonData!)
-//            print(arrCourses.description)
+            
+            // 如果只有一个科目的话，不能删除
+            if arrCourses.count <= 1 {
+                TipsSwift.showCenterWithText("不可删除，一个班级至少对应一个课程")
+                return
+            }
             
             var arrNewCourse: [String] = []
             for i in 0..<arrCourses.count {
@@ -107,7 +112,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         
-        print(sourceIndexPath.row ,destinationIndexPath.row)
+//        print(sourceIndexPath.row ,destinationIndexPath.row)
         if sourceIndexPath.row == destinationIndexPath.row {
             return
         }
@@ -130,8 +135,8 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             arrNewCourse.remove(at: sourceIndexPath.row)
         }
         
-        print(arrNewCourse)
-        print(arrNewCourse.description)
+//        print(arrNewCourse)
+//        print(arrNewCourse.description)
         let newJson = JSON.init(arrNewCourse)
         arrClassData[gIndexClass].course = newJson.description
         appDelegate.saveContext()
