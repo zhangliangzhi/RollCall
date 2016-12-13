@@ -15,8 +15,12 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewWillAppear(_ animated: Bool) {
         getCoreData()
         
-        self.navigationController?.navigationBar.topItem?.title = "当前班级：" + arrClassData[gIndexClass].classname!
-        
+        if arrClassData.count > 0 {
+            self.navigationController?.navigationBar.topItem?.title = "当前班级：" + arrClassData[gIndexClass].classname!
+        } else {
+            TipsSwift.showCenterWithText("请先创建班级!")
+        }
+
         tableView.reloadData()
     }
     
@@ -30,9 +34,14 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.navigationItem.rightBarButtonItem = mSearchButtonRight
         // edit
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+//        tableView.setEditing(true, animated: true)
         
     }
     
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing,animated: animated)
+        tableView.setEditing(editing, animated: true)
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

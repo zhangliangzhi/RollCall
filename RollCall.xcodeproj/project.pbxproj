@@ -240,9 +240,9 @@
 		0BD0F4E71DFFD41000E49E4B /* CoursePage */ = {
 			isa = PBXGroup;
 			children = (
+				0BD0F4EA1DFFD41000E49E4B /* CourseViewController.swift */,
 				0BD0F4E81DFFD41000E49E4B /* AddCourseMemberViewController.swift */,
 				0BD0F4E91DFFD41000E49E4B /* Course.storyboard */,
-				0BD0F4EA1DFFD41000E49E4B /* CourseViewController.swift */,
 			);
 			path = CoursePage;
 			sourceTree = "<group>";

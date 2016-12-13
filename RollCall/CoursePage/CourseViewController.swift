@@ -15,7 +15,11 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewWillAppear(_ animated: Bool) {
         getCoreData()
         
-        self.navigationController?.navigationBar.topItem?.title = "当前班级：" + arrClassData[gIndexClass].classname!
+        if arrClassData.count > 0 {
+            self.navigationController?.navigationBar.topItem?.title = "当前班级：" + arrClassData[gIndexClass].classname!
+        } else {
+            TipsSwift.showCenterWithText("请先创建班级!")
+        }
         
         tableView.reloadData()
     }

@@ -111,7 +111,11 @@ class ClassNameViewController: UITableViewController {
             appDelegate.saveContext()
             
             arrClassData.remove(at: indexPath.row)
+            if gIndexClass >= arrClassData.count {
+                gIndexClass = 0
+            }
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
         }
     }
     
