@@ -17,6 +17,10 @@ class DateSetStartViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "记录开始时间"
+        
+        let strDate:String = arrClassData[gIndexClass].dateStart!
+        let ndate = try! DateInRegion(string: strDate, format: DateFormat.custom("yyyy-MM-dd"))
+        timePicker.setDate(ndate.absoluteDate, animated: true)
     }
 
     @IBAction func timeChange(_ sender: Any) {
