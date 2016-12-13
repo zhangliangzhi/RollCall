@@ -51,7 +51,8 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "memcell", for: indexPath) as! MemberTableViewCell
+        
         
         let strMembers:String = arrClassData[gIndexClass].member!
         let membersJsonData = strMembers.data(using: .utf8)
@@ -59,7 +60,9 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         // coreData里的member字段格式 {"id":1, "name":"a1"}
         let member:String = arrMembers[indexPath.row]["name"].string!
-        cell.textLabel?.text = member
+        let id:String = arrMembers[indexPath.row]["id"].description
+        cell.textLabel?.text = id
+        cell.memLabel.text = member
         
         return cell
     }

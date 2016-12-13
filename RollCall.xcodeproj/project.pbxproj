@@ -46,6 +46,7 @@
 		0BD0F4EB1DFFD41000E49E4B /* AddCourseMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4E81DFFD41000E49E4B /* AddCourseMemberViewController.swift */; };
 		0BD0F4EC1DFFD41000E49E4B /* Course.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BD0F4E91DFFD41000E49E4B /* Course.storyboard */; };
 		0BD0F4ED1DFFD41000E49E4B /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4EA1DFFD41000E49E4B /* CourseViewController.swift */; };
+		0BD0F4EF1DFFF08600E49E4B /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4EE1DFFF08600E49E4B /* MemberTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		0BD0F4E81DFFD41000E49E4B /* AddCourseMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseMemberViewController.swift; sourceTree = "<group>"; };
 		0BD0F4E91DFFD41000E49E4B /* Course.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Course.storyboard; sourceTree = "<group>"; };
 		0BD0F4EA1DFFD41000E49E4B /* CourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
+		0BD0F4EE1DFFF08600E49E4B /* MemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
 		6EAC734C6F5D923349E592BB /* Pods_RollCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C5CDD502C40C18E18A8FFD /* Pods-RollCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollCall.release.xcconfig"; path = "Pods/Target Support Files/Pods-RollCall/Pods-RollCall.release.xcconfig"; sourceTree = "<group>"; };
 		E7EB97CC5C353CD4744D4005 /* Pods-RollCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollCall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RollCall/Pods-RollCall.debug.xcconfig"; sourceTree = "<group>"; };
@@ -227,9 +229,10 @@
 		0BD0F4E01DFFD37800E49E4B /* MemberPage */ = {
 			isa = PBXGroup;
 			children = (
-				0BD0F4E11DFFD37800E49E4B /* AddClassMemberViewController.swift */,
-				0BD0F4E21DFFD37800E49E4B /* Member.storyboard */,
 				0BD0F4E31DFFD37800E49E4B /* MemberViewController.swift */,
+				0BD0F4E21DFFD37800E49E4B /* Member.storyboard */,
+				0BD0F4E11DFFD37800E49E4B /* AddClassMemberViewController.swift */,
+				0BD0F4EE1DFFF08600E49E4B /* MemberTableViewCell.swift */,
 			);
 			path = MemberPage;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				0BD0F4D61DFC9B4400E49E4B /* ClassModel.swift in Sources */,
 				0BD0F4DD1DFEFD9100E49E4B /* DateShowViewController.swift in Sources */,
 				0B4BAC1C1DE71CCA000636CB /* ViewController.swift in Sources */,
+				0BD0F4EF1DFFF08600E49E4B /* MemberTableViewCell.swift in Sources */,
 				0BD0F4E61DFFD37800E49E4B /* MemberViewController.swift in Sources */,
 				0B4C85E41DF9AA9E0038DC85 /* TipsSwift.swift in Sources */,
 				0B4C85E21DF962230038DC85 /* AddClassNameViewController.swift in Sources */,
