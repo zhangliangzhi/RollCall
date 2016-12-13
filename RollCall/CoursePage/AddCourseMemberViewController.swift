@@ -1,14 +1,14 @@
 //
-//  AddClassMemberViewController.swift
+//  AddCourseViewController.swift
 //  RollCall
 //
-//  Created by ZhangLiangZhi on 2016/12/9.
+//  Created by ZhangLiangZhi on 2016/12/13.
 //  Copyright © 2016年 xigk. All rights reserved.
 //
 
 import UIKit
 
-class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
+class AddCourseViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textNum: UITextField!
     @IBOutlet weak var textName: UITextField!

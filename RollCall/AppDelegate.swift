@@ -52,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // 分类页
+        /*
         let mCategoryViewController = UIStoryboard(name: "CategoryPage", bundle: nil).instantiateViewController(withIdentifier: "CategoryPage") as! CategoryPageViewController
         let mCategoryNavController = UINavigationController(rootViewController: mCategoryViewController)
         let mCategoryNormalImage = UIImage(named: "main_bottom_feedback_n")?.withRenderingMode(.alwaysOriginal)
@@ -64,6 +65,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Fallback on earlier versions
         }
         mCategoryNavController.tabBarItem = mCategoryTabBarItem
+        */
+        
+        let mCourseViewController = UIStoryboard(name: "Course", bundle: nil).instantiateViewController(withIdentifier: "CoursePage") as! CourseViewController
+        let mCourseNavCtontroller = UINavigationController(rootViewController: mCourseViewController)
+        let mCourseNormalImage = UIImage(named: "main_bottom_feedback_n")?.withRenderingMode(.alwaysOriginal)
+        let mCourseSelectedImage = UIImage(named: "main_bottom_feedback_p")?.withRenderingMode(.alwaysOriginal)
+        let mCourseTabBarItem = UITabBarItem(title: "课程", image: mCourseNormalImage, selectedImage: mCourseSelectedImage)
+        mCourseTabBarItem.setTitleTextAttributes(attributes, for: .normal)
+        mCourseNavCtontroller.tabBarItem = mCourseTabBarItem
         
         // 成员页面
         let mMemberViewController = UIStoryboard(name: "Member", bundle: nil).instantiateViewController(withIdentifier: "Member") as! MemberViewController
@@ -95,7 +105,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // 导航控制器
-        let mTabArray = [mHomeNavController,mClassNameNavCtontroller,mCategoryNavController,mMemberNavController,mUserMineNavController]
+        let mTabArray = [mHomeNavController,mClassNameNavCtontroller,mCourseNavCtontroller,mMemberNavController,mUserMineNavController]
         let mTabBarController = UITabBarController()
         mTabBarController.viewControllers = mTabArray
         
