@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftDate
 
 class DateSetViewController: UIViewController {
 
@@ -18,8 +19,13 @@ class DateSetViewController: UIViewController {
     }
 
     @IBAction func timeChange(_ sender: Any) {
-        let data = timePicker.date
-        print(data)
+        // 默认获取的是0时区的日期
+        let getDate = timePicker.date
+//        print(getDate)
+        let todate = DateInRegion(absoluteDate: getDate)
+//        print(todate)
+        arrClassData[gIndexClass].dateStart = todate.string(format: DateFormat.custom("yyyy-MM-dd"))
+        appDelegate.saveContext()
     }
 
 }

@@ -152,8 +152,8 @@
                                     <segue destination="wN6-ZV-AhI" kind="show" id="ZAf-Ml-lAA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="建议：9月-1月，2月-7月" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDT-2X-sJ7">
-                                <rect key="frame" x="111.66666666666669" y="665.66666666666652" width="191" height="20.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDT-2X-sJ7">
+                                <rect key="frame" x="198.66666666666666" y="665.66666666666652" width="17.666666666666686" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -213,8 +213,8 @@
                                 <date key="date" timeIntervalSinceReferenceDate="503250084.26505798">
                                     <!--2016-12-12 15:41:24 +0000-->
                                 </date>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="473338800">
-                                    <!--2016-01-01 11:00:00 +0000-->
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="315572400">
+                                    <!--2011-01-01 11:00:00 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="zh"/>
                                 <connections>

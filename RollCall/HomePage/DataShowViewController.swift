@@ -13,18 +13,24 @@ class DataShowViewController: UIViewController {
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var endLabel: UILabel!
     
+    var dateStart:String = ""
+    var dateEnd:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        startLabel.text = arrClassData[gIndexClass].dateStart
+        endLabel.text = arrClassData[gIndexClass].dateEnd
     }
     
     // 设置截止日期
     @IBAction func setEndTime(_ sender: Any) {
+        
     }
     
     // 设置开始日期
     @IBAction func setStartTime(_ sender: Any) {
+        
     }
 
 }

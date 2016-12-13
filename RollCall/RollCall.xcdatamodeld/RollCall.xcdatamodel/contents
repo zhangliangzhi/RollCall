@@ -3,8 +3,8 @@
     <entity name="ClassData" representedClassName="ClassData" syncable="YES" codeGenerationType="class">
         <attribute name="classname" attributeType="String" syncable="YES"/>
         <attribute name="course" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dataEnd" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="dataStart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateEnd" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateStart" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="member" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="record" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sortID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>

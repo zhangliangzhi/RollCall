@@ -8,6 +8,7 @@
 
 import Foundation
 import  UIKit
+import SwiftDate
 
 // coreData数据库操作接口
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -25,7 +26,13 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         
-
+//        let ndate = DateInRegion(absoluteDate: Date() )
+//        print(ndate + 1.day)
+//        let str = ndate.string(format: DateFormat.custom("yyyy-MM-dd"))
+//        print(str)
+        
+//        let date_custom = try! DateInRegion(string: "2016-12-13", format: DateFormat.custom("yyyy-MM-dd"))
+//        print(date_custom + 6.month)
         
         tableView.delegate = self
         tableView.dataSource = self

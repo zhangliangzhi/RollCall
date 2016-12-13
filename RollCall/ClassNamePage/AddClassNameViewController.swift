@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SwiftDate
 
 class AddClassNameViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!
@@ -52,12 +53,23 @@ class AddClassNameViewController: UIViewController, UITextFieldDelegate {
         // 其他的先设置为json格式的
         oneClassData.member = "[]"
         oneClassData.record = "[]"
-        
-//        oneClassData.dataStart = Data()
-//        oneClassData.endStart = Data()
-        print(oneClassData.dataStart)
 
-//        print(strJson)
+        // 时间设置
+//        let dformatter = DateFormatter()
+//        dformatter.dateFormat = "yyyy-MM-dd"
+//        dformatter.timeZone = NSTimeZone.system
+//        let resultDate:String = dformatter.string(from: Date())
+
+        let ndate = DateInRegion(absoluteDate: Date() )
+        let strndate = ndate.string(format: DateFormat.custom("yyyy-MM-dd"))
+        oneClassData.dateStart = strndate
+        
+        let enddate = ndate + 6.month
+        oneClassData.dateEnd = enddate.string(format: DateFormat.custom("yyyy-MM-dd"))
+        
+//        print(oneClassData.dateStart)
+//        print(oneClassData.dateEnd)
+
         
         
         // 数据处理
