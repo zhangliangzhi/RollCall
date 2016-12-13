@@ -20,6 +20,7 @@ var arrClassData:[ClassData] = []
 var gIndexClass = 0
 
 class HomePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var curCoursePage: UILabel!
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -102,8 +103,10 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         
         if gIndexClass < arrClassData.count {
             curNameLabel.text = arrClassData[gIndexClass].classname
+            curCoursePage.text = arrClassData[gIndexClass].selCourse
         } else {
             curNameLabel.text = "还没有创建班级"
+            curCoursePage.text = "还没有创建班级"
         }
     }
     
