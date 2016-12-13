@@ -14,7 +14,7 @@ struct CMember {
 }
 
 struct CRecord {
-    let time: Data
-    let ctype: String
-    let mid: Int32
+    let time: String    // 时间
+    let cou: String     // 课程
+    let mid: Int32      // 学号
 }

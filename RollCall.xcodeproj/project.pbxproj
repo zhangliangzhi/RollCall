@@ -32,6 +32,7 @@
 		0B4C86001DFBCDFA0038DC85 /* INSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FC1DFBCDFA0038DC85 /* INSPersistentContainer.swift */; };
 		0B4C86011DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FD1DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift */; };
 		0B4C86021DFBCDFA0038DC85 /* NSManagedObjectContext+iOS10Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FE1DFBCDFA0038DC85 /* NSManagedObjectContext+iOS10Additions.swift */; };
+		0B881CCB1E006381008C30E4 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B881CCA1E006381008C30E4 /* CourseTableViewCell.swift */; };
 		0BB4ACC91DF40E99003B1C91 /* BootstrapBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB4ACC81DF40E99003B1C91 /* BootstrapBtn.swift */; };
 		0BBBFFBE1DE9254400EFAE9E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBFFBD1DE9254400EFAE9E /* MainTableViewController.swift */; };
 		0BBBFFC01DE93F6F00EFAE9E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBFFBF1DE93F6F00EFAE9E /* SwiftyJSON.swift */; };
@@ -77,6 +78,7 @@
 		0B4C85FD1DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSPersistentStoreDescription.swift; sourceTree = "<group>"; };
 		0B4C85FE1DFBCDFA0038DC85 /* NSManagedObjectContext+iOS10Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+iOS10Additions.swift"; sourceTree = "<group>"; };
 		0B5B58FD1DED97B10075E267 /* RollCall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RollCall.entitlements; sourceTree = "<group>"; };
+		0B881CCA1E006381008C30E4 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		0BB4ACC81DF40E99003B1C91 /* BootstrapBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapBtn.swift; sourceTree = "<group>"; };
 		0BBBFFBD1DE9254400EFAE9E /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		0BBBFFBF1DE93F6F00EFAE9E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				0BD0F4EA1DFFD41000E49E4B /* CourseViewController.swift */,
 				0BD0F4E81DFFD41000E49E4B /* AddCourseMemberViewController.swift */,
 				0BD0F4E91DFFD41000E49E4B /* Course.storyboard */,
+				0B881CCA1E006381008C30E4 /* CourseTableViewCell.swift */,
 			);
 			path = CoursePage;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				0B152B031DF2BA5200915B81 /* UserMineViewController.swift in Sources */,
 				0BB4ACC91DF40E99003B1C91 /* BootstrapBtn.swift in Sources */,
 				0BD0F4E41DFFD37800E49E4B /* AddClassMemberViewController.swift in Sources */,
+				0B881CCB1E006381008C30E4 /* CourseTableViewCell.swift in Sources */,
 				0BBBFFBE1DE9254400EFAE9E /* MainTableViewController.swift in Sources */,
 				0B152AFE1DF2BA5200915B81 /* HomePageViewController.swift in Sources */,
 				0BD0F4ED1DFFD41000E49E4B /* CourseViewController.swift in Sources */,

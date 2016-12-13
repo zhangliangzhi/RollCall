@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-    
 
     override func viewWillAppear(_ animated: Bool) {
+        
         getCoreData()
         
         if arrClassData.count > 0 {
@@ -55,15 +55,15 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "coursecell", for: indexPath) as! CourseTableViewCell
         
         let strMembers:String = arrClassData[gIndexClass].member!
         let membersJsonData = strMembers.data(using: .utf8)
         let arrMembers = JSON(data:membersJsonData!)
         
-        // coreData里的member字段格式 {"id":1, "name":"a1"}
+        // coreData里的course字段格式 {"id":1, "cname":"a1"}
         let member:String = arrMembers[indexPath.row]["name"].string!
-        cell.textLabel?.text = member
+        cell.courseLabel.text = member
         
         return cell
     }

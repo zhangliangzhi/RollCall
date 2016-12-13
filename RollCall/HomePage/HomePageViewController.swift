@@ -141,11 +141,10 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
 
         TipsSwift.showCenterWithText("点名：" + name!)
         
-        // 保存一条记录
-        let now = Data()
-        print(Date().timeIntervalSince1970)
-        print(Data().description)
-        let record = CRecord(time: Data(), ctype: "我的", mid: id)
+        // 保存一条记录 时间，学号
+        let nowdate = DateInRegion(absoluteDate: Date())
+        let strDate = nowdate.string(format: DateFormat.custom("yyyy-MM-dd"))
+        let record = CRecord(time: strDate, cou: "我的", mid: id)
         print(record)
         
     }
