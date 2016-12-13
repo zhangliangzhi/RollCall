@@ -20,6 +20,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         } else {
             TipsSwift.showCenterWithText("请先创建班级!")
         }
+        memberSortById()
 
         tableView.reloadData()
     }
@@ -120,7 +121,35 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.navigationController?.pushViewController(mAddClassNamePage, animated: true)
     }
     
-
+    // 按学号排序
+    func memberSortById() {
+        let strMembers:String = arrClassData[gIndexClass].member!
+        let membersJsonData = strMembers.data(using: .utf8)
+        var arrMembers = JSON(data:membersJsonData!)
+        if arrMembers.count < 2 {
+            return
+        }
+        
+        // 排序，这够累的啊🐶，真是来回转，保存到数组！在保存回来 额
+        var sortMembers:[CMember] = []
+        for (_,subJson):(String, JSON) in arrMembers {
+            sortMembers.append(CMember(name: subJson["name"].stringValue, id: subJson["id"].int32Value))
+        }
+        sortMembers.sort(by: {$0.id < $1.id})
+        
+        // 数组转为json格式
+        for (key,subJson):(String, JSON) in arrMembers {
+            let iKey:Int = Int(key)!
+            let k : [JSONSubscriptType] = [iKey]
+//            print(key, subJson)
+//            print(arrMembers[k])
+            arrMembers[k]["name"].string = sortMembers[iKey].name
+            arrMembers[k]["id"].string = String(sortMembers[iKey].id)
+        }
+//        print(arrMembers)
+        arrClassData[gIndexClass].member = arrMembers.description
+        appDelegate.saveContext()
+    }
     
     // 获取coreData数据
     func getCoreData() {

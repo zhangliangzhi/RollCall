@@ -230,8 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				0BD0F4E31DFFD37800E49E4B /* MemberViewController.swift */,
-				0BD0F4E21DFFD37800E49E4B /* Member.storyboard */,
 				0BD0F4E11DFFD37800E49E4B /* AddClassMemberViewController.swift */,
+				0BD0F4E21DFFD37800E49E4B /* Member.storyboard */,
 				0BD0F4EE1DFFF08600E49E4B /* MemberTableViewCell.swift */,
 			);
 			path = MemberPage;
