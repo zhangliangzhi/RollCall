@@ -20,6 +20,7 @@ var arrClassData:[ClassData] = []
 var gIndexClass = 0
 
 class HomePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var curNameLabel: UILabel!
@@ -109,7 +110,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     func goSearchPage() {
         
         let mSearchPage = UIStoryboard(name: "SearchPage", bundle: nil).instantiateViewController(withIdentifier: "SearchPage") as! SearchPageController
-         self.tabBarController?.hidesBottomBarWhenPushed = true
+        self.tabBarController?.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(mSearchPage, animated: true)
 
     }
@@ -148,4 +149,16 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         print(record)
         
     }
+    
+    @IBAction func goSetTimePage(_ sender: Any) {
+        if arrClassData.count == 0 {
+            TipsSwift.showCenterWithText("需要先创建班级")
+            return
+        }
+        let mSearchPage = UIStoryboard(name: "SearchPage", bundle: nil).instantiateViewController(withIdentifier: "SearchPage") as! SearchPageController
+        self.tabBarController?.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(mSearchPage, animated: true)
+        
+    }
+    
 }

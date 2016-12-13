@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DataShowViewController: UIViewController {
+class DateShowViewController: UIViewController {
 
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var endLabel: UILabel!

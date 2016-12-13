@@ -83,12 +83,11 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I64-qw-sQ7">
-                                <rect key="frame" x="272" y="587" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I64-qw-sQ7">
+                                <rect key="frame" x="275" y="636" width="92" height="30"/>
                                 <state key="normal" title="设置时间范围"/>
                                 <connections>
-                                    <segue destination="9Yh-Qf-pLr" kind="show" id="9Iw-Gw-ten"/>
+                                    <action selector="goSetTimePage:" destination="fjG-4n-nOT" eventType="touchUpInside" id="cva-PE-YRP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -104,6 +103,8 @@
                             <constraint firstItem="1U2-WS-Am9" firstAttribute="top" secondItem="uvJ-5M-9kq" secondAttribute="bottom" constant="16" id="bqN-Sm-OSd"/>
                             <constraint firstItem="66r-Df-bTZ" firstAttribute="centerX" secondItem="1U2-WS-Am9" secondAttribute="centerX" id="fDa-2d-qja"/>
                             <constraint firstItem="fyv-es-fSX" firstAttribute="top" secondItem="Mlh-dX-0jV" secondAttribute="bottom" constant="10" id="jFT-E6-wA3"/>
+                            <constraint firstItem="I64-qw-sQ7" firstAttribute="leading" secondItem="fyv-es-fSX" secondAttribute="trailing" constant="8" id="pfZ-Op-fEq"/>
+                            <constraint firstItem="I64-qw-sQ7" firstAttribute="centerY" secondItem="fyv-es-fSX" secondAttribute="centerY" id="rZm-Qq-tA5"/>
                             <constraint firstItem="L1W-Zp-8Zh" firstAttribute="top" secondItem="fyv-es-fSX" secondAttribute="bottom" constant="50" id="u8v-NR-xPU"/>
                             <constraint firstAttribute="trailing" secondItem="Mlh-dX-0jV" secondAttribute="trailing" id="uOI-u6-GXS"/>
                             <constraint firstItem="Mlh-dX-0jV" firstAttribute="top" secondItem="uvJ-5M-9kq" secondAttribute="bottom" constant="58" id="xQg-Oy-dDq"/>
@@ -118,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="-330.39999999999998" y="-718.29085457271367"/>
         </scene>
-        <!--Data Show View Controller-->
+        <!--Date Show View Controller-->
         <scene sceneID="vGn-i8-123">
             <objects>
-                <viewController id="9Yh-Qf-pLr" customClass="DataShowViewController" customModule="RollCall" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DateShowPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Yh-Qf-pLr" customClass="DateShowViewController" customModule="RollCall" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tLw-9i-ndU"/>
                         <viewControllerLayoutGuide type="bottom" id="iir-ay-Fnj"/>

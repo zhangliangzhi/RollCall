@@ -41,7 +41,7 @@
 		0BD0F4D61DFC9B4400E49E4B /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4D51DFC9B4400E49E4B /* ClassModel.swift */; };
 		0BD0F4D91DFEB33300E49E4B /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4D81DFEB33300E49E4B /* HomeTableViewCell.swift */; };
 		0BD0F4DB1DFEEC4100E49E4B /* DateSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4DA1DFEEC4100E49E4B /* DateSetViewController.swift */; };
-		0BD0F4DD1DFEFD9100E49E4B /* DataShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4DC1DFEFD9100E49E4B /* DataShowViewController.swift */; };
+		0BD0F4DD1DFEFD9100E49E4B /* DateShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4DC1DFEFD9100E49E4B /* DateShowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +81,7 @@
 		0BD0F4D51DFC9B4400E49E4B /* ClassModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassModel.swift; sourceTree = "<group>"; };
 		0BD0F4D81DFEB33300E49E4B /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		0BD0F4DA1DFEEC4100E49E4B /* DateSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSetViewController.swift; sourceTree = "<group>"; };
-		0BD0F4DC1DFEFD9100E49E4B /* DataShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataShowViewController.swift; sourceTree = "<group>"; };
+		0BD0F4DC1DFEFD9100E49E4B /* DateShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateShowViewController.swift; sourceTree = "<group>"; };
 		6EAC734C6F5D923349E592BB /* Pods_RollCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C5CDD502C40C18E18A8FFD /* Pods-RollCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollCall.release.xcconfig"; path = "Pods/Target Support Files/Pods-RollCall/Pods-RollCall.release.xcconfig"; sourceTree = "<group>"; };
 		E7EB97CC5C353CD4744D4005 /* Pods-RollCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollCall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RollCall/Pods-RollCall.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 				0B152AF21DF2BA5200915B81 /* HomePageViewController.swift */,
 				0BD0F4D81DFEB33300E49E4B /* HomeTableViewCell.swift */,
 				0BD0F4DA1DFEEC4100E49E4B /* DateSetViewController.swift */,
-				0BD0F4DC1DFEFD9100E49E4B /* DataShowViewController.swift */,
+				0BD0F4DC1DFEFD9100E49E4B /* DateShowViewController.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -374,7 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BD0F4D61DFC9B4400E49E4B /* ClassModel.swift in Sources */,
-				0BD0F4DD1DFEFD9100E49E4B /* DataShowViewController.swift in Sources */,
+				0BD0F4DD1DFEFD9100E49E4B /* DateShowViewController.swift in Sources */,
 				0B152B0A1DF2D24A00915B81 /* MemberViewController.swift in Sources */,
 				0B4BAC1C1DE71CCA000636CB /* ViewController.swift in Sources */,
 				0B4C85E41DF9AA9E0038DC85 /* TipsSwift.swift in Sources */,
