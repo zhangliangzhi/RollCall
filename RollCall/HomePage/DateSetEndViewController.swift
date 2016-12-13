@@ -13,11 +13,11 @@ import SwiftDate
 class DateSetEndViewController: UIViewController {
     
     @IBOutlet weak var timePicker: UIDatePicker!
-    var mtitle = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = mtitle
+        self.title = "记录结束时间"
     }
     
     @IBAction func timeChange(_ sender: Any) {
@@ -26,7 +26,7 @@ class DateSetEndViewController: UIViewController {
         //        print(getDate)
         let todate = DateInRegion(absoluteDate: getDate)
         //        print(todate)
-        arrClassData[gIndexClass].dateStart = todate.string(format: DateFormat.custom("yyyy-MM-dd"))
+        arrClassData[gIndexClass].dateEnd = todate.string(format: DateFormat.custom("yyyy-MM-dd"))
         appDelegate.saveContext()
     }
     

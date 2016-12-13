@@ -12,11 +12,11 @@ import SwiftDate
 class DateSetStartViewController: UIViewController {
 
     @IBOutlet weak var timePicker: UIDatePicker!
-    var mtitle = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = mtitle
+        self.title = "记录开始时间"
     }
 
     @IBAction func timeChange(_ sender: Any) {
