@@ -133,7 +133,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="textNum" destination="aqb-kg-srX" id="MLE-Mk-20t"/>
+                        <outlet property="textFieldCourse" destination="aqb-kg-srX" id="bLV-pK-Kxi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ti6-Vb-Ote" userLabel="First Responder" sceneMemberID="firstResponder"/>
