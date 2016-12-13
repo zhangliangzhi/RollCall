@@ -94,7 +94,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
             for i in 0..<arrMembers.count {
                 let strOneJson:String = arrMembers[i].description
                 if strOneJson != "" {
-                    if i == arrMembers.count - 1 {
+                    if i == arrMembers.count - 1 || indexPath.row == arrMembers.count - 1 {
                         newStrMember = newStrMember + arrMembers[i].description
                     } else {
                         newStrMember = newStrMember + arrMembers[i].description + ","

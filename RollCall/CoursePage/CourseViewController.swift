@@ -12,7 +12,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tableView: UITableView!
 
     override func viewWillAppear(_ animated: Bool) {
-        
+
         getCoreData()
         
         if arrClassData.count > 0 {
@@ -74,29 +74,28 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // 删除一个成员
+            
+            // 删除一个成员 1.转JSON 2.保存新array 3.转新JSON 最后保存.description
             let strCourses:String = arrClassData[gIndexClass].course!
             let coursesJsonData = strCourses.data(using: .utf8)
             var arrCourses = JSON(data:coursesJsonData!)
 //            print(arrCourses.description)
-            arrCourses[indexPath.row] = ""
-            var newStrCourse = "["
+            
+            var arrNewCourse: [String] = []
             for i in 0..<arrCourses.count {
-                let strOneJson:String = arrCourses[i].description
-                if strOneJson != "" {
-                    if i == arrCourses.count - 1 {
-                        newStrCourse = newStrCourse + arrCourses[i].description
-                    } else {
-                        newStrCourse = newStrCourse + arrCourses[i].description + ","
-                    }
+                if i != indexPath.row {
+                    arrNewCourse.append(arrCourses[i].stringValue)
                 }
             }
-            newStrCourse += "]"
             
-//            print(newStrCourse)
-            arrClassData[gIndexClass].course = newStrCourse
+//            print(arrNewCourse)
+            let newJson = JSON.init(arrNewCourse)
+            print(newJson.description)
+            
+            arrClassData[gIndexClass].course = newJson.description
             appDelegate.saveContext()
             tableView.deleteRows(at: [indexPath], with: .fade)
+ 
         }
     }
     
