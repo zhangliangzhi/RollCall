@@ -19,6 +19,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.navigationController?.navigationBar.topItem?.title = "当前班级：" + arrClassData[gIndexClass].classname!
         } else {
             TipsSwift.showCenterWithText("请先创建班级!")
+            return
         }
         memberSortById()
 
