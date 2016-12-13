@@ -10,6 +10,8 @@ import UIKit
 
 class MemberTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var numLabel: UILabel!
     @IBOutlet weak var memLabel: UILabel!
     
     override func awakeFromNib() {

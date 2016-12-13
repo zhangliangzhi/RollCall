@@ -61,7 +61,8 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // coreData里的member字段格式 {"id":1, "name":"a1"}
         let member:String = arrMembers[indexPath.row]["name"].string!
         let id:String = arrMembers[indexPath.row]["id"].description
-        cell.textLabel?.text = id
+        
+        cell.numLabel.text = id
         cell.memLabel.text = member
         
         return cell
