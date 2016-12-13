@@ -9,7 +9,7 @@
 import UIKit
 import SwiftDate
 
-class DateSetViewController: UIViewController {
+class DateSetStartViewController: UIViewController {
 
     @IBOutlet weak var timePicker: UIDatePicker!
     var mtitle = ""

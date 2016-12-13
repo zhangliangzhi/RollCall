@@ -40,8 +40,9 @@
 		0BBBFFC01DE93F6F00EFAE9E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBFFBF1DE93F6F00EFAE9E /* SwiftyJSON.swift */; };
 		0BD0F4D61DFC9B4400E49E4B /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4D51DFC9B4400E49E4B /* ClassModel.swift */; };
 		0BD0F4D91DFEB33300E49E4B /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4D81DFEB33300E49E4B /* HomeTableViewCell.swift */; };
-		0BD0F4DB1DFEEC4100E49E4B /* DateSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4DA1DFEEC4100E49E4B /* DateSetViewController.swift */; };
+		0BD0F4DB1DFEEC4100E49E4B /* DateSetStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4DA1DFEEC4100E49E4B /* DateSetStartViewController.swift */; };
 		0BD0F4DD1DFEFD9100E49E4B /* DateShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4DC1DFEFD9100E49E4B /* DateShowViewController.swift */; };
+		0BD0F4DF1DFF9DE400E49E4B /* DateSetEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4DE1DFF9DE400E49E4B /* DateSetEndViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,8 +81,9 @@
 		0BBBFFBF1DE93F6F00EFAE9E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		0BD0F4D51DFC9B4400E49E4B /* ClassModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassModel.swift; sourceTree = "<group>"; };
 		0BD0F4D81DFEB33300E49E4B /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		0BD0F4DA1DFEEC4100E49E4B /* DateSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSetViewController.swift; sourceTree = "<group>"; };
+		0BD0F4DA1DFEEC4100E49E4B /* DateSetStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSetStartViewController.swift; sourceTree = "<group>"; };
 		0BD0F4DC1DFEFD9100E49E4B /* DateShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateShowViewController.swift; sourceTree = "<group>"; };
+		0BD0F4DE1DFF9DE400E49E4B /* DateSetEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSetEndViewController.swift; sourceTree = "<group>"; };
 		6EAC734C6F5D923349E592BB /* Pods_RollCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C5CDD502C40C18E18A8FFD /* Pods-RollCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollCall.release.xcconfig"; path = "Pods/Target Support Files/Pods-RollCall/Pods-RollCall.release.xcconfig"; sourceTree = "<group>"; };
 		E7EB97CC5C353CD4744D4005 /* Pods-RollCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollCall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RollCall/Pods-RollCall.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +116,8 @@
 				0B152AF11DF2BA5200915B81 /* HomePage.storyboard */,
 				0B152AF21DF2BA5200915B81 /* HomePageViewController.swift */,
 				0BD0F4D81DFEB33300E49E4B /* HomeTableViewCell.swift */,
-				0BD0F4DA1DFEEC4100E49E4B /* DateSetViewController.swift */,
+				0BD0F4DA1DFEEC4100E49E4B /* DateSetStartViewController.swift */,
+				0BD0F4DE1DFF9DE400E49E4B /* DateSetEndViewController.swift */,
 				0BD0F4DC1DFEFD9100E49E4B /* DateShowViewController.swift */,
 			);
 			path = HomePage;
@@ -391,9 +394,10 @@
 				0B4C86001DFBCDFA0038DC85 /* INSPersistentContainer.swift in Sources */,
 				0B4C85DC1DF95C5E0038DC85 /* RollCall.xcdatamodeld in Sources */,
 				0BD0F4D91DFEB33300E49E4B /* HomeTableViewCell.swift in Sources */,
+				0BD0F4DF1DFF9DE400E49E4B /* DateSetEndViewController.swift in Sources */,
 				0B152AFF1DF2BA5200915B81 /* SearchPageController.swift in Sources */,
 				0B4C86011DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift in Sources */,
-				0BD0F4DB1DFEEC4100E49E4B /* DateSetViewController.swift in Sources */,
+				0BD0F4DB1DFEEC4100E49E4B /* DateSetStartViewController.swift in Sources */,
 				0B4C85FF1DFBCDFA0038DC85 /* INSDataStackContainer.swift in Sources */,
 				0B4C86021DFBCDFA0038DC85 /* NSManagedObjectContext+iOS10Additions.swift in Sources */,
 				0B4C85E71DFAB2720038DC85 /* AddClassMemberViewController.swift in Sources */,

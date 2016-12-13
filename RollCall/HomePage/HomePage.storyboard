@@ -142,7 +142,6 @@
                                 <state key="normal" title="设置开始时间"/>
                                 <connections>
                                     <action selector="setStartTime:" destination="9Yh-Qf-pLr" eventType="touchUpInside" id="gg9-tV-3Gh"/>
-                                    <segue destination="wN6-ZV-AhI" kind="show" id="1av-9l-uOi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mf7-hq-vDm">
@@ -150,7 +149,6 @@
                                 <state key="normal" title="设置结束时间"/>
                                 <connections>
                                     <action selector="setEndTime:" destination="9Yh-Qf-pLr" eventType="touchUpInside" id="63F-m0-5Aq"/>
-                                    <segue destination="wN6-ZV-AhI" kind="show" id="ZAf-Ml-lAA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDT-2X-sJ7">
@@ -197,10 +195,10 @@
             </objects>
             <point key="canvasLocation" x="392.75362318840581" y="-719.02173913043487"/>
         </scene>
-        <!--Date Set View Controller-->
+        <!--Date Set Start View Controller-->
         <scene sceneID="5I1-q7-zsL">
             <objects>
-                <viewController storyboardIdentifier="DataSetPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wN6-ZV-AhI" customClass="DateSetViewController" customModule="RollCall" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DataSetPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wN6-ZV-AhI" customClass="DateSetStartViewController" customModule="RollCall" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qV3-g3-j0d"/>
                         <viewControllerLayoutGuide type="bottom" id="tRU-O2-DQ1"/>
@@ -243,14 +241,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5BY-TR-2fq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1119" y="-719"/>
+            <point key="canvasLocation" x="1128" y="-867"/>
+        </scene>
+        <!--Date Set End View Controller-->
+        <scene sceneID="Ofn-si-OXt">
+            <objects>
+                <viewController storyboardIdentifier="DataSetPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9qK-9w-i7r" customClass="DateSetEndViewController" customModule="RollCall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r7o-DR-nVV"/>
+                        <viewControllerLayoutGuide type="bottom" id="hBQ-Ba-0MP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Svq-VD-IGi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FuI-bX-5hn">
+                                <rect key="frame" x="47" y="260" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="503250084.26505798">
+                                    <!--2016-12-12 15:41:24 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="315572400">
+                                    <!--2011-01-01 11:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="zh"/>
+                                <connections>
+                                    <action selector="timeChange:" destination="9qK-9w-i7r" eventType="valueChanged" id="j99-up-Fc9"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIc-tJ-gVs">
+                                <rect key="frame" x="172" y="229" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FuI-bX-5hn" firstAttribute="centerY" secondItem="Svq-VD-IGi" secondAttribute="centerY" id="3sw-Ad-c8X"/>
+                            <constraint firstItem="FuI-bX-5hn" firstAttribute="top" secondItem="BIc-tJ-gVs" secondAttribute="bottom" constant="10" id="47F-ry-AO3"/>
+                            <constraint firstItem="FuI-bX-5hn" firstAttribute="centerX" secondItem="Svq-VD-IGi" secondAttribute="centerX" id="nUi-Oa-8eq"/>
+                            <constraint firstItem="BIc-tJ-gVs" firstAttribute="centerX" secondItem="FuI-bX-5hn" secondAttribute="centerX" id="uOQ-Ng-JK3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timePicker" destination="FuI-bX-5hn" id="HIc-vy-sub"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5es-Pa-cAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="-569"/>
         </scene>
     </scenes>
     <resources>
         <image name="btn1" width="124" height="52"/>
         <image name="btn4" width="159" height="44"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ZAf-Ml-lAA"/>
-    </inferredMetricsTieBreakers>
 </document>

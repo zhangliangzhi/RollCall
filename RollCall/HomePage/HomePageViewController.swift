@@ -155,9 +155,9 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             TipsSwift.showCenterWithText("需要先创建班级")
             return
         }
-        let mSearchPage = UIStoryboard(name: "SearchPage", bundle: nil).instantiateViewController(withIdentifier: "SearchPage") as! SearchPageController
-        self.tabBarController?.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(mSearchPage, animated: true)
+
+        let mDateShowPage = UIStoryboard(name: "HomePage", bundle: nil).instantiateViewController(withIdentifier: "DateShowPage") as! DateShowViewController
+        navigationController?.pushViewController(mDateShowPage, animated: true)
         
     }
     
