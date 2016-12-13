@@ -12,10 +12,11 @@ import SwiftDate
 class DateSetViewController: UIViewController {
 
     @IBOutlet weak var timePicker: UIDatePicker!
+    var mtitle = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.title = mtitle
     }
 
     @IBAction func timeChange(_ sender: Any) {
