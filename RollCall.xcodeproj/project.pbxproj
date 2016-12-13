@@ -17,8 +17,6 @@
 		0B152B021DF2BA5200915B81 /* UserMine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B152AF91DF2BA5200915B81 /* UserMine.storyboard */; };
 		0B152B031DF2BA5200915B81 /* UserMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B152AFA1DF2BA5200915B81 /* UserMineViewController.swift */; };
 		0B152B051DF2CF8F00915B81 /* SearchPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B152B041DF2CF8F00915B81 /* SearchPage.storyboard */; };
-		0B152B091DF2D24A00915B81 /* Member.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B152B071DF2D24A00915B81 /* Member.storyboard */; };
-		0B152B0A1DF2D24A00915B81 /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B152B081DF2D24A00915B81 /* MemberViewController.swift */; };
 		0B152B0F1DF3E7E700915B81 /* ClassNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B152B0E1DF3E7E700915B81 /* ClassNameViewController.swift */; };
 		0B152B111DF3E80400915B81 /* ClassName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B152B101DF3E80400915B81 /* ClassName.storyboard */; };
 		0B152B141DF3F02600915B81 /* ClassNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B152B121DF3F02600915B81 /* ClassNameTableViewCell.swift */; };
@@ -30,7 +28,6 @@
 		0B4C85DC1DF95C5E0038DC85 /* RollCall.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85DA1DF95C5E0038DC85 /* RollCall.xcdatamodeld */; };
 		0B4C85E21DF962230038DC85 /* AddClassNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85E11DF962230038DC85 /* AddClassNameViewController.swift */; };
 		0B4C85E41DF9AA9E0038DC85 /* TipsSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85E31DF9AA9E0038DC85 /* TipsSwift.swift */; };
-		0B4C85E71DFAB2720038DC85 /* AddClassMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85E61DFAB2720038DC85 /* AddClassMemberViewController.swift */; };
 		0B4C85FF1DFBCDFA0038DC85 /* INSDataStackContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FB1DFBCDFA0038DC85 /* INSDataStackContainer.swift */; };
 		0B4C86001DFBCDFA0038DC85 /* INSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FC1DFBCDFA0038DC85 /* INSPersistentContainer.swift */; };
 		0B4C86011DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FD1DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift */; };
@@ -43,6 +40,9 @@
 		0BD0F4DB1DFEEC4100E49E4B /* DateSetStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4DA1DFEEC4100E49E4B /* DateSetStartViewController.swift */; };
 		0BD0F4DD1DFEFD9100E49E4B /* DateShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4DC1DFEFD9100E49E4B /* DateShowViewController.swift */; };
 		0BD0F4DF1DFF9DE400E49E4B /* DateSetEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4DE1DFF9DE400E49E4B /* DateSetEndViewController.swift */; };
+		0BD0F4E41DFFD37800E49E4B /* AddClassMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4E11DFFD37800E49E4B /* AddClassMemberViewController.swift */; };
+		0BD0F4E51DFFD37800E49E4B /* Member.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BD0F4E21DFFD37800E49E4B /* Member.storyboard */; };
+		0BD0F4E61DFFD37800E49E4B /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4E31DFFD37800E49E4B /* MemberViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,8 +55,6 @@
 		0B152AF91DF2BA5200915B81 /* UserMine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserMine.storyboard; sourceTree = "<group>"; };
 		0B152AFA1DF2BA5200915B81 /* UserMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMineViewController.swift; sourceTree = "<group>"; };
 		0B152B041DF2CF8F00915B81 /* SearchPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchPage.storyboard; sourceTree = "<group>"; };
-		0B152B071DF2D24A00915B81 /* Member.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Member.storyboard; sourceTree = "<group>"; };
-		0B152B081DF2D24A00915B81 /* MemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		0B152B0E1DF3E7E700915B81 /* ClassNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassNameViewController.swift; sourceTree = "<group>"; };
 		0B152B101DF3E80400915B81 /* ClassName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClassName.storyboard; sourceTree = "<group>"; };
 		0B152B121DF3F02600915B81 /* ClassNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassNameTableViewCell.swift; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 		0B4C85DB1DF95C5E0038DC85 /* RollCall.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RollCall.xcdatamodel; sourceTree = "<group>"; };
 		0B4C85E11DF962230038DC85 /* AddClassNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassNameViewController.swift; sourceTree = "<group>"; };
 		0B4C85E31DF9AA9E0038DC85 /* TipsSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsSwift.swift; sourceTree = "<group>"; };
-		0B4C85E61DFAB2720038DC85 /* AddClassMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassMemberViewController.swift; sourceTree = "<group>"; };
 		0B4C85FB1DFBCDFA0038DC85 /* INSDataStackContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSDataStackContainer.swift; sourceTree = "<group>"; };
 		0B4C85FC1DFBCDFA0038DC85 /* INSPersistentContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSPersistentContainer.swift; sourceTree = "<group>"; };
 		0B4C85FD1DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSPersistentStoreDescription.swift; sourceTree = "<group>"; };
@@ -84,6 +81,9 @@
 		0BD0F4DA1DFEEC4100E49E4B /* DateSetStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSetStartViewController.swift; sourceTree = "<group>"; };
 		0BD0F4DC1DFEFD9100E49E4B /* DateShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateShowViewController.swift; sourceTree = "<group>"; };
 		0BD0F4DE1DFF9DE400E49E4B /* DateSetEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSetEndViewController.swift; sourceTree = "<group>"; };
+		0BD0F4E11DFFD37800E49E4B /* AddClassMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassMemberViewController.swift; sourceTree = "<group>"; };
+		0BD0F4E21DFFD37800E49E4B /* Member.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Member.storyboard; sourceTree = "<group>"; };
+		0BD0F4E31DFFD37800E49E4B /* MemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		6EAC734C6F5D923349E592BB /* Pods_RollCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C5CDD502C40C18E18A8FFD /* Pods-RollCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollCall.release.xcconfig"; path = "Pods/Target Support Files/Pods-RollCall/Pods-RollCall.release.xcconfig"; sourceTree = "<group>"; };
 		E7EB97CC5C353CD4744D4005 /* Pods-RollCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollCall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RollCall/Pods-RollCall.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,17 +141,6 @@
 			path = UserMinePage;
 			sourceTree = "<group>";
 		};
-		0B152B061DF2D24A00915B81 /* MemberPage */ = {
-			isa = PBXGroup;
-			children = (
-				0B152B081DF2D24A00915B81 /* MemberViewController.swift */,
-				0B4C85E61DFAB2720038DC85 /* AddClassMemberViewController.swift */,
-				0B152B071DF2D24A00915B81 /* Member.storyboard */,
-			);
-			name = MemberPage;
-			path = SearchPage/MemberPage;
-			sourceTree = "<group>";
-		};
 		0B152B0D1DF3E5A300915B81 /* ClassNamePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,10 +174,10 @@
 		0B4BAC181DE71CCA000636CB /* RollCall */ = {
 			isa = PBXGroup;
 			children = (
+				0BD0F4E01DFFD37800E49E4B /* MemberPage */,
 				0B152B0D1DF3E5A300915B81 /* ClassNamePage */,
 				0B152AF01DF2BA5200915B81 /* HomePage */,
 				0B152AED1DF2BA5100915B81 /* HomeCategoryPage */,
-				0B152B061DF2D24A00915B81 /* MemberPage */,
 				0B152AF81DF2BA5200915B81 /* UserMinePage */,
 				0B152AF31DF2BA5200915B81 /* SearchPage */,
 				0B4C85FA1DFBCDFA0038DC85 /* INSPersistentContainer */,
@@ -226,6 +215,16 @@
 				6EAC734C6F5D923349E592BB /* Pods_RollCall.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BD0F4E01DFFD37800E49E4B /* MemberPage */ = {
+			isa = PBXGroup;
+			children = (
+				0BD0F4E11DFFD37800E49E4B /* AddClassMemberViewController.swift */,
+				0BD0F4E21DFFD37800E49E4B /* Member.storyboard */,
+				0BD0F4E31DFFD37800E49E4B /* MemberViewController.swift */,
+			);
+			path = MemberPage;
 			sourceTree = "<group>";
 		};
 		D4BD4649112AB9ABFC6D07ED /* Pods */ = {
@@ -308,9 +307,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B152B091DF2D24A00915B81 /* Member.storyboard in Resources */,
 				0B152B021DF2BA5200915B81 /* UserMine.storyboard in Resources */,
 				0B152AFD1DF2BA5200915B81 /* HomePage.storyboard in Resources */,
+				0BD0F4E51DFFD37800E49E4B /* Member.storyboard in Resources */,
 				0B152B151DF3F02600915B81 /* ClassNameTableViewCell.xib in Resources */,
 				0B4BAC241DE71CCA000636CB /* LaunchScreen.storyboard in Resources */,
 				0B152AFB1DF2BA5200915B81 /* CategoryPage.storyboard in Resources */,
@@ -378,12 +377,13 @@
 			files = (
 				0BD0F4D61DFC9B4400E49E4B /* ClassModel.swift in Sources */,
 				0BD0F4DD1DFEFD9100E49E4B /* DateShowViewController.swift in Sources */,
-				0B152B0A1DF2D24A00915B81 /* MemberViewController.swift in Sources */,
 				0B4BAC1C1DE71CCA000636CB /* ViewController.swift in Sources */,
+				0BD0F4E61DFFD37800E49E4B /* MemberViewController.swift in Sources */,
 				0B4C85E41DF9AA9E0038DC85 /* TipsSwift.swift in Sources */,
 				0B4C85E21DF962230038DC85 /* AddClassNameViewController.swift in Sources */,
 				0B152B031DF2BA5200915B81 /* UserMineViewController.swift in Sources */,
 				0BB4ACC91DF40E99003B1C91 /* BootstrapBtn.swift in Sources */,
+				0BD0F4E41DFFD37800E49E4B /* AddClassMemberViewController.swift in Sources */,
 				0BBBFFBE1DE9254400EFAE9E /* MainTableViewController.swift in Sources */,
 				0B152AFE1DF2BA5200915B81 /* HomePageViewController.swift in Sources */,
 				0B4BAC1A1DE71CCA000636CB /* AppDelegate.swift in Sources */,
@@ -400,7 +400,6 @@
 				0BD0F4DB1DFEEC4100E49E4B /* DateSetStartViewController.swift in Sources */,
 				0B4C85FF1DFBCDFA0038DC85 /* INSDataStackContainer.swift in Sources */,
 				0B4C86021DFBCDFA0038DC85 /* NSManagedObjectContext+iOS10Additions.swift in Sources */,
-				0B4C85E71DFAB2720038DC85 /* AddClassMemberViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
