@@ -138,7 +138,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         sortMembers.sort(by: {$0.id < $1.id})
         
         // 数组转为json格式
-        for (key,subJson):(String, JSON) in arrMembers {
+        for (key,_):(String, JSON) in arrMembers {
             let iKey:Int = Int(key)!
             let k : [JSONSubscriptType] = [iKey]
 //            print(key, subJson)
