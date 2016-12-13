@@ -19,6 +19,7 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
         textNum.delegate = self
         textName.delegate = self
         
+        
         let strMembers:String = arrClassData[gIndexClass].member!
         let membersJsonData = strMembers.data(using: .utf8)
         let arrMembers = JSON(data:membersJsonData!)

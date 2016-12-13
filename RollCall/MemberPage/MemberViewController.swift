@@ -15,12 +15,15 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewWillAppear(_ animated: Bool) {
         getCoreData()
         
+        self.navigationController?.navigationBar.topItem?.title = "当前班级：" + arrClassData[gIndexClass].classname!
+        
         tableView.reloadData()
     }
     
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
+        
         
         // add
         let mSearchButtonRight = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(MemberViewController.addClassMemberPage))
