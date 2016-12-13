@@ -50,6 +50,8 @@ class AddClassNameViewController: UIViewController, UITextFieldDelegate {
         let strCourseJson:String = String(data: courseData, encoding: String.Encoding.utf8)!
         oneClassData.course = strCourseJson
         
+        // 选中的课程类别
+        oneClassData.selCourse = "英语"
         // 其他的先设置为json格式的
         oneClassData.member = "[]"
         oneClassData.record = "[]"
