@@ -95,7 +95,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             arrClassData[gIndexClass].course = newJson.description
             appDelegate.saveContext()
             tableView.deleteRows(at: [indexPath], with: .fade)
- 
         }
     }
     

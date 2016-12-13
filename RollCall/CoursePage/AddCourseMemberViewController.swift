@@ -34,15 +34,21 @@ class AddCourseViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        // 添加课程
-        let oneClassData = arrClassData[gIndexClass]
-        let strCourses:String = oneClassData.course!
+        // 添加课程 1.转JSON 2.保存新array 3.转新JSON 最后保存.description
+        let strCourses:String = arrClassData[gIndexClass].course!
+        let coursesJsonData = strCourses.data(using: .utf8)
+        var arrCourses = JSON(data:coursesJsonData!)
+        var arrNewCourse: [String] = []
+        for i in 0..<arrCourses.count {
+            arrNewCourse.append(arrCourses[i].stringValue)
+        }
+        arrNewCourse.append(textFieldCourse.text!)
         
-
-        // 修改数据
-//        oneClassData.member = strMemberJson
+        let newJson = JSON.init(arrNewCourse)
+        print(newJson.description)
 
         // 数据处理
+        arrClassData[gIndexClass].course = newJson.description
         appDelegate.saveContext()
         
         // 跳转上个界面
