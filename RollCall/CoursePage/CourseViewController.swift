@@ -37,6 +37,13 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing,animated: animated)
+        tableView.setEditing(editing, animated: animated)
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -96,6 +103,38 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             appDelegate.saveContext()
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        print(sourceIndexPath.row ,destinationIndexPath.row)
+        if sourceIndexPath.row == destinationIndexPath.row {
+            return
+        }
+        
+        // 移动科目的排练顺序
+        let strCourses:String = arrClassData[gIndexClass].course!
+        let coursesJsonData = strCourses.data(using: .utf8)
+        var arrCourses = JSON(data:coursesJsonData!)
+        
+        var arrNewCourse: [String] = []
+        for i in 0..<arrCourses.count {
+            arrNewCourse.append(arrCourses[i].stringValue)
+        }
+        let strTmp = arrNewCourse[sourceIndexPath.row]
+        if sourceIndexPath.row > destinationIndexPath.row {
+            arrNewCourse.remove(at: sourceIndexPath.row)
+            arrNewCourse.insert(strTmp, at: destinationIndexPath.row)
+        }else{
+            arrNewCourse.insert(strTmp, at: destinationIndexPath.row+1)
+            arrNewCourse.remove(at: sourceIndexPath.row)
+        }
+        
+        print(arrNewCourse)
+        print(arrNewCourse.description)
+        let newJson = JSON.init(arrNewCourse)
+        arrClassData[gIndexClass].course = newJson.description
+        appDelegate.saveContext()
     }
     
     func addClassCoursePage() {
