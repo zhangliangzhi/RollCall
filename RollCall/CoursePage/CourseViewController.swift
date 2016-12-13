@@ -30,7 +30,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         
         // add
-        let mSearchButtonRight = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(MemberViewController.addClassMemberPage))
+        let mSearchButtonRight = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(CourseViewController.addClassCoursePage))
         self.navigationItem.rightBarButtonItem = mSearchButtonRight
         // edit
         self.navigationItem.leftBarButtonItem = self.editButtonItem
@@ -47,23 +47,23 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             TipsSwift.showCenterWithText("请先创建班级!")
             return 0
         }
-        let strMembers:String = arrClassData[gIndexClass].member!
-        let membersJsonData = strMembers.data(using: .utf8)
-        let arrMembers = JSON(data:membersJsonData!)
+        let strCourses:String = arrClassData[gIndexClass].course!
+        let coursesJsonData = strCourses.data(using: .utf8)
+        let arrCourses = JSON(data:coursesJsonData!)
         
-        return arrMembers.count
+        return arrCourses.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "coursecell", for: indexPath) as! CourseTableViewCell
         
-        let strMembers:String = arrClassData[gIndexClass].member!
-        let membersJsonData = strMembers.data(using: .utf8)
-        let arrMembers = JSON(data:membersJsonData!)
+        let strCourses:String = arrClassData[gIndexClass].course!
+        let coursesJsonData = strCourses.data(using: .utf8)
+        let arrCourses = JSON(data:coursesJsonData!)
         
-        // coreData里的course字段格式 {"id":1, "cname":"a1"}
-        let member:String = arrMembers[indexPath.row]["name"].string!
-        cell.courseLabel.text = member
+        // coreData里的course字段格式 [“a","b","c"]
+        let course:String = arrCourses[indexPath.row].string!
+        cell.courseLabel.text = course
         
         return cell
     }
@@ -75,38 +75,38 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // 删除一个成员
-            let strMembers:String = arrClassData[gIndexClass].member!
-            let membersJsonData = strMembers.data(using: .utf8)
-            var arrMembers = JSON(data:membersJsonData!)
-//            print(arrMembers.description)
-            arrMembers[indexPath.row] = ""
-            var newStrMember = "["
-            for i in 0..<arrMembers.count {
-                let strOneJson:String = arrMembers[i].description
+            let strCourses:String = arrClassData[gIndexClass].course!
+            let coursesJsonData = strCourses.data(using: .utf8)
+            var arrCourses = JSON(data:coursesJsonData!)
+//            print(arrCourses.description)
+            arrCourses[indexPath.row] = ""
+            var newStrCourse = "["
+            for i in 0..<arrCourses.count {
+                let strOneJson:String = arrCourses[i].description
                 if strOneJson != "" {
-                    if i == arrMembers.count - 1 {
-                        newStrMember = newStrMember + arrMembers[i].description
+                    if i == arrCourses.count - 1 {
+                        newStrCourse = newStrCourse + arrCourses[i].description
                     } else {
-                        newStrMember = newStrMember + arrMembers[i].description + ","
+                        newStrCourse = newStrCourse + arrCourses[i].description + ","
                     }
                 }
             }
-            newStrMember += "]"
+            newStrCourse += "]"
             
-//            print(newStrMember)
-            arrClassData[gIndexClass].member = newStrMember
+//            print(newStrCourse)
+            arrClassData[gIndexClass].course = newStrCourse
             appDelegate.saveContext()
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
-    func addClassMemberPage() {
+    func addClassCoursePage() {
         if arrClassData.count == 0 {
             TipsSwift.showCenterWithText("请先创建班级!")
             return
         }
         
-        let mAddClassNamePage = UIStoryboard(name: "Member", bundle: nil).instantiateViewController(withIdentifier: "AddClassMemberPage") as! AddClassMemberViewController
+        let mAddClassNamePage = UIStoryboard(name: "Course", bundle: nil).instantiateViewController(withIdentifier: "AddCoursePage") as! AddCourseViewController
         self.tabBarController?.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(mAddClassNamePage, animated: true)
     }
