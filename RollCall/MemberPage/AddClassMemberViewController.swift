@@ -66,7 +66,7 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
         
         let strMembers:String = arrClassData[gIndexClass].member!
         let membersJsonData = strMembers.data(using: .utf8)
-        let arrMembers = JSON(data:membersJsonData!)
+        var arrMembers = JSON(data:membersJsonData!)
         // 学号不能重复
         for i in 0..<arrMembers.count {
             if num == arrMembers[i]["id"].int32Value {
@@ -75,18 +75,24 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
             }
         }
 
-        // 修改 成员名字
-        let strOneMem = "{\"id\":\"" + getMemID + "\",\"name\":\"" + getMemName + "\"}"
-        
-        // 用json格式保存 课程类别
-        let indexstr = strMembers.index(strMembers.endIndex, offsetBy: -1)
-        let tmpstr1 = strMembers.substring(to: indexstr)
-        var strMemberJson:String = ""
-        if strMembers == "[]" {
-            strMemberJson = tmpstr1 + strOneMem + "]"
-        }else{
-            strMemberJson = tmpstr1 + "," + strOneMem + "]"
+        // 加一个成员
+        var arrCMember:[CMember] = []
+        for i in 0..<arrMembers.count {
+            arrCMember.append(CMember(name: arrMembers[i]["name"].stringValue, id: arrMembers[i]["id"].int32Value))
         }
+        arrCMember.append(CMember(name: getMemName, id: num!))
+        
+        var strMemberJson:String = "["
+        for i in 0..<arrCMember.count {
+            let onem = arrCMember[i]
+            if i == arrCMember.count - 1 {
+                strMemberJson = strMemberJson + onem.toJSON()!
+            }else {
+                strMemberJson = strMemberJson + onem.toJSON()! + ","
+            }
+        }
+        strMemberJson += "]"
+        
 //        print(strMemberJson)
         
         // 修改数据
