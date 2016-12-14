@@ -22,10 +22,22 @@ class AddClassNameViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func addClassName(_ sender: Any) {
+        // 去除头尾空格
+        var getClassName:String = textField.text!
+        getClassName = getClassName.trimmingCharacters(in: .whitespaces)
+        
         // 班级名字不为空
-        if textField.text == "" {
+        if getClassName == "" {
             TipsSwift.showCenterWithText("班级名字不能为空")
             return
+        }
+        
+        // 班级名字不能重复
+        for i in 0..<arrClassData.count {
+            if arrClassData[i].classname == getClassName {
+                TipsSwift.showCenterWithText("班级名字不能重复")
+                return
+            }
         }
         
         // 加入一个班级名字
@@ -41,7 +53,7 @@ class AddClassNameViewController: UIViewController, UITextFieldDelegate {
 //        }
 
         
-        oneClassData.classname = textField.text
+        oneClassData.classname = getClassName
         oneClassData.sortID = Int64(Date().timeIntervalSince1970 * 10000)
         
         // 用json格式保存 课程类别
