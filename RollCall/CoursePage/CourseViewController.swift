@@ -82,7 +82,12 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // coreData里的course字段格式 [“a","b","c"]
         let course:String = arrCourses[indexPath.row].string!
         cell.courseLabel.text = course
-
+        
+        // 选中状态
+        if course == arrClassData[gIndexClass].selCourse {
+            tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+        }
+        
         return cell
     }
     

@@ -79,6 +79,12 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         
         cell.nameLabel.text = arrClassData[indexPath.row].classname
 //        cell.textLabel?.text = String(indexPath.row)
+        
+        // 选中状态
+        if indexPath.row == gIndexClass {
+            tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+        }
+        
         return cell
     }
 
@@ -89,6 +95,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         let className:String = arrClassData[indexPath.row].classname!
         
         curNameLabel.text = className
+        curCoursePage.text = arrClassData[indexPath.row].selCourse
         
         
     }
