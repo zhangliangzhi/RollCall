@@ -38,7 +38,7 @@
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.94779020547866821" green="1" blue="0.90638506412506104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.91220432520000005" green="0.974018991" blue="0.9036220908" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="PL0-9p-3t5" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="100" id="118-yO-E3H"/>
                             <constraint firstItem="b2x-Mq-YZY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="HMS-kK-tcP"/>

@@ -66,7 +66,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDm-sy-ufP" id="cfZ-sb-v9y">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uB0-Pu-Wgv" userLabel="mLabel">
@@ -107,7 +107,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.9122043251991272" green="0.97401899099349976" blue="0.9036220908164978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uvJ-5M-9kq" firstAttribute="centerX" secondItem="CLl-k4-y6x" secondAttribute="centerX" id="FJa-tu-S3F"/>
                             <constraint firstItem="QLa-7n-POW" firstAttribute="height" secondItem="kMc-mY-JAq" secondAttribute="height" id="Hfc-KY-Sph"/>
@@ -200,7 +200,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.9122043251991272" green="0.97401899099349976" blue="0.9036220908164978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Zxt-Dy-pAM" firstAttribute="centerX" secondItem="pVN-qk-xqQ" secondAttribute="centerX" id="294-3z-JCT"/>
                             <constraint firstItem="XDT-2X-sJ7" firstAttribute="centerX" secondItem="pVN-qk-xqQ" secondAttribute="centerX" id="Hon-QW-p99"/>
@@ -257,7 +257,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.9122043251991272" green="0.97401899099349976" blue="0.9036220908164978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1Dl-2f-VDb" firstAttribute="top" secondItem="iec-l5-nDQ" secondAttribute="bottom" constant="10" id="093-MQ-qXP"/>
                             <constraint firstItem="iec-l5-nDQ" firstAttribute="centerX" secondItem="1Dl-2f-VDb" secondAttribute="centerX" id="8r5-yu-EVF"/>
@@ -305,7 +305,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.9122043251991272" green="0.97401899099349976" blue="0.9036220908164978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FuI-bX-5hn" firstAttribute="centerY" secondItem="Svq-VD-IGi" secondAttribute="centerY" id="3sw-Ad-c8X"/>
                             <constraint firstItem="FuI-bX-5hn" firstAttribute="top" secondItem="BIc-tJ-gVs" secondAttribute="bottom" constant="10" id="47F-ry-AO3"/>
