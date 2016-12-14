@@ -41,18 +41,24 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func addOneMember(_ sender: Any) {
+        // 去除头尾空格
+        var getMemName:String = textName.text!
+        getMemName = getMemName.trimmingCharacters(in: .whitespaces)
+        var getMemID:String = textNum.text!
+        getMemID = getMemID.trimmingCharacters(in: .whitespaces)
+        
         // 名字不为空
-        if textName.text == "" {
+        if getMemName == "" {
             TipsSwift.showCenterWithText("名字不能为空")
             return
         }
         // 学号不为空
-        if textNum.text == "" {
+        if getMemID == "" {
             TipsSwift.showCenterWithText("学号不能为空")
             return
         }
         //  学号为是数字
-        let num = Int32(textNum.text!)
+        let num = Int32(getMemID)
         if num == nil || num! < 0 {
             TipsSwift.showCenterWithText("学号只能为数字")
             return
@@ -70,7 +76,7 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
         }
 
         // 修改 成员名字
-        let strOneMem = "{\"id\":\"" + textNum.text! + "\",\"name\":\"" + textName.text! + "\"}"
+        let strOneMem = "{\"id\":\"" + getMemID + "\",\"name\":\"" + getMemName + "\"}"
         
         // 用json格式保存 课程类别
         let indexstr = strMembers.index(strMembers.endIndex, offsetBy: -1)
