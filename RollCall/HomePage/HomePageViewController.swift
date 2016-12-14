@@ -217,5 +217,6 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         oneClassData.dateEnd = enddate.string(format: DateFormat.custom("yyyy-MM-dd"))
         contextData.insert(oneClassData)
         appDelegate.saveContext()
+        getCoreData()
     }
 }

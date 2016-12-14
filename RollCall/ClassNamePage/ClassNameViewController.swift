@@ -61,12 +61,8 @@ class ClassNameViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "classNameCellIdentifier", for: indexPath)
         
-
-        
         // Configure the cell...
 //        cell.textLabel?.text = String(indexPath.row)
-        
-
         
         // 数据源
         let cell = tableView.dequeueReusableCell(withIdentifier: "cncell", for: indexPath) as! ClassNameTableViewCell
@@ -84,6 +80,11 @@ class ClassNameViewController: UITableViewController {
 //        print(arrClassData[indexPath.row].course)
 //        print(JSON(arrClassData[indexPath.row].course))
 //        print(arrClassData[indexPath.row].sortID)
+        
+        // 选中状态
+        if indexPath.row == gIndexClass {
+            tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+        }
 
         return cell
     }
