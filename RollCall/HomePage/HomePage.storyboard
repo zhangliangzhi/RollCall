@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -160,25 +161,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="随机公平点名" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezw-nZ-W8y">
-                                <rect key="frame" x="155.33333333333331" y="358" width="103.99999999999994" height="21"/>
+                                <rect key="frame" x="32" y="70" width="350" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="KaJ-Rk-4r4"/>
+                                    <constraint firstAttribute="width" constant="350" id="wYs-J4-kdT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neg-ME-qga">
+                                <rect key="frame" x="353" y="712.66666666666652" width="31" height="13.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ezw-nZ-W8y" firstAttribute="centerX" secondItem="mow-eC-GIK" secondAttribute="centerX" id="1So-BM-b9V"/>
-                            <constraint firstItem="ezw-nZ-W8y" firstAttribute="centerY" secondItem="mow-eC-GIK" secondAttribute="centerY" id="vt0-5K-Xwb"/>
+                            <constraint firstItem="ezw-nZ-W8y" firstAttribute="centerX" secondItem="mow-eC-GIK" secondAttribute="centerX" id="358-js-Bhq"/>
+                            <constraint firstItem="ezw-nZ-W8y" firstAttribute="top" secondItem="APc-UC-LIP" secondAttribute="bottom" constant="50" id="5YY-iZ-e6Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="neg-ME-qga" secondAttribute="trailing" constant="10" id="FlW-hG-vWF"/>
+                            <constraint firstItem="l65-kQ-AqK" firstAttribute="top" secondItem="neg-ME-qga" secondAttribute="bottom" constant="10" id="aOp-wG-M3K"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomLabel" destination="neg-ME-qga" id="QXX-a2-Fxs"/>
                         <outlet property="descLabel" destination="ezw-nZ-W8y" id="XqT-13-Lgl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2YC-iR-Y8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-459" y="-10"/>
+            <point key="canvasLocation" x="-459.4202898550725" y="-10.597826086956523"/>
         </scene>
         <!--Date Show View Controller-->
         <scene sceneID="vGn-i8-123">
@@ -353,6 +367,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5es-Pa-cAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1159" y="-527"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0vL-Sa-5vx">
+            <objects>
+                <viewController id="IQQ-LF-Dhs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QF5-0L-JAI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bwb-B4-x7h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T7r-I7-2VV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G4d-5N-8oD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

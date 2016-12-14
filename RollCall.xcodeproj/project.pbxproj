@@ -12,10 +12,8 @@
 		0B152AC91DF2B93000915B81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B152AC81DF2B93000915B81 /* Assets.xcassets */; };
 		0B152AFD1DF2BA5200915B81 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B152AF11DF2BA5200915B81 /* HomePage.storyboard */; };
 		0B152AFE1DF2BA5200915B81 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B152AF21DF2BA5200915B81 /* HomePageViewController.swift */; };
-		0B152AFF1DF2BA5200915B81 /* SearchPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B152AF41DF2BA5200915B81 /* SearchPageController.swift */; };
 		0B152B021DF2BA5200915B81 /* UserMine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B152AF91DF2BA5200915B81 /* UserMine.storyboard */; };
 		0B152B031DF2BA5200915B81 /* UserMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B152AFA1DF2BA5200915B81 /* UserMineViewController.swift */; };
-		0B152B051DF2CF8F00915B81 /* SearchPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B152B041DF2CF8F00915B81 /* SearchPage.storyboard */; };
 		0B152B0F1DF3E7E700915B81 /* ClassNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B152B0E1DF3E7E700915B81 /* ClassNameViewController.swift */; };
 		0B152B111DF3E80400915B81 /* ClassName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B152B101DF3E80400915B81 /* ClassName.storyboard */; };
 		0B152B141DF3F02600915B81 /* ClassNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B152B121DF3F02600915B81 /* ClassNameTableViewCell.swift */; };
@@ -54,10 +52,8 @@
 		0B152AC81DF2B93000915B81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B152AF11DF2BA5200915B81 /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		0B152AF21DF2BA5200915B81 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
-		0B152AF41DF2BA5200915B81 /* SearchPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPageController.swift; sourceTree = "<group>"; };
 		0B152AF91DF2BA5200915B81 /* UserMine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserMine.storyboard; sourceTree = "<group>"; };
 		0B152AFA1DF2BA5200915B81 /* UserMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMineViewController.swift; sourceTree = "<group>"; };
-		0B152B041DF2CF8F00915B81 /* SearchPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchPage.storyboard; sourceTree = "<group>"; };
 		0B152B0E1DF3E7E700915B81 /* ClassNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassNameViewController.swift; sourceTree = "<group>"; };
 		0B152B101DF3E80400915B81 /* ClassName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClassName.storyboard; sourceTree = "<group>"; };
 		0B152B121DF3F02600915B81 /* ClassNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassNameTableViewCell.swift; sourceTree = "<group>"; };
@@ -123,15 +119,6 @@
 			path = HomePage;
 			sourceTree = "<group>";
 		};
-		0B152AF31DF2BA5200915B81 /* SearchPage */ = {
-			isa = PBXGroup;
-			children = (
-				0B152AF41DF2BA5200915B81 /* SearchPageController.swift */,
-				0B152B041DF2CF8F00915B81 /* SearchPage.storyboard */,
-			);
-			path = SearchPage;
-			sourceTree = "<group>";
-		};
 		0B152AF81DF2BA5200915B81 /* UserMinePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +166,6 @@
 				0B152B0D1DF3E5A300915B81 /* ClassNamePage */,
 				0B152AF01DF2BA5200915B81 /* HomePage */,
 				0B152AF81DF2BA5200915B81 /* UserMinePage */,
-				0B152AF31DF2BA5200915B81 /* SearchPage */,
 				0B4C85FA1DFBCDFA0038DC85 /* INSPersistentContainer */,
 				0B5B58FD1DED97B10075E267 /* RollCall.entitlements */,
 				0B4BAC191DE71CCA000636CB /* AppDelegate.swift */,
@@ -328,7 +314,6 @@
 				0B152B111DF3E80400915B81 /* ClassName.storyboard in Resources */,
 				0B152AC91DF2B93000915B81 /* Assets.xcassets in Resources */,
 				0B4BAC1F1DE71CCA000636CB /* Main.storyboard in Resources */,
-				0B152B051DF2CF8F00915B81 /* SearchPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +396,6 @@
 				0B4C85DC1DF95C5E0038DC85 /* RollCall.xcdatamodeld in Sources */,
 				0BD0F4D91DFEB33300E49E4B /* HomeTableViewCell.swift in Sources */,
 				0BD0F4DF1DFF9DE400E49E4B /* DateSetEndViewController.swift in Sources */,
-				0B152AFF1DF2BA5200915B81 /* SearchPageController.swift in Sources */,
 				0B4C86011DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift in Sources */,
 				0BD0F4DB1DFEEC4100E49E4B /* DateSetStartViewController.swift in Sources */,
 				0B4C85FF1DFBCDFA0038DC85 /* INSDataStackContainer.swift in Sources */,

@@ -137,7 +137,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     
 
     func goDescHelpPage() {
-        let mPage = UIStoryboard(name: "HomePage", bundle: nil).instantiateViewController(withIdentifier: "DescHelp") as! SearchPageController
+        let mPage = UIStoryboard(name: "HomePage", bundle: nil).instantiateViewController(withIdentifier: "DescHelpPage") as! DescHelpViewController
         self.tabBarController?.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(mPage, animated: true)
     }
