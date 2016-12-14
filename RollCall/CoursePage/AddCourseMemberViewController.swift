@@ -28,8 +28,11 @@ class AddCourseViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func addOneMember(_ sender: Any) {
+        // 去除头尾空格
+        var getCourseName:String = textFieldCourse.text!
+        getCourseName = getCourseName.trimmingCharacters(in: .whitespaces)
         // 不为空
-        if textFieldCourse.text == "" {
+        if getCourseName == "" {
             TipsSwift.showCenterWithText("课程名不能为空")
             return
         }
@@ -38,14 +41,24 @@ class AddCourseViewController: UIViewController, UITextFieldDelegate {
         let strCourses:String = arrClassData[gIndexClass].course!
         let coursesJsonData = strCourses.data(using: .utf8)
         var arrCourses = JSON(data:coursesJsonData!)
+        
+
+        // 课程名 不能重复
+        for i in 0..<arrCourses.count {
+            if arrCourses[i].stringValue == getCourseName{
+                TipsSwift.showCenterWithText("课程名不能重复")
+                return
+            }
+        }
+        
         var arrNewCourse: [String] = []
         for i in 0..<arrCourses.count {
             arrNewCourse.append(arrCourses[i].stringValue)
         }
-        arrNewCourse.append(textFieldCourse.text!)
+        arrNewCourse.append(getCourseName)
         
         let newJson = JSON.init(arrNewCourse)
-        print(newJson.description)
+//        print(newJson.description)
 
         // 数据处理
         arrClassData[gIndexClass].course = newJson.description
