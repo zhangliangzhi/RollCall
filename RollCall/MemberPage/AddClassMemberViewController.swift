@@ -29,7 +29,7 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
             iLastID = Int32(lastId.description)! + 1
         }
         textNum.text = String(iLastID)
-        textNum.becomeFirstResponder()
+        textName.becomeFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
