@@ -97,7 +97,11 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         curNameLabel.text = className
         curCoursePage.text = arrClassData[indexPath.row].selCourse
         
+        TipsSwift.showTopWithText("选中班级: " + className)
         
+        // 进入选课程界面
+        
+        appDelegate.saveContext()
     }
 
     // 获取coreData数据
@@ -187,6 +191,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     // 第一次打开app，加入测试数据
     func firstOpenAPP() -> Void {
         if arrCurGlobalSet.count > 0 {
+            gIndexClass = Int(arrCurGlobalSet[0].classIndex)
             return
         }
         // 1.全局设置
