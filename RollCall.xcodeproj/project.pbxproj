@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0770892378D6F84659D7DF52 /* Pods_RollCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAC734C6F5D923349E592BB /* Pods_RollCall.framework */; };
 		0B152AC91DF2B93000915B81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B152AC81DF2B93000915B81 /* Assets.xcassets */; };
-		0B152AFB1DF2BA5200915B81 /* CategoryPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B152AEE1DF2BA5100915B81 /* CategoryPage.storyboard */; };
-		0B152AFC1DF2BA5200915B81 /* CategoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B152AEF1DF2BA5100915B81 /* CategoryPageViewController.swift */; };
 		0B152AFD1DF2BA5200915B81 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B152AF11DF2BA5200915B81 /* HomePage.storyboard */; };
 		0B152AFE1DF2BA5200915B81 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B152AF21DF2BA5200915B81 /* HomePageViewController.swift */; };
 		0B152AFF1DF2BA5200915B81 /* SearchPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B152AF41DF2BA5200915B81 /* SearchPageController.swift */; };
@@ -52,8 +50,6 @@
 
 /* Begin PBXFileReference section */
 		0B152AC81DF2B93000915B81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0B152AEE1DF2BA5100915B81 /* CategoryPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CategoryPage.storyboard; sourceTree = "<group>"; };
-		0B152AEF1DF2BA5100915B81 /* CategoryPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPageViewController.swift; sourceTree = "<group>"; };
 		0B152AF11DF2BA5200915B81 /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		0B152AF21DF2BA5200915B81 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		0B152AF41DF2BA5200915B81 /* SearchPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPageController.swift; sourceTree = "<group>"; };
@@ -111,15 +107,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B152AED1DF2BA5100915B81 /* HomeCategoryPage */ = {
-			isa = PBXGroup;
-			children = (
-				0B152AEE1DF2BA5100915B81 /* CategoryPage.storyboard */,
-				0B152AEF1DF2BA5100915B81 /* CategoryPageViewController.swift */,
-			);
-			path = HomeCategoryPage;
-			sourceTree = "<group>";
-		};
 		0B152AF01DF2BA5200915B81 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +175,6 @@
 				0BD0F4E01DFFD37800E49E4B /* MemberPage */,
 				0B152B0D1DF3E5A300915B81 /* ClassNamePage */,
 				0B152AF01DF2BA5200915B81 /* HomePage */,
-				0B152AED1DF2BA5100915B81 /* HomeCategoryPage */,
 				0B152AF81DF2BA5200915B81 /* UserMinePage */,
 				0B152AF31DF2BA5200915B81 /* SearchPage */,
 				0B4C85FA1DFBCDFA0038DC85 /* INSPersistentContainer */,
@@ -335,7 +321,6 @@
 				0BD0F4E51DFFD37800E49E4B /* Member.storyboard in Resources */,
 				0B152B151DF3F02600915B81 /* ClassNameTableViewCell.xib in Resources */,
 				0B4BAC241DE71CCA000636CB /* LaunchScreen.storyboard in Resources */,
-				0B152AFB1DF2BA5200915B81 /* CategoryPage.storyboard in Resources */,
 				0BD0F4EC1DFFD41000E49E4B /* Course.storyboard in Resources */,
 				0B152B111DF3E80400915B81 /* ClassName.storyboard in Resources */,
 				0B152AC91DF2B93000915B81 /* Assets.xcassets in Resources */,
@@ -416,7 +401,6 @@
 				0B4BAC1A1DE71CCA000636CB /* AppDelegate.swift in Sources */,
 				0B152B141DF3F02600915B81 /* ClassNameTableViewCell.swift in Sources */,
 				0BBBFFC01DE93F6F00EFAE9E /* SwiftyJSON.swift in Sources */,
-				0B152AFC1DF2BA5200915B81 /* CategoryPageViewController.swift in Sources */,
 				0B152B0F1DF3E7E700915B81 /* ClassNameViewController.swift in Sources */,
 				0B4C86001DFBCDFA0038DC85 /* INSPersistentContainer.swift in Sources */,
 				0BD0F4EB1DFFD41000E49E4B /* AddCourseMemberViewController.swift in Sources */,
