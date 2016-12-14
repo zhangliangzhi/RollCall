@@ -21,3 +21,5 @@ struct CRecord {
     let mid: Int32      // 学号
 }
 
+// coreData里的CollFair为公平点名记录表
+

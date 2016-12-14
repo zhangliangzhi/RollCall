@@ -14,7 +14,6 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     override func viewWillAppear(_ animated: Bool) {
         getCoreData()
-        
         if arrClassData.count > 0 {
             self.navigationController?.navigationBar.topItem?.title = "当前班级：" + arrClassData[gIndexClass].classname!
         } else {
@@ -87,25 +86,30 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if editingStyle == .delete {
             // 删除一个成员
             let strMembers:String = arrClassData[gIndexClass].member!
+            
+//            strMembers = strMembers.replacingOccurrences(of: "\n", with: "")
+//            strMembers = strMembers.replacingOccurrences(of: "\r", with: "")
+//            strMembers = strMembers.replacingOccurrences(of: "[  {", with: "[{")
+//            strMembers = strMembers.replacingOccurrences(of: "    ", with: "")
+//            strMembers = strMembers.replacingOccurrences(of: "},  ", with: "},")
+//            strMembers = strMembers.replacingOccurrences(of: "  }", with: "}")
+//            strMembers = strMembers.replacingOccurrences(of: " : ", with: ":")
+            
             let membersJsonData = strMembers.data(using: .utf8)
             var arrMembers = JSON(data:membersJsonData!)
-//            print(arrMembers.description)
-            arrMembers[indexPath.row] = ""
-            var newStrMember = "["
-            for i in 0..<arrMembers.count {
-                let strOneJson:String = arrMembers[i].description
-                if strOneJson != "" {
-                    if i == arrMembers.count - 1 || indexPath.row == arrMembers.count - 1 {
-                        newStrMember = newStrMember + arrMembers[i].description
-                    } else {
-                        newStrMember = newStrMember + arrMembers[i].description + ","
-                    }
-                }
-            }
-            newStrMember += "]"
             
-//            print(newStrMember)
-            arrClassData[gIndexClass].member = newStrMember
+            arrMembers[indexPath.row] = ""
+            var strNewMem:String = arrMembers.description
+            // 字符串 替换3种 "", 或者 ,""  或者[""]
+//            print(strNewMem)
+            strNewMem = strNewMem.replacingOccurrences(of: "\n  \"\",", with: "")
+            strNewMem = strNewMem.replacingOccurrences(of: ",\n  \"\"", with: "")
+            
+            strNewMem = strNewMem.replacingOccurrences(of: "[\n  \"\"\n]", with: "[]")
+//            print(strNewMem)
+            
+            
+            arrClassData[gIndexClass].member = strNewMem
             appDelegate.saveContext()
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
@@ -128,6 +132,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let membersJsonData = strMembers.data(using: .utf8)
         var arrMembers = JSON(data:membersJsonData!)
         if arrMembers.count < 2 {
+            print("no 2 mem", arrMembers)
             return
         }
         

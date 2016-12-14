@@ -9,12 +9,15 @@
 import Foundation
 import  UIKit
 import SwiftDate
+import CoreData
 
 // coreData数据库操作接口
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 let contextData = appDelegate.persistentContainer.viewContext
 // coreData里的数据库内容
 var arrClassData:[ClassData] = []
+var arrCallFair:[CallFair] = []
+var arrCurGlobalSet:[CurGlobalSet]=[]
 
 // 班级序列号
 var gIndexClass = 0
@@ -55,9 +58,10 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         }else {
             self.tabBarController?.tabBar.isHidden = false // 显示tabbar
             self.automaticallyAdjustsScrollViewInsets = true
-
         }
+        
         getCoreData()
+        firstOpenAPP()
         tableView.reloadData()
     }
     
@@ -85,6 +89,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     // 选中班级
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         gIndexClass = indexPath.row
+        arrCurGlobalSet[0].classIndex = Int32(gIndexClass)
         let className:String = arrClassData[indexPath.row].classname!
         
         curNameLabel.text = className
@@ -98,8 +103,21 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             arrClassData = try contextData.fetch(ClassData.fetchRequest())
             arrClassData.sort(by: { $0.sortID > $1.sortID })
         }catch{
-            print("fetch core data error")
+            print("fetch core data ClassData error")
         }
+        
+        do{
+            arrCallFair = try contextData.fetch(CallFair.fetchRequest())
+        }catch{
+            print("fetch core data CallFair error")
+        }
+        do{
+            arrCurGlobalSet = try contextData.fetch(CurGlobalSet.fetchRequest())
+        }catch{
+            print("fetch core data CurGlobalSet error")
+        }
+        
+        
         
         if gIndexClass < arrClassData.count {
             curNameLabel.text = arrClassData[gIndexClass].classname
@@ -163,4 +181,33 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
+    // 第一次打开app，加入测试数据
+    func firstOpenAPP() -> Void {
+        if arrCurGlobalSet.count > 0 {
+            return
+        }
+        // 1.全局设置
+        let oneGlobalSet = NSEntityDescription.insertNewObject(forEntityName: "CurGlobalSet", into: contextData) as! CurGlobalSet
+        oneGlobalSet.classIndex = 0
+        contextData.insert(oneGlobalSet)
+        
+        // 2. 加入班级测试数据
+        let oneClassData = NSEntityDescription.insertNewObject(forEntityName: "ClassData", into: contextData) as! ClassData
+        oneClassData.classname = "我的班级"
+        oneClassData.sortID = Int64(Date().timeIntervalSince1970 * 10000)
+        let arrCourse = ["英语","数学","语文"]
+        let courseData = try! JSONSerialization.data(withJSONObject: arrCourse, options: .prettyPrinted)
+        let strCourseJson:String = String(data: courseData, encoding: String.Encoding.utf8)!
+        oneClassData.course = strCourseJson
+        oneClassData.selCourse = "英语"
+        oneClassData.member = "[{\"id\":\"1\",\"name\":\"张三\"},{\"id\":\"2\",\"name\":\"李四\"},{\"id\":\"3\",\"name\":\"王五\"}]"
+        oneClassData.record = "[]"
+        let ndate = DateInRegion(absoluteDate: Date() )
+        let strndate = ndate.string(format: DateFormat.custom("yyyy-MM-dd"))
+        oneClassData.dateStart = strndate
+        let enddate = ndate + 6.month
+        oneClassData.dateEnd = enddate.string(format: DateFormat.custom("yyyy-MM-dd"))
+        contextData.insert(oneClassData)
+        appDelegate.saveContext()
+    }
 }

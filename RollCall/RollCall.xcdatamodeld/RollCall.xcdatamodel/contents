@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CallFair" representedClassName="CallFair" syncable="YES" codeGenerationType="class">
+        <attribute name="classname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="course" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="data" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="memID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <entity name="ClassData" representedClassName="ClassData" syncable="YES" codeGenerationType="class">
         <attribute name="classname" attributeType="String" syncable="YES"/>
         <attribute name="course" optional="YES" attributeType="String" syncable="YES"/>
@@ -10,7 +16,12 @@
         <attribute name="selCourse" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sortID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
+    <entity name="CurGlobalSet" representedClassName="CurGlobalSet" syncable="YES" codeGenerationType="class">
+        <attribute name="classIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <elements>
         <element name="ClassData" positionX="-45" positionY="0" width="128" height="165"/>
+        <element name="CallFair" positionX="-45" positionY="63" width="128" height="105"/>
+        <element name="CurGlobalSet" positionX="-36" positionY="72" width="128" height="60"/>
     </elements>
 </model>

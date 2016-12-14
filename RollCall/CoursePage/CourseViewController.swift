@@ -104,6 +104,11 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 return
             }
             
+            // 如果是选中的课程，则改为选第一个课程
+            if arrCourses[indexPath.row].stringValue == arrClassData[gIndexClass].selCourse {
+                arrClassData[gIndexClass].selCourse = arrCourses[0].stringValue
+            }
+            
             var arrNewCourse: [String] = []
             for i in 0..<arrCourses.count {
                 if i != indexPath.row {
@@ -113,7 +118,6 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
 //            print(arrNewCourse)
             let newJson = JSON.init(arrNewCourse)
-            print(newJson.description)
             
             arrClassData[gIndexClass].course = newJson.description
             appDelegate.saveContext()
