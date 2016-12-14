@@ -18,10 +18,8 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.navigationController?.navigationBar.topItem?.title = "当前班级：" + arrClassData[gIndexClass].classname!
         } else {
             TipsSwift.showCenterWithText("请先创建班级!")
-            return
         }
         memberSortById()
-
         tableView.reloadData()
     }
     
@@ -128,6 +126,9 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // 按学号排序
     func memberSortById() {
+        if arrClassData.count == 0 {
+            return
+        }
         let strMembers:String = arrClassData[gIndexClass].member!
         let membersJsonData = strMembers.data(using: .utf8)
         var arrMembers = JSON(data:membersJsonData!)
