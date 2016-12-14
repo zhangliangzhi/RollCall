@@ -147,6 +147,39 @@
             </objects>
             <point key="canvasLocation" x="-459" y="-725"/>
         </scene>
+        <!--Desc Help View Controller-->
+        <scene sceneID="FVW-1f-PRF">
+            <objects>
+                <viewController storyboardIdentifier="DescHelpPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Ud-BG-Ue8" customClass="DescHelpViewController" customModule="RollCall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="APc-UC-LIP"/>
+                        <viewControllerLayoutGuide type="bottom" id="l65-kQ-AqK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mow-eC-GIK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="随机公平点名" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezw-nZ-W8y">
+                                <rect key="frame" x="155.33333333333331" y="358" width="103.99999999999994" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ezw-nZ-W8y" firstAttribute="centerX" secondItem="mow-eC-GIK" secondAttribute="centerX" id="1So-BM-b9V"/>
+                            <constraint firstItem="ezw-nZ-W8y" firstAttribute="centerY" secondItem="mow-eC-GIK" secondAttribute="centerY" id="vt0-5K-Xwb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descLabel" destination="ezw-nZ-W8y" id="XqT-13-Lgl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2YC-iR-Y8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-459" y="-10"/>
+        </scene>
         <!--Date Show View Controller-->
         <scene sceneID="vGn-i8-123">
             <objects>

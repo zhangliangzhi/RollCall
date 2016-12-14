@@ -40,7 +40,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.title = "西瓜点名"
         // 右侧按钮
-        let mRightButton = UIBarButtonItem(title: "帮助", style: .plain, target: self, action: #selector(HomePageViewController.goSearchPage))
+        let mRightButton = UIBarButtonItem(title: "帮助", style: .plain, target: self, action: #selector(HomePageViewController.goDescHelpPage))
         self.navigationItem.rightBarButtonItem = mRightButton
         
     }
@@ -135,12 +135,11 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    func goSearchPage() {
-        
-        let mSearchPage = UIStoryboard(name: "SearchPage", bundle: nil).instantiateViewController(withIdentifier: "SearchPage") as! SearchPageController
-        self.tabBarController?.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(mSearchPage, animated: true)
 
+    func goDescHelpPage() {
+        let mPage = UIStoryboard(name: "HomePage", bundle: nil).instantiateViewController(withIdentifier: "DescHelp") as! SearchPageController
+        self.tabBarController?.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(mPage, animated: true)
     }
     
     @IBAction func goRandom(_ sender: Any) {
