@@ -37,6 +37,17 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let strCourses:String = arrClassData[gIndexClass].course!
+        let coursesJsonData = strCourses.data(using: .utf8)
+        let arrCourses = JSON(data:coursesJsonData!)
+        let curCourse = arrCourses[indexPath.row].stringValue
+        let tips = "选中课程" + curCourse
+        TipsSwift.showCenterWithText(tips)
+        arrClassData[gIndexClass].selCourse = curCourse
+        appDelegate.saveContext()
+    }
+    
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -71,7 +82,7 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // coreData里的course字段格式 [“a","b","c"]
         let course:String = arrCourses[indexPath.row].string!
         cell.courseLabel.text = course
-        
+
         return cell
     }
     
