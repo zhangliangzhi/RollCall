@@ -20,7 +20,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewWillAppear(_ animated: Bool) {
         getCoreData()
         if arrClassData.count > 0 {
-            self.navigationController?.navigationBar.topItem?.title = "当前班级：" + arrClassData[gIndexClass].classname!
+            self.navigationController?.navigationBar.topItem?.title = arrClassData[gIndexClass].classname! + "|" + arrClassData[gIndexClass].selCourse!
         } else {
             TipsSwift.showCenterWithText("请先创建班级!")
         }
