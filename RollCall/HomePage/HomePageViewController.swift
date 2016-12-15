@@ -35,6 +35,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
 
         
         
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -157,27 +158,92 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             TipsSwift.showCenterWithText("先增加班级成员")
             return
         }
-        let nCount:UInt32 = UInt32(iCount)
-        let strRandom:String = String(arc4random_uniform(nCount))
-//        print(strRandom)
-        let iRandom:Int = Int(strRandom)!
-        let pathName: [JSONSubscriptType] = [iRandom,"name"]
-        let pathID: [JSONSubscriptType] = [iRandom,"id"]
-        let name = arrMembers[pathName].string
-        let id:Int32 = arrMembers[pathID].int32Value
+        let fairMemId = getRandomMemId()
+        if fairMemId.id < 0 {
+            return
+        }
 
-        TipsSwift.showCenterWithText("点名：" + name!)
+        let name:String = fairMemId.name
+        let id:Int32 = fairMemId.id
+        
+        TipsSwift.showCenterWithText("点名：" + name)
         
         // 保存一条记录 时间，学号
 //        let nowdate = DateInRegion(absoluteDate: Date())
 //        let strDate = nowdate.string(format: DateFormat.custom("yyyy-MM-dd HH:mm:ss"))
-        var oneCallFair = NSEntityDescription.insertNewObject(forEntityName: "CallFair", into: contextData) as! CallFair
+        let oneCallFair = NSEntityDescription.insertNewObject(forEntityName: "CallFair", into: contextData) as! CallFair
         oneCallFair.classname = arrClassData[gIndexClass].classname
         oneCallFair.course = arrClassData[gIndexClass].selCourse
         oneCallFair.date = NSDate()
         oneCallFair.memID = id
-        contextData.insert(oneCallFair)
+//        contextData.insert(oneCallFair)
+        arrCallFair.append(oneCallFair)
         appDelegate.saveContext()
+        
+        
+    }
+    
+    // 成员id:次数
+    struct MemCount {
+        let id:Int32    // member id
+        var count:Int32 // count
+        var name:String // name
+    }
+    
+    func getRandomMemId() -> MemCount {
+        let dateStart:String = arrClassData[gIndexClass].dateStart!
+        let dateEnd:String = arrClassData[gIndexClass].dateEnd!
+        let startTime = try! DateInRegion.init(string: dateStart, format: DateFormat.custom("yyyy-MM-dd"))
+        let endTime = try! DateInRegion.init(string: dateEnd, format: DateFormat.custom("yyyy-MM-dd"))
+        let nowTime = DateInRegion(absoluteDate: Date())
+        if nowTime > endTime {
+            TipsSwift.showBottomWithText("先设置时间, 截止时间小于当前时间")
+            return MemCount.init(id: -1, count: 0, name: "")
+        }
+        
+        var arrMemID:[MemCount] = []
+        // 获取所有成员id
+        let strMembers:String = arrClassData[gIndexClass].member!
+        let membersJsonData = strMembers.data(using: .utf8)
+        var arrMembers = JSON(data:membersJsonData!)
+        for i in 0..<arrMembers.count {
+            let id:Int32 = arrMembers[i]["id"].int32Value
+            arrMemID.append(MemCount.init(id: id, count: 0, name: arrMembers[i]["name"].stringValue) )
+        }
+        
+        // 统计目前时间范围内的 次数
+        for i in 0..<arrCallFair.count {
+            let one = arrCallFair[i]
+            let onedate = DateInRegion.init(absoluteDate: one.date as! Date)
+            let id = one.memID
+            // 统计在时间范围内的次数
+            if onedate >= startTime && onedate <= endTime {
+                for j in 0..<arrMemID.count {
+                    if arrMemID[j].id == id {
+                        arrMemID[j].count += 1
+                        break
+                    }
+                }
+            }
+        }
+        arrMemID.sort(by: {$0.count < $1.count})
+        print(arrMemID)
+        
+        // 获取最低次数的所有人
+        var minCountMems:[MemCount] = []
+        for i in 0..<arrMemID.count {
+            if arrMemID[0].count == arrMemID[i].count {
+                minCountMems.append(arrMemID[i])
+            }
+        }
+        // 众minCountMems里面，随机去一个学号id
+        print(minCountMems)
+        let nCount:UInt32 = UInt32(minCountMems.count)
+        let getRanIndex:Int = Int(arc4random_uniform(nCount))
+        let getNewMemId = minCountMems[getRanIndex]
+//        print(getNewMemId)
+        
+        return getNewMemId
     }
     
     @IBAction func goSetTimePage(_ sender: Any) {
