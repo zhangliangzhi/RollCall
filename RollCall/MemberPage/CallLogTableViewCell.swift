@@ -10,6 +10,11 @@ import UIKit
 
 class CallLogTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var memLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var courseLabel: UILabel!
+    @IBOutlet weak var classLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

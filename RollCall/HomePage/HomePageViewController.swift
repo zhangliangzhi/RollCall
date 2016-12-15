@@ -23,10 +23,10 @@ var arrCurGlobalSet:[CurGlobalSet]=[]
 var gIndexClass = 0
 
 class HomePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var curCoursePage: UILabel!
-
     
+    @IBOutlet weak var curCoursePage: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var justLogLabel: UILabel!
     @IBOutlet weak var curNameLabel: UILabel!
     
     override func viewDidLoad() {
@@ -167,7 +167,9 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         let id:Int32 = fairMemId.id
         
         TipsSwift.showCenterWithText("点名：" + name)
-        
+        let logText:String = "当前点名:" + name + ", 学号:" + String(id) + ", 课程:" + arrClassData[gIndexClass].selCourse! + ", 班级:" + arrClassData[gIndexClass].classname!
+        justLogLabel.text = logText
+
         // 保存一条记录 时间，学号
 //        let nowdate = DateInRegion(absoluteDate: Date())
 //        let strDate = nowdate.string(format: DateFormat.custom("yyyy-MM-dd HH:mm:ss"))
@@ -292,4 +294,11 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         appDelegate.saveContext()
         getCoreData()
     }
+    
+    // 打开点名记录
+    @IBAction func goCallLogPage(_ sender: Any) {
+        let mPage = UIStoryboard(name: "Member", bundle: nil).instantiateViewController(withIdentifier: "CallLogPage") as! CallLogViewController
+        navigationController?.pushViewController(mPage, animated: true)
+    }
+    
 }

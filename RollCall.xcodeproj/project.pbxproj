@@ -45,6 +45,8 @@
 		0BD0F4EC1DFFD41000E49E4B /* Course.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BD0F4E91DFFD41000E49E4B /* Course.storyboard */; };
 		0BD0F4ED1DFFD41000E49E4B /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4EA1DFFD41000E49E4B /* CourseViewController.swift */; };
 		0BD0F4EF1DFFF08600E49E4B /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0F4EE1DFFF08600E49E4B /* MemberTableViewCell.swift */; };
+		0BD676611E029F490061B77C /* CallLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD676601E029F490061B77C /* CallLogViewController.swift */; };
+		0BD676631E02A2F80061B77C /* CallLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD676621E02A2F80061B77C /* CallLogTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		0BD0F4E91DFFD41000E49E4B /* Course.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Course.storyboard; sourceTree = "<group>"; };
 		0BD0F4EA1DFFD41000E49E4B /* CourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		0BD0F4EE1DFFF08600E49E4B /* MemberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
+		0BD676601E029F490061B77C /* CallLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallLogViewController.swift; sourceTree = "<group>"; };
+		0BD676621E02A2F80061B77C /* CallLogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallLogTableViewCell.swift; sourceTree = "<group>"; };
 		6EAC734C6F5D923349E592BB /* Pods_RollCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RollCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C5CDD502C40C18E18A8FFD /* Pods-RollCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollCall.release.xcconfig"; path = "Pods/Target Support Files/Pods-RollCall/Pods-RollCall.release.xcconfig"; sourceTree = "<group>"; };
 		E7EB97CC5C353CD4744D4005 /* Pods-RollCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RollCall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RollCall/Pods-RollCall.debug.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 				0BD0F4E11DFFD37800E49E4B /* AddClassMemberViewController.swift */,
 				0BD0F4E21DFFD37800E49E4B /* Member.storyboard */,
 				0BD0F4EE1DFFF08600E49E4B /* MemberTableViewCell.swift */,
+				0BD676601E029F490061B77C /* CallLogViewController.swift */,
+				0BD676621E02A2F80061B77C /* CallLogTableViewCell.swift */,
 			);
 			path = MemberPage;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 				0BD0F4E61DFFD37800E49E4B /* MemberViewController.swift in Sources */,
 				0B4C85E41DF9AA9E0038DC85 /* TipsSwift.swift in Sources */,
 				0B151D061E01C7C300593729 /* DescHelpViewController.swift in Sources */,
+				0BD676611E029F490061B77C /* CallLogViewController.swift in Sources */,
 				0B4C85E21DF962230038DC85 /* AddClassNameViewController.swift in Sources */,
 				0B152B031DF2BA5200915B81 /* UserMineViewController.swift in Sources */,
 				0BB4ACC91DF40E99003B1C91 /* BootstrapBtn.swift in Sources */,
@@ -391,6 +398,7 @@
 				0B152B141DF3F02600915B81 /* ClassNameTableViewCell.swift in Sources */,
 				0BBBFFC01DE93F6F00EFAE9E /* SwiftyJSON.swift in Sources */,
 				0B152B0F1DF3E7E700915B81 /* ClassNameViewController.swift in Sources */,
+				0BD676631E02A2F80061B77C /* CallLogTableViewCell.swift in Sources */,
 				0B4C86001DFBCDFA0038DC85 /* INSPersistentContainer.swift in Sources */,
 				0BD0F4EB1DFFD41000E49E4B /* AddCourseMemberViewController.swift in Sources */,
 				0B4C85DC1DF95C5E0038DC85 /* RollCall.xcdatamodeld in Sources */,
