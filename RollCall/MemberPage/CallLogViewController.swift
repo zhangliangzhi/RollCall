@@ -64,8 +64,12 @@ class CallLogViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            arrCallFair.remove(at: indexPath.row)
+            // 倒序
+            let delRow = arrCallFair.count - indexPath.row - 1
+            let one = arrCallFair[delRow]
+            contextData.delete(one)
             appDelegate.saveContext()
+            arrCallFair.remove(at: delRow)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
