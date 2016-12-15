@@ -227,7 +227,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             }
         }
         arrMemID.sort(by: {$0.count < $1.count})
-        print(arrMemID)
+//        print(arrMemID)
         
         // 获取最低次数的所有人
         var minCountMems:[MemCount] = []
@@ -237,7 +237,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             }
         }
         // 众minCountMems里面，随机去一个学号id
-        print(minCountMems)
+//        print(minCountMems)
         let nCount:UInt32 = UInt32(minCountMems.count)
         let getRanIndex:Int = Int(arc4random_uniform(nCount))
         let getNewMemId = minCountMems[getRanIndex]

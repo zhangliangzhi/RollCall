@@ -8,10 +8,15 @@
 
 import Foundation
 import UIKit
+import SwiftDate
+
+
 class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
-
+    var arrMemCount = [Int32:Int]()
+    //var arrMemCount = Dictionary<Int32, Int>()
+    
     override func viewWillAppear(_ animated: Bool) {
         getCoreData()
         if arrClassData.count > 0 {
@@ -20,6 +25,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
             TipsSwift.showCenterWithText("请先创建班级!")
         }
         memberSortById()
+        getArrMemCount()
         tableView.reloadData()
     }
     
@@ -73,8 +79,49 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.numLabel.text = id
         cell.memLabel.text = member
         
+        let iMemID:Int32 = arrMembers[indexPath.row]["id"].int32Value
+        let imemcount:Int = arrMemCount[iMemID]!
+        cell.countLabel.text = String(imemcount)
+        
         return cell
     }
+    
+    // 获取成员的总点名次数
+    func getArrMemCount() -> Void {
+        let dateStart:String = arrClassData[gIndexClass].dateStart!
+        let dateEnd:String = arrClassData[gIndexClass].dateEnd!
+        let startTime = try! DateInRegion.init(string: dateStart, format: DateFormat.custom("yyyy-MM-dd"))
+        let endTime = try! DateInRegion.init(string: dateEnd, format: DateFormat.custom("yyyy-MM-dd"))
+
+        arrMemCount = [:]
+        // 获取所有成员id
+        let strMembers:String = arrClassData[gIndexClass].member!
+        let membersJsonData = strMembers.data(using: .utf8)
+        var arrMembers = JSON(data:membersJsonData!)
+        for i in 0..<arrMembers.count {
+            let id:Int32 = arrMembers[i]["id"].int32Value
+            arrMemCount[id] = 0
+        }
+        
+        // 统计目前时间范围内的 次数
+        for i in 0..<arrCallFair.count {
+            let one = arrCallFair[i]
+            let onedate = DateInRegion.init(absoluteDate: one.date as! Date)
+            let id = one.memID
+            // 统计在时间范围内的次数
+            if onedate >= startTime && onedate <= endTime {
+                if arrMemCount[id] != nil{
+                    arrMemCount[id] = arrMemCount[id]! + 1
+                }else {
+                    //del
+                }
+            }
+        }
+        print(arrMemCount)
+
+        return
+    }
+    
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
