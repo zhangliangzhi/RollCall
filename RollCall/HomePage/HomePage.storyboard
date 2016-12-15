@@ -217,9 +217,9 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="随机公平点名" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezw-nZ-W8y">
-                                <rect key="frame" x="57" y="204.33333333333331" width="300" height="119.99999999999994"/>
+                                <rect key="frame" x="57" y="204.33333333333331" width="300" height="149.99999999999994"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="KaJ-Rk-4r4"/>
+                                    <constraint firstAttribute="height" constant="150" id="KaJ-Rk-4r4"/>
                                     <constraint firstAttribute="width" constant="300" id="wYs-J4-kdT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
