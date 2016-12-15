@@ -102,6 +102,9 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
         // 数据处理
         appDelegate.saveContext()
         
+        // umeng统计观
+        MobClick.event("UMADDMEMBER")
+        
         // 跳转上个界面
         navigationController!.popViewController(animated: true)
     }

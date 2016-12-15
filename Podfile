@@ -7,4 +7,6 @@ target 'RollCall' do
 	pod 'Alamofire'
 	pod 'SwiftDate', '~> 4.0'
 	pod 'Charts'
+	pod 'UMengAnalytics-NO-IDFA'
+	pod 'Firebase/Core'
 end

@@ -74,6 +74,7 @@
 		0B4C85FD1DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSPersistentStoreDescription.swift; sourceTree = "<group>"; };
 		0B4C85FE1DFBCDFA0038DC85 /* NSManagedObjectContext+iOS10Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+iOS10Additions.swift"; sourceTree = "<group>"; };
 		0B5B58FD1DED97B10075E267 /* RollCall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RollCall.entitlements; sourceTree = "<group>"; };
+		0B63F3361E03345700B41FAD /* RollCall-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RollCall-Bridging-Header.h"; sourceTree = "<group>"; };
 		0B881CCA1E006381008C30E4 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		0BB4ACC81DF40E99003B1C91 /* BootstrapBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapBtn.swift; sourceTree = "<group>"; };
 		0BBBFFBD1DE9254400EFAE9E /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +185,7 @@
 				0B4C85DA1DF95C5E0038DC85 /* RollCall.xcdatamodeld */,
 				0B4C85E31DF9AA9E0038DC85 /* TipsSwift.swift */,
 				0BD0F4D51DFC9B4400E49E4B /* ClassModel.swift */,
+				0B63F3361E03345700B41FAD /* RollCall-Bridging-Header.h */,
 			);
 			path = RollCall;
 			sourceTree = "<group>";
@@ -542,6 +544,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xigk.RollCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RollCall/RollCall-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -562,6 +565,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xigk.RollCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RollCall/RollCall-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

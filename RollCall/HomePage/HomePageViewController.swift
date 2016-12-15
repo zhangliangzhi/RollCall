@@ -144,6 +144,9 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func goRandom(_ sender: Any) {
+        // umeng统计观
+        MobClick.event("UMRANDOM")
+        
         // 随机点名
         if arrClassData.count == 0 {
             TipsSwift.showCenterWithText("需要先创建班级")

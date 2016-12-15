@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,7 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // umeng统计观
+        let obj = UMAnalyticsConfig()
+        obj.appKey = "5852fa613eae254d7d00268d"
+        obj.channelId = "App Store"
+        MobClick.start(withConfigure: obj)
+        
+        // umeng统计观看次数
+        MobClick.event("UMLOGIN")
+        
         
         // 导航按钮文字颜色 字体大小
         let attributes =  [NSForegroundColorAttributeName: UIColor.gray,NSFontAttributeName: UIFont(name: "Heiti SC", size: 10.0)!]
