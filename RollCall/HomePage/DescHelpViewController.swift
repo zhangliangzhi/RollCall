@@ -50,7 +50,7 @@ class DescHelpViewController: UIViewController, UITextFieldDelegate {
             TipsSwift.showCenterWithText("请先创建班级!")
         }
         
-        TipsSwift.showTopWithText("设置成功!")
+        TipsSwift.showCenterWithText("设置成功!")
         return true
     }
 

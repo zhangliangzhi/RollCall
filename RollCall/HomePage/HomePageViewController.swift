@@ -238,8 +238,10 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         
         // 获取最低次数的所有人
         var minCountMems:[MemCount] = []
+        let iwc = arrClassData[gIndexClass].wc
         for i in 0..<arrMemID.count {
-            if arrMemID[0].count == arrMemID[i].count {
+            // 误差范围内的都加入 arrClassData[gIndexClass].wc 默认是1
+            if arrMemID[i].count < arrMemID[0].count + iwc {
                 minCountMems.append(arrMemID[i])
             }
         }
