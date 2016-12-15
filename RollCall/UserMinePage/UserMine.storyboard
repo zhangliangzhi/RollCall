@@ -21,16 +21,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="统计信息图表" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhf-w3-1Sq">
-                                <rect key="frame" x="99" y="294" width="177" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQ4-qR-GGS" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.87185579538345337" green="0.96517914533615112" blue="0.96151071786880493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pQ4-qR-GGS" secondAttribute="trailing" id="PVV-7T-BdQ"/>
+                            <constraint firstItem="CZw-3q-cOU" firstAttribute="top" secondItem="pQ4-qR-GGS" secondAttribute="bottom" id="Y2m-YE-gku"/>
+                            <constraint firstItem="pQ4-qR-GGS" firstAttribute="leading" secondItem="9Ib-DB-2uc" secondAttribute="leading" id="aa9-xD-7zS"/>
+                            <constraint firstItem="pQ4-qR-GGS" firstAttribute="top" secondItem="Rc3-4E-pFG" secondAttribute="bottom" id="nWy-TB-0Fh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="barChartView" destination="pQ4-qR-GGS" id="6J0-es-8Bt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLZ-aV-eik" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,15 +1,20 @@
 PODS:
   - Alamofire (4.2.0)
+  - Charts (3.0.1):
+    - Charts/Core (= 3.0.1)
+  - Charts/Core (3.0.1)
   - SwiftDate (4.0.8)
 
 DEPENDENCIES:
   - Alamofire
+  - Charts
   - SwiftDate (~> 4.0)
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   SwiftDate: 9aa3259d8850d818bec02802f8f05aa9a8c26fdb
 
-PODFILE CHECKSUM: 524e8558abc7267768731c0f9746861c50b05825
+PODFILE CHECKSUM: 10f46c2e2bdeaf39aa5ee57c148318fec5657c0d
 
 COCOAPODS: 1.1.1
