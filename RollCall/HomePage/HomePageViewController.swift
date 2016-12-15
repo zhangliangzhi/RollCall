@@ -218,16 +218,20 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             let id = one.memID
             // 统计在时间范围内的次数
             if onedate >= startTime && onedate <= endTime {
-                for j in 0..<arrMemID.count {
-                    if arrMemID[j].id == id {
-                        arrMemID[j].count += 1
-                        break
+                // 是选定课程
+                if arrClassData[gIndexClass].selCourse == one.course {
+                    // +1
+                    for j in 0..<arrMemID.count {
+                        if arrMemID[j].id == id {
+                            arrMemID[j].count += 1
+                            break
+                        }
                     }
                 }
             }
         }
         arrMemID.sort(by: {$0.count < $1.count})
-//        print(arrMemID)
+        print(arrMemID)
         
         // 获取最低次数的所有人
         var minCountMems:[MemCount] = []

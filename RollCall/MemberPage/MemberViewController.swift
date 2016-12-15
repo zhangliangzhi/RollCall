@@ -103,6 +103,8 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
             arrMemCount[id] = 0
         }
         
+        // 先删除没用的数据
+        
         // 统计目前时间范围内的 次数
         for i in 0..<arrCallFair.count {
             let one = arrCallFair[i]
@@ -110,14 +112,17 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let id = one.memID
             // 统计在时间范围内的次数
             if onedate >= startTime && onedate <= endTime {
-                if arrMemCount[id] != nil{
-                    arrMemCount[id] = arrMemCount[id]! + 1
-                }else {
-                    //del
+                // 是选定课程
+                if arrClassData[gIndexClass].selCourse == one.course {
+                    if arrMemCount[id] != nil{
+                        arrMemCount[id] = arrMemCount[id]! + 1
+                    }else {
+                        //del
+                    }
                 }
             }
         }
-        print(arrMemCount)
+//        print(arrMemCount)
 
         return
     }
