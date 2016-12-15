@@ -16,13 +16,14 @@
         <attribute name="record" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="selCourse" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sortID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wc" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="CurGlobalSet" representedClassName="CurGlobalSet" syncable="YES" codeGenerationType="class">
         <attribute name="classIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
         <element name="CallFair" positionX="-45" positionY="63" width="128" height="120"/>
-        <element name="ClassData" positionX="-45" positionY="0" width="128" height="165"/>
+        <element name="ClassData" positionX="-45" positionY="0" width="128" height="180"/>
         <element name="CurGlobalSet" positionX="-36" positionY="72" width="128" height="60"/>
     </elements>
 </model>

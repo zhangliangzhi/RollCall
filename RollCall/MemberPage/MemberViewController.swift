@@ -24,6 +24,8 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         } else {
             TipsSwift.showCenterWithText("请先创建班级!")
         }
+        
+        // 注意判断arrClassData.count == 0时的情
         memberSortById()
         getArrMemCount()
         tableView.reloadData()
@@ -88,6 +90,9 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // 获取成员的总点名次数
     func getArrMemCount() -> Void {
+        if arrClassData.count == 0 {
+            return
+        }
         let dateStart:String = arrClassData[gIndexClass].dateStart!
         let dateEnd:String = arrClassData[gIndexClass].dateEnd!
         let startTime = try! DateInRegion.init(string: dateStart, format: DateFormat.custom("yyyy-MM-dd"))

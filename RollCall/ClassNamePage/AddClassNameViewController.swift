@@ -64,6 +64,7 @@ class AddClassNameViewController: UIViewController, UITextFieldDelegate {
         
         // 选中的课程类别
         oneClassData.selCourse = "英语"
+        oneClassData.wc = 1
         // 其他的先设置为json格式的
         oneClassData.member = "[]"
         oneClassData.record = "[]"

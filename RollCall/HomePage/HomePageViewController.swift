@@ -284,6 +284,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         let strCourseJson:String = String(data: courseData, encoding: String.Encoding.utf8)!
         oneClassData.course = strCourseJson
         oneClassData.selCourse = "英语"
+        oneClassData.wc = 1
         oneClassData.member = "[{\"id\":\"1\",\"name\":\"张三\"},{\"id\":\"2\",\"name\":\"李四\"},{\"id\":\"3\",\"name\":\"王五\"}]"
         oneClassData.record = "[]"
         let ndate = DateInRegion(absoluteDate: Date() )
