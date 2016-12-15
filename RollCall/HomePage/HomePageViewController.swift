@@ -178,6 +178,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         oneCallFair.course = arrClassData[gIndexClass].selCourse
         oneCallFair.date = NSDate()
         oneCallFair.memID = id
+        oneCallFair.memName = name
 //        contextData.insert(oneCallFair)
         arrCallFair.append(oneCallFair)
         appDelegate.saveContext()

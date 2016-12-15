@@ -18,8 +18,9 @@ class CallLogViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         
+        self.title = "随机点名历史记录"
         // edit
-        self.navigationItem.leftBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -43,15 +44,16 @@ class CallLogViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "logcell", for: indexPath) as! CallLogTableViewCell
         
-        
-        let one = arrCallFair[indexPath.row]
+        // 时间倒序
+        let index = arrCallFair.count - indexPath.row - 1
+        let one = arrCallFair[index]
         let getDate = DateInRegion(absoluteDate: one.date as! Date)
         let timestr:String = getDate.string(format: DateFormat.custom("yyyy-MM-dd\nHH:mm:ss"))
         cell.timeLabel.text = timestr
         cell.classLabel.text = one.classname
         cell.courseLabel.text = one.course
         cell.idLabel.text = String(one.memID) + "号"
-        cell.memLabel.text = "okkk"
+        cell.memLabel.text = one.memName
         
         return cell
     }
