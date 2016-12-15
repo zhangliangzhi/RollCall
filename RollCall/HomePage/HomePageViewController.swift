@@ -169,11 +169,15 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         TipsSwift.showCenterWithText("点名：" + name!)
         
         // 保存一条记录 时间，学号
-        let nowdate = DateInRegion(absoluteDate: Date())
-        let strDate = nowdate.string(format: DateFormat.custom("yyyy-MM-dd"))
-        let record = CRecord(time: strDate, cou: "我的", mid: id)
-        print(record)
-        
+//        let nowdate = DateInRegion(absoluteDate: Date())
+//        let strDate = nowdate.string(format: DateFormat.custom("yyyy-MM-dd HH:mm:ss"))
+        var oneCallFair = NSEntityDescription.insertNewObject(forEntityName: "CallFair", into: contextData) as! CallFair
+        oneCallFair.classname = arrClassData[gIndexClass].classname
+        oneCallFair.course = arrClassData[gIndexClass].selCourse
+        oneCallFair.date = NSDate()
+        oneCallFair.memID = id
+        contextData.insert(oneCallFair)
+        appDelegate.saveContext()
     }
     
     @IBAction func goSetTimePage(_ sender: Any) {

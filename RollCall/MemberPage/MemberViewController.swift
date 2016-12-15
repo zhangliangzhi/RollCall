@@ -133,7 +133,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let membersJsonData = strMembers.data(using: .utf8)
         var arrMembers = JSON(data:membersJsonData!)
         if arrMembers.count < 2 {
-            print("no 2 mem", arrMembers)
+//            print("no 2 mem", arrMembers)
             return
         }
         

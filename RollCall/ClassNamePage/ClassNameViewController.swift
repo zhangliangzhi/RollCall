@@ -90,8 +90,14 @@ class ClassNameViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        cnTableView?.deselectRow(at: indexPath, animated: true)
-        print("点击了item=\(indexPath.row)")
+//        cnTableView?.deselectRow(at: indexPath, animated: true)
+//        print("点击了item=\(indexPath.row)")
+        
+        gIndexClass = indexPath.row
+        arrCurGlobalSet[0].classIndex = Int32(gIndexClass)
+        let className:String = arrClassData[indexPath.row].classname!
+        TipsSwift.showTopWithText("选中班级: " + className)
+        appDelegate.saveContext()
         
     }
     
