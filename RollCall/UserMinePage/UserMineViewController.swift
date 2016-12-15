@@ -40,7 +40,7 @@ class UserMineViewController: UIViewController, ChartViewDelegate, IAxisValueFor
         if arrMemNameCount.count == 0 {
             TipsSwift.showCenterWithText("没有班级成员!")
         }
-        print(arrMemNameCount.count)
+//        print(arrMemNameCount.count)
         var values: [Double] = []
         for i in 0..<arrMemNameCount.count {
             let d:Double = Double(arrMemNameCount[i].count)
