@@ -10,7 +10,7 @@ import Foundation
 import  UIKit
 import Charts
 
-class UserMineViewController: UIViewController, ChartViewDelegate {
+class UserMineViewController: UIViewController, ChartViewDelegate, IAxisValueFormatter {
     @IBOutlet weak var barChartView: BarChartView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -23,10 +23,16 @@ class UserMineViewController: UIViewController, ChartViewDelegate {
         chartsGo()
     }
     
+    public func stringForValue(_ value: Double, axis: Charts.AxisBase?) -> String
+    {
+        var months: [String]! = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        return months[Int(value)]
+    }
+    
     func chartsGo() {
-        let values: [Double] = [8, 104, 81, 93, 52, 44, 97, 101, 75, 28,
-                                76, 25, 20, 13, 52, 44, 57, 23, 45, 91,
-                                99, 14, 84, 48, 40, 71, 106, 41, 45, 61]
+        
+        let values: [Double] = [8, 7, 2, 9, 10, 14, 17, 20, 15, 12,
+                                13, 8]
         
         var entries: [ChartDataEntry] = Array()
         for (i, value) in values.enumerated()
@@ -38,13 +44,15 @@ class UserMineViewController: UIViewController, ChartViewDelegate {
 
         let data = BarChartData(dataSet: dataSet)
         data.barWidth = 0.85
-        //        chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
         dataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
         
         barChartView.backgroundColor = NSUIColor.clear
         barChartView.xAxis.labelPosition = .bottom
         let xAxis = barChartView.xAxis
         xAxis.drawGridLinesEnabled = false
+        
+
+        barChartView.xAxis.setValue(8, forKey:"axisLineWidth")
         
         
         barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .linear)
@@ -53,9 +61,9 @@ class UserMineViewController: UIViewController, ChartViewDelegate {
     }
     
     override func viewDidLoad() {
+        barChartView.xAxis.valueFormatter = self
         
         barChartView.chartDescription?.text = "by 🍉西瓜点名🍉"
-
     }
     
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
