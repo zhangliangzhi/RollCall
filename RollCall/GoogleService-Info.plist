@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1059132331377-a7h2opdj5uma34agch3bss62l2krk9gj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1059132331377-a7h2opdj5uma34agch3bss62l2krk9gj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyClOq1bm9waUa610WwK3-soOxOgZ73UHIg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1059132331377</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.xigk.RollCall</string>
+	<key>PROJECT_ID</key>
+	<string>rollcall-1bded</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rollcall-1bded.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1059132331377:ios:5ccc7022279b5dad</string>
+	<key>DATABASE_URL</key>
+	<string>https://rollcall-1bded.firebaseio.com</string>
+</dict>
+</plist>
