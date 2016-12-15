@@ -27,8 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mHomeViewController = UIStoryboard(name: "HomePage", bundle: nil).instantiateViewController(withIdentifier: "HomePage") as! HomePageViewController
         let mHomeNavController = UINavigationController(rootViewController: mHomeViewController)
         // 第二步 创建一个导航item 并且设置导航按钮的点击icon切换 设置字体颜色 和大小
-        let mHomeNormalImage = UIImage(named: "main_bottom_category_normal")?.withRenderingMode(.alwaysOriginal)
-        let mHomeSelectedImage = UIImage(named: "main_bottom_category_hover")?.withRenderingMode(.alwaysOriginal)
+        let mHomeNormalImage = UIImage(named: "main_nor")?.withRenderingMode(.alwaysOriginal)
+        let mHomeSelectedImage = UIImage(named: "main_sel")?.withRenderingMode(.alwaysOriginal)
         let mHomeTabBarItem = UITabBarItem(title: "精选", image: mHomeNormalImage, selectedImage: mHomeSelectedImage)
         mHomeTabBarItem.setTitleTextAttributes(attributes, for: .normal)
         if #available(iOS 9.0, *) {
@@ -43,8 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 班级列表
         let mClassNameVeiwController = UIStoryboard(name: "ClassName", bundle: nil).instantiateViewController(withIdentifier: "ClassName") as! ClassNameViewController
         let mClassNameNavCtontroller = UINavigationController(rootViewController: mClassNameVeiwController)
-        let mClassNameNormalImage = UIImage(named: "main_bottom_feedback_n")?.withRenderingMode(.alwaysOriginal)
-        let mClassNameSelectedImage = UIImage(named: "main_bottom_feedback_p")?.withRenderingMode(.alwaysOriginal)
+        let mClassNameNormalImage = UIImage(named: "list_nor")?.withRenderingMode(.alwaysOriginal)
+        let mClassNameSelectedImage = UIImage(named: "list_sel")?.withRenderingMode(.alwaysOriginal)
         let mClassNameTabBarItem = UITabBarItem(title: "班级列表", image: mClassNameNormalImage, selectedImage: mClassNameSelectedImage)
         mClassNameNavCtontroller.tabBarItem = mClassNameTabBarItem
 
@@ -78,8 +78,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 成员页面
         let mMemberViewController = UIStoryboard(name: "Member", bundle: nil).instantiateViewController(withIdentifier: "Member") as! MemberViewController
         let mMemberNavController = UINavigationController(rootViewController: mMemberViewController)
-        let mMemberNormalImage = UIImage(named: "main_bottom_recommand_n")?.withRenderingMode(.alwaysOriginal)
-        let mMemberSelectedImage = UIImage(named: "main_bottom_recommand_p")?.withRenderingMode(.alwaysOriginal)
+        let mMemberNormalImage = UIImage(named: "user_nor")?.withRenderingMode(.alwaysOriginal)
+        let mMemberSelectedImage = UIImage(named: "user_sel")?.withRenderingMode(.alwaysOriginal)
         let mShopCarTabBar = UITabBarItem(title: "成员", image: mMemberNormalImage, selectedImage: mMemberSelectedImage)
         mShopCarTabBar.setTitleTextAttributes(attributes, for: .normal)
         if #available(iOS 9.0, *) {
@@ -92,8 +92,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 用户主页
         let mUserMineViewController = UIStoryboard(name: "UserMine", bundle: nil).instantiateViewController(withIdentifier: "UserMine") as! UserMineViewController
         let mUserMineNavController = UINavigationController(rootViewController: mUserMineViewController)
-        let mUserMineNormalImage = UIImage(named: "main_bottom_mine_n")?.withRenderingMode(.alwaysOriginal)
-        let mUserMineSelectedImage = UIImage(named: "main_bottom_mine_p")?.withRenderingMode(.alwaysOriginal)
+        let mUserMineNormalImage = UIImage(named: "Conduc_nor")?.withRenderingMode(.alwaysOriginal)
+        let mUserMineSelectedImage = UIImage(named: "Conduc_sel")?.withRenderingMode(.alwaysOriginal)
         let mUserMineTabBar = UITabBarItem(title: "统计", image: mUserMineNormalImage, selectedImage: mUserMineSelectedImage)
         mUserMineTabBar.setTitleTextAttributes(attributes, for: .normal)
         if #available(iOS 9.0, *) {
