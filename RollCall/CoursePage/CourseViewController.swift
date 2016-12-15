@@ -110,8 +110,13 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
             
             // 如果是选中的课程，则改为选第一个课程
-            if arrCourses[indexPath.row].stringValue == arrClassData[gIndexClass].selCourse {
-                arrClassData[gIndexClass].selCourse = arrCourses[0].stringValue
+            let delCourseName = arrCourses[indexPath.row].stringValue
+            if delCourseName == arrClassData[gIndexClass].selCourse {
+                if 0 == indexPath.row {
+                    arrClassData[gIndexClass].selCourse = arrCourses[1].stringValue
+                }else{
+                    arrClassData[gIndexClass].selCourse = arrCourses[0].stringValue
+                }
             }
             
             var arrNewCourse: [String] = []
@@ -123,8 +128,15 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
 //            print(arrNewCourse)
             let newJson = JSON.init(arrNewCourse)
-            
             arrClassData[gIndexClass].course = newJson.description
+            
+            // 删除改课程的 日志记录
+            for one in arrCallFair {
+                if one.classname == arrClassData[gIndexClass].classname && one.course == delCourseName {
+                    contextData.delete(one)
+                }
+            }
+            
             appDelegate.saveContext()
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
