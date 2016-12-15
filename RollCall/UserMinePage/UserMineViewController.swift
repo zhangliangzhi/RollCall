@@ -37,7 +37,10 @@ class UserMineViewController: UIViewController, ChartViewDelegate, IAxisValueFor
     }
     
     func chartsGo() {
-        
+        if arrMemNameCount.count == 0 {
+            TipsSwift.showCenterWithText("没有班级成员!")
+        }
+        print(arrMemNameCount.count)
         var values: [Double] = []
         for i in 0..<arrMemNameCount.count {
             let d:Double = Double(arrMemNameCount[i].count)
@@ -61,11 +64,7 @@ class UserMineViewController: UIViewController, ChartViewDelegate, IAxisValueFor
         barChartView.xAxis.labelPosition = .bottom
         let xAxis = barChartView.xAxis
         xAxis.drawGridLinesEnabled = false
-        
 
-        barChartView.xAxis.setValue(8, forKey:"axisLineWidth")
-        
-        
         barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .linear)
         
         barChartView.data = data
