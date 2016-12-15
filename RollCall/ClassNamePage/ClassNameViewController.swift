@@ -112,13 +112,14 @@ class ClassNameViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
+            // 删除一个班级
             let oneClassName = arrClassData[indexPath.row]
             contextData.delete(oneClassName)
             if gIndexClass >= arrClassData.count {
                 gIndexClass = 0
                 arrCurGlobalSet[0].classIndex = 0
             }
+            delAllLog(classname: oneClassName.classname!)
             appDelegate.saveContext()
             arrClassData.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
@@ -126,6 +127,13 @@ class ClassNameViewController: UITableViewController {
         }
     }
     
+    func delAllLog(classname : String) {
+        for one in arrCallFair {
+            if one.classname == classname {
+                contextData.delete(one)
+            }
+        }
+    }
 
     
     // Override to support rearranging the table view.
