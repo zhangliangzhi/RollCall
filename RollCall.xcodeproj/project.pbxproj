@@ -29,6 +29,8 @@
 		0B4C86001DFBCDFA0038DC85 /* INSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FC1DFBCDFA0038DC85 /* INSPersistentContainer.swift */; };
 		0B4C86011DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FD1DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift */; };
 		0B4C86021DFBCDFA0038DC85 /* NSManagedObjectContext+iOS10Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FE1DFBCDFA0038DC85 /* NSManagedObjectContext+iOS10Additions.swift */; };
+		0B63F3391E03372500B41FAD /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B63F3381E03372500B41FAD /* Shop.storyboard */; };
+		0B63F33B1E03373D00B41FAD /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B63F33A1E03373D00B41FAD /* ShopViewController.swift */; };
 		0B881CCB1E006381008C30E4 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B881CCA1E006381008C30E4 /* CourseTableViewCell.swift */; };
 		0BB4ACC91DF40E99003B1C91 /* BootstrapBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB4ACC81DF40E99003B1C91 /* BootstrapBtn.swift */; };
 		0BBBFFBE1DE9254400EFAE9E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBFFBD1DE9254400EFAE9E /* MainTableViewController.swift */; };
@@ -75,6 +77,8 @@
 		0B4C85FE1DFBCDFA0038DC85 /* NSManagedObjectContext+iOS10Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+iOS10Additions.swift"; sourceTree = "<group>"; };
 		0B5B58FD1DED97B10075E267 /* RollCall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RollCall.entitlements; sourceTree = "<group>"; };
 		0B63F3361E03345700B41FAD /* RollCall-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RollCall-Bridging-Header.h"; sourceTree = "<group>"; };
+		0B63F3381E03372500B41FAD /* Shop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
+		0B63F33A1E03373D00B41FAD /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		0B881CCA1E006381008C30E4 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		0BB4ACC81DF40E99003B1C91 /* BootstrapBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapBtn.swift; sourceTree = "<group>"; };
 		0BBBFFBD1DE9254400EFAE9E /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 		0B4BAC181DE71CCA000636CB /* RollCall */ = {
 			isa = PBXGroup;
 			children = (
+				0B63F3371E03371800B41FAD /* ShopPage */,
 				0BD0F4E71DFFD41000E49E4B /* CoursePage */,
 				0BD0F4E01DFFD37800E49E4B /* MemberPage */,
 				0B152B0D1DF3E5A300915B81 /* ClassNamePage */,
@@ -207,6 +212,15 @@
 				6EAC734C6F5D923349E592BB /* Pods_RollCall.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0B63F3371E03371800B41FAD /* ShopPage */ = {
+			isa = PBXGroup;
+			children = (
+				0B63F3381E03372500B41FAD /* Shop.storyboard */,
+				0B63F33A1E03373D00B41FAD /* ShopViewController.swift */,
+			);
+			path = ShopPage;
 			sourceTree = "<group>";
 		};
 		0BD0F4E01DFFD37800E49E4B /* MemberPage */ = {
@@ -319,6 +333,7 @@
 				0B152B151DF3F02600915B81 /* ClassNameTableViewCell.xib in Resources */,
 				0B4BAC241DE71CCA000636CB /* LaunchScreen.storyboard in Resources */,
 				0BD0F4EC1DFFD41000E49E4B /* Course.storyboard in Resources */,
+				0B63F3391E03372500B41FAD /* Shop.storyboard in Resources */,
 				0B152B111DF3E80400915B81 /* ClassName.storyboard in Resources */,
 				0B152AC91DF2B93000915B81 /* Assets.xcassets in Resources */,
 				0B4BAC1F1DE71CCA000636CB /* Main.storyboard in Resources */,
@@ -399,6 +414,7 @@
 				0B4BAC1A1DE71CCA000636CB /* AppDelegate.swift in Sources */,
 				0B152B141DF3F02600915B81 /* ClassNameTableViewCell.swift in Sources */,
 				0BBBFFC01DE93F6F00EFAE9E /* SwiftyJSON.swift in Sources */,
+				0B63F33B1E03373D00B41FAD /* ShopViewController.swift in Sources */,
 				0B152B0F1DF3E7E700915B81 /* ClassNameViewController.swift in Sources */,
 				0BD676631E02A2F80061B77C /* CallLogTableViewCell.swift in Sources */,
 				0B4C86001DFBCDFA0038DC85 /* INSPersistentContainer.swift in Sources */,
