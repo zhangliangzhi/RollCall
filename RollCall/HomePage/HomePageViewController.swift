@@ -151,6 +151,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         }
         // 没有成员
         let strMembers:String = arrClassData[gIndexClass].member!
+        print(strMembers)
         let membersJsonData = strMembers.data(using: .utf8)
         let arrMembers = JSON(data:membersJsonData!)
         let iCount = arrMembers.count
