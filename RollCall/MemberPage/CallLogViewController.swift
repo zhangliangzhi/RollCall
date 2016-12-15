@@ -45,6 +45,13 @@ class CallLogViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         
         let one = arrCallFair[indexPath.row]
+        let getDate = DateInRegion(absoluteDate: one.date as! Date)
+        let timestr:String = getDate.string(format: DateFormat.custom("yyyy-MM-dd\nHH:mm:ss"))
+        cell.timeLabel.text = timestr
+        cell.classLabel.text = one.classname
+        cell.courseLabel.text = one.course
+        cell.idLabel.text = String(one.memID) + "号"
+        cell.memLabel.text = "okkk"
         
         return cell
     }
