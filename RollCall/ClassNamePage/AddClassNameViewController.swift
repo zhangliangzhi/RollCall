@@ -85,7 +85,8 @@ class AddClassNameViewController: UIViewController, UITextFieldDelegate {
 //        print(oneClassData.dateStart)
 //        print(oneClassData.dateEnd)
 
-        
+        // umeng统计观看次数
+        MobClick.event("UMADDCLASS")
         
         // 数据处理
         contextData.insert(oneClassData)
