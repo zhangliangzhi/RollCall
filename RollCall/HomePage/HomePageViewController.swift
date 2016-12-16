@@ -10,7 +10,7 @@ import Foundation
 import  UIKit
 import SwiftDate
 import CoreData
-import Firebase
+import GoogleMobileAds
 
 // coreData数据库操作接口
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -34,10 +34,12 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         
 
-
+        
         gdaBannerView.adUnitID = "ca-app-pub-7431883824117566/2677822130"
         gdaBannerView.rootViewController = self
-        gdaBannerView.load(GADRequest())
+        let request = GADRequest()
+//        request.testDevices = ["2c0b4bd55bcbb0ec0d881329ce52a8b3"]
+        gdaBannerView.load(request)
         
         
         tableView.delegate = self
