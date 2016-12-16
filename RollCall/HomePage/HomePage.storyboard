@@ -139,10 +139,17 @@
                                     <constraint firstAttribute="height" constant="50" id="p1t-7X-RIB"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公平点名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g63-6z-2Xz">
+                                <rect key="frame" x="147" y="622.66666666666652" width="120" height="19.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.9122043251991272" green="0.97401899099349976" blue="0.9036220908164978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fyv-es-fSX" firstAttribute="leading" secondItem="Q7a-Ja-PbN" secondAttribute="trailing" constant="8" id="09Q-ir-w4L"/>
+                            <constraint firstItem="fyv-es-fSX" firstAttribute="top" secondItem="g63-6z-2Xz" secondAttribute="bottom" constant="-25" id="CNe-2A-8x8"/>
                             <constraint firstItem="uvJ-5M-9kq" firstAttribute="centerX" secondItem="CLl-k4-y6x" secondAttribute="centerX" id="FJa-tu-S3F"/>
                             <constraint firstItem="7OD-Ds-B6z" firstAttribute="centerX" secondItem="CLl-k4-y6x" secondAttribute="centerX" id="FKL-DG-DZe"/>
                             <constraint firstItem="Oxq-O3-zdH" firstAttribute="centerX" secondItem="fyv-es-fSX" secondAttribute="centerX" id="GbE-EQ-HEZ"/>
@@ -155,9 +162,11 @@
                             <constraint firstItem="uvJ-5M-9kq" firstAttribute="leading" secondItem="66r-Df-bTZ" secondAttribute="trailing" constant="-45" id="NPI-P5-cN5"/>
                             <constraint firstItem="QLa-7n-POW" firstAttribute="centerX" secondItem="kMc-mY-JAq" secondAttribute="centerX" id="O0y-8f-Phv"/>
                             <constraint firstItem="kMc-mY-JAq" firstAttribute="top" secondItem="Ahs-0O-8n3" secondAttribute="bottom" constant="-2" id="O1N-Ue-Yml"/>
+                            <constraint firstItem="g63-6z-2Xz" firstAttribute="width" secondItem="fyv-es-fSX" secondAttribute="width" id="RFv-GW-tcB"/>
                             <constraint firstAttribute="trailing" secondItem="Oxq-O3-zdH" secondAttribute="trailing" id="Rji-0Y-q5d"/>
                             <constraint firstItem="1U2-WS-Am9" firstAttribute="height" secondItem="66r-Df-bTZ" secondAttribute="height" id="SqT-ed-CKi"/>
                             <constraint firstItem="66r-Df-bTZ" firstAttribute="top" secondItem="uvJ-5M-9kq" secondAttribute="bottom" constant="10" id="UDA-mq-MWP"/>
+                            <constraint firstItem="g63-6z-2Xz" firstAttribute="centerX" secondItem="fyv-es-fSX" secondAttribute="centerX" id="Upb-yB-myR"/>
                             <constraint firstItem="Oxq-O3-zdH" firstAttribute="top" secondItem="fyv-es-fSX" secondAttribute="bottom" constant="-80" id="UvT-Jb-kz5"/>
                             <constraint firstItem="Ahs-0O-8n3" firstAttribute="centerX" secondItem="kMc-mY-JAq" secondAttribute="centerX" id="Vnt-pM-TeY"/>
                             <constraint firstItem="fyv-es-fSX" firstAttribute="centerX" secondItem="CLl-k4-y6x" secondAttribute="centerX" id="a0s-WW-zCg"/>
@@ -183,6 +192,7 @@
                         <outlet property="curNameLabel" destination="1U2-WS-Am9" id="a7C-y7-0lO"/>
                         <outlet property="gdaBannerView" destination="7OD-Ds-B6z" id="cWw-pf-G9S"/>
                         <outlet property="justLogLabel" destination="Oxq-O3-zdH" id="MIQ-FD-LTs"/>
+                        <outlet property="ranNameLabel" destination="g63-6z-2Xz" id="LxG-Kz-Mzv"/>
                         <outlet property="tableView" destination="Mlh-dX-0jV" id="x2d-0S-NQP"/>
                     </connections>
                 </viewController>

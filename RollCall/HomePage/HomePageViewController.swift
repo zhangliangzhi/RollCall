@@ -26,6 +26,7 @@ var gIndexClass = 0
 class HomePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var curCoursePage: UILabel!
+    @IBOutlet weak var ranNameLabel: UILabel!
     @IBOutlet weak var gdaBannerView: GADBannerView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var justLogLabel: UILabel!
@@ -38,7 +39,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         gdaBannerView.adUnitID = "ca-app-pub-7431883824117566/2677822130"
         gdaBannerView.rootViewController = self
         let request = GADRequest()
-//        request.testDevices = ["2c0b4bd55bcbb0ec0d881329ce52a8b3"]
+        request.testDevices = ["2c0b4bd55bcbb0ec0d881329ce52a8b3"]
         gdaBannerView.load(request)
         
         
@@ -62,7 +63,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             self.tabBarController?.tabBar.isHidden = false // 显示tabbar
             self.automaticallyAdjustsScrollViewInsets = true
         }
-        
+        ranNameLabel.text = ""
         getCoreData()
         firstOpenAPP()
         tableView.reloadData()
@@ -104,6 +105,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         curNameLabel.text = className
         curCoursePage.text = arrClassData[indexPath.row].selCourse
         
+        ranNameLabel.text = ""
         TipsSwift.showTopWithText("选中班级: " + className)
         
         // 进入选课程界面
@@ -175,6 +177,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         let name:String = fairMemId.name
         let id:Int32 = fairMemId.id
         
+        ranNameLabel.text = name
         TipsSwift.showCenterWithText("点名：" + name)
         let logText:String = "当前点名:" + name + ", 学号:" + String(id) + ", 课程:" + arrClassData[gIndexClass].selCourse! + ", 班级:" + arrClassData[gIndexClass].classname!
         justLogLabel.text = logText
