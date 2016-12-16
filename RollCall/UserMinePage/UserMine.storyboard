@@ -29,8 +29,8 @@
                         <color key="backgroundColor" red="0.87185579538345337" green="0.96517914533615112" blue="0.96151071786880493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="pQ4-qR-GGS" secondAttribute="trailing" id="PVV-7T-BdQ"/>
-                            <constraint firstItem="CZw-3q-cOU" firstAttribute="top" secondItem="pQ4-qR-GGS" secondAttribute="bottom" id="Y2m-YE-gku"/>
                             <constraint firstItem="pQ4-qR-GGS" firstAttribute="leading" secondItem="9Ib-DB-2uc" secondAttribute="leading" id="aa9-xD-7zS"/>
+                            <constraint firstItem="CZw-3q-cOU" firstAttribute="top" secondItem="pQ4-qR-GGS" secondAttribute="bottom" id="fld-qh-6XX"/>
                             <constraint firstItem="pQ4-qR-GGS" firstAttribute="top" secondItem="Rc3-4E-pFG" secondAttribute="bottom" id="nWy-TB-0Fh"/>
                         </constraints>
                     </view>

@@ -31,6 +31,12 @@ class UserMineViewController: UIViewController, ChartViewDelegate, IAxisValueFor
         chartsGo()
     }
     
+    override func viewDidLoad() {
+        barChartView.xAxis.valueFormatter = self
+        barChartView.chartDescription?.text = "by 🍉西瓜点名🍉"
+        
+    }
+    
     public func stringForValue(_ value: Double, axis: Charts.AxisBase?) -> String
     {
         return arrMemNameCount[Int(value)].name
@@ -70,11 +76,6 @@ class UserMineViewController: UIViewController, ChartViewDelegate, IAxisValueFor
         barChartView.data = data
     }
     
-    override func viewDidLoad() {
-        barChartView.xAxis.valueFormatter = self
-        
-        barChartView.chartDescription?.text = "by 🍉西瓜点名🍉"
-    }
     
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         print(highlight)

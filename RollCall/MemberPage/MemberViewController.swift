@@ -9,9 +9,11 @@
 import Foundation
 import UIKit
 import SwiftDate
+import Firebase
 
 
 class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var tableView: UITableView!
     
     var arrMemCount = [Int32:Int]()
@@ -35,6 +37,9 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
         
         // add
         let mSearchButtonRight = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(MemberViewController.addClassMemberPage))

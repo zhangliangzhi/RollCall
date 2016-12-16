@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8I8-yy-QS7">
-                                <rect key="frame" x="0.0" y="41" width="375" height="626"/>
+                                <rect key="frame" x="0.0" y="41" width="375" height="576"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="coursecell" id="usU-YN-FCZ" customClass="CourseTableViewCell" customModule="RollCall" customModuleProvider="target">
@@ -64,22 +64,33 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbw-wo-OlF" customClass="GADBannerView">
+                                <rect key="frame" x="27" y="617" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Gpq-EU-pQA"/>
+                                    <constraint firstAttribute="width" constant="320" id="yBu-Hu-w06"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1iB-aV-I2o" firstAttribute="top" secondItem="dbw-wo-OlF" secondAttribute="bottom" id="8Il-ox-5PH"/>
                             <constraint firstItem="8I8-yy-QS7" firstAttribute="top" secondItem="DI7-9k-txY" secondAttribute="bottom" id="ETc-CC-Moa"/>
                             <constraint firstItem="aN9-Fh-Vjc" firstAttribute="trailing" secondItem="8I8-yy-QS7" secondAttribute="trailing" id="FBD-qg-TMV"/>
                             <constraint firstItem="DI7-9k-txY" firstAttribute="top" secondItem="0TQ-bG-dm7" secondAttribute="bottom" id="GLN-VB-L3J"/>
                             <constraint firstItem="aN9-Fh-Vjc" firstAttribute="top" secondItem="lrh-nz-MpJ" secondAttribute="top" id="GSD-bl-Xo7"/>
                             <constraint firstItem="8I8-yy-QS7" firstAttribute="leading" secondItem="lrh-nz-MpJ" secondAttribute="leading" id="HmP-43-PRk"/>
                             <constraint firstItem="aN9-Fh-Vjc" firstAttribute="bottom" secondItem="DI7-9k-txY" secondAttribute="bottom" id="Itz-eH-n3F"/>
+                            <constraint firstItem="dbw-wo-OlF" firstAttribute="top" secondItem="8I8-yy-QS7" secondAttribute="bottom" id="Izm-Tq-ea7"/>
                             <constraint firstItem="DI7-9k-txY" firstAttribute="centerX" secondItem="lrh-nz-MpJ" secondAttribute="centerX" id="UFn-0b-PZ0"/>
+                            <constraint firstItem="dbw-wo-OlF" firstAttribute="centerX" secondItem="lrh-nz-MpJ" secondAttribute="centerX" id="UKO-js-sKR"/>
                             <constraint firstItem="aN9-Fh-Vjc" firstAttribute="leading" secondItem="lrh-nz-MpJ" secondAttribute="leading" id="cz3-pZ-vDt"/>
-                            <constraint firstItem="1iB-aV-I2o" firstAttribute="top" secondItem="8I8-yy-QS7" secondAttribute="bottom" id="fRM-jt-cC3"/>
                             <constraint firstAttribute="trailing" secondItem="8I8-yy-QS7" secondAttribute="trailing" id="yU0-sc-Azh"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="dbw-wo-OlF" id="3Dq-UT-VBp"/>
                         <outlet property="tableView" destination="8I8-yy-QS7" id="bye-li-8if"/>
                     </connections>
                 </viewController>
