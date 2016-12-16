@@ -159,7 +159,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         // 随机点名
         if arrClassData.count == 0 {
             TipsSwift.showCenterWithText("需要先创建班级")
-            Toast(text: "需要先创建班级").show()
+            Toast(text: "去班级页面新建一个班级吧！").show()
             return
         }
         // 没有成员
@@ -169,7 +169,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         let iCount = arrMembers.count
         if iCount == 0 {
             TipsSwift.showCenterWithText("先增加班级成员")
-            Toast(text: "到成员页面目录去添加成员吧!").show()
+            Toast(text: "到成员页面目录开始添加成员吧!").show()
             return
         }
         let fairMemId = getRandomMemId()
