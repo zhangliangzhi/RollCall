@@ -10,6 +10,7 @@ import Foundation
 import  UIKit
 import SwiftDate
 import CoreData
+import Firebase
 
 // coreData数据库操作接口
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -25,6 +26,7 @@ var gIndexClass = 0
 class HomePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var curCoursePage: UILabel!
+    @IBOutlet weak var gdaBannerView: GADBannerView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var justLogLabel: UILabel!
     @IBOutlet weak var curNameLabel: UILabel!
@@ -33,7 +35,9 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         
 
 
-        
+        gdaBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        gdaBannerView.rootViewController = self
+        gdaBannerView.load(GADRequest())
         
         
         tableView.delegate = self
