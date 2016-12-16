@@ -11,6 +11,7 @@ import  UIKit
 import SwiftDate
 import CoreData
 import GoogleMobileAds
+import Toaster
 
 // coreData数据库操作接口
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -158,6 +159,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         // 随机点名
         if arrClassData.count == 0 {
             TipsSwift.showCenterWithText("需要先创建班级")
+            Toast(text: "需要先创建班级").show()
             return
         }
         // 没有成员
@@ -167,6 +169,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         let iCount = arrMembers.count
         if iCount == 0 {
             TipsSwift.showCenterWithText("先增加班级成员")
+            Toast(text: "到成员页面目录去添加成员吧!").show()
             return
         }
         let fairMemId = getRandomMemId()
@@ -181,6 +184,8 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         TipsSwift.showCenterWithText("点名：" + name)
         let logText:String = "当前点名:" + name + ", 学号:" + String(id) + ", 课程:" + arrClassData[gIndexClass].selCourse! + ", 班级:" + arrClassData[gIndexClass].classname!
         justLogLabel.text = logText
+        
+        Toast(text: logText).show()
 
         // 保存一条记录 时间，学号
 //        let nowdate = DateInRegion(absoluteDate: Date())
