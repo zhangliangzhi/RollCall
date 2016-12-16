@@ -17,18 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="YPb-3g-Hev" customClass="GADBannerView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                            <color key="backgroundColor" red="0.90018612146377563" green="0.96085089445114136" blue="0.97356754541397095" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
                         <connections>
                             <outlet property="dataSource" destination="8eM-Uh-JwO" id="SnJ-kk-fkh"/>
                             <outlet property="delegate" destination="8eM-Uh-JwO" id="Pxi-kT-auI"/>
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="bannerView" destination="YPb-3g-Hev" id="9HG-FN-sjT"/>
                         <outlet property="cnTableView" destination="Jcl-wp-1BU" id="hdE-DP-7Bs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eum-Xi-lLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="-234"/>
+            <point key="canvasLocation" x="372" y="-234.33283358320841"/>
         </scene>
         <!--Add Class Name View Controller-->
         <scene sceneID="QHt-ej-gIj">

@@ -17,13 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // google
         FIRApp.configure()
+        
         // umeng统计观
         let obj = UMAnalyticsConfig()
         obj.appKey = "5852fa613eae254d7d00268d"
         obj.channelId = "App Store"
         MobClick.start(withConfigure: obj)
-        
         // umeng统计观看次数
         MobClick.event("UMLOGIN")
         
