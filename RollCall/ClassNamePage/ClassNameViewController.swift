@@ -17,7 +17,7 @@ class ClassNameViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-7431883824117566/5631288533"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
 

@@ -35,7 +35,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         
 
 
-        gdaBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        gdaBannerView.adUnitID = "ca-app-pub-7431883824117566/2677822130"
         gdaBannerView.rootViewController = self
         gdaBannerView.load(GADRequest())
         

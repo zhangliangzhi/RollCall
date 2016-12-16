@@ -37,7 +37,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-7431883824117566/5072885331"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         
