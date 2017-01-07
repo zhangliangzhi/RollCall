@@ -18,10 +18,12 @@ class MultAddViewController: UIViewController, UITextViewDelegate {
         
         mTextView.delegate = self
         self.title = "名字间用逗号隔开"
+        
+        mTextView.text = UIPasteboard.general.string
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        mTextView.text = ""
+//        mTextView.text = ""
     }
 
     // 导入
