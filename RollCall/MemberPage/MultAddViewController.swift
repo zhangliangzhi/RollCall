@@ -118,6 +118,7 @@ class MultAddViewController: UIViewController, UITextViewDelegate {
         let membersJsonData = strMembers.data(using: .utf8)
         let arrMembers = JSON(data:membersJsonData!)
         if arrMembers.count == 0 {
+            TipsSwift.showTopWithText("没有成员导出失败")
             return
         }
         
