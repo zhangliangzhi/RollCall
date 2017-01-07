@@ -34,7 +34,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         
 
-        
+
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -147,6 +147,12 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func goRandom(_ sender: Any) {
         // umeng统计观
         MobClick.event("UMRANDOM")
+        
+        
+        
+
+        
+        
         
         // 随机点名
         if arrClassData.count == 0 {

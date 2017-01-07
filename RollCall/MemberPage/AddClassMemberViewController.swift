@@ -19,6 +19,8 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
         textNum.delegate = self
         textName.delegate = self
         
+        let multAddBtn = UIBarButtonItem(title: "一键导入", style: .plain, target: self, action: #selector(multiAdd))
+        self.navigationItem.rightBarButtonItem = multAddBtn
         
         let strMembers:String = arrClassData[gIndexClass].member!
         let membersJsonData = strMembers.data(using: .utf8)
@@ -30,6 +32,11 @@ class AddClassMemberViewController: UIViewController, UITextFieldDelegate {
         }
         textNum.text = String(iLastID)
         textName.becomeFirstResponder()
+    }
+    
+    func multiAdd() {
+        let muladd = UIStoryboard(name: "Member", bundle: nil).instantiateViewController(withIdentifier: "multadd") as! MultAddViewController
+        self.navigationController?.pushViewController(muladd, animated: true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

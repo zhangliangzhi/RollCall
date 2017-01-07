@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0770892378D6F84659D7DF52 /* Pods_RollCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAC734C6F5D923349E592BB /* Pods_RollCall.framework */; };
+		0B08E88E1E216868009ED6BF /* MultAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08E88D1E216868009ED6BF /* MultAddViewController.swift */; };
 		0B151D061E01C7C300593729 /* DescHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B151D051E01C7C300593729 /* DescHelpViewController.swift */; };
 		0B152AC91DF2B93000915B81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B152AC81DF2B93000915B81 /* Assets.xcassets */; };
 		0B152AFD1DF2BA5200915B81 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B152AF11DF2BA5200915B81 /* HomePage.storyboard */; };
@@ -52,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B08E88D1E216868009ED6BF /* MultAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultAddViewController.swift; sourceTree = "<group>"; };
 		0B151D051E01C7C300593729 /* DescHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescHelpViewController.swift; sourceTree = "<group>"; };
 		0B152AC81DF2B93000915B81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B152AF11DF2BA5200915B81 /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				0BD0F4EE1DFFF08600E49E4B /* MemberTableViewCell.swift */,
 				0BD676601E029F490061B77C /* CallLogViewController.swift */,
 				0BD676621E02A2F80061B77C /* CallLogTableViewCell.swift */,
+				0B08E88D1E216868009ED6BF /* MultAddViewController.swift */,
 			);
 			path = MemberPage;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				0BD0F4EF1DFFF08600E49E4B /* MemberTableViewCell.swift in Sources */,
 				0BD0F4E61DFFD37800E49E4B /* MemberViewController.swift in Sources */,
 				0B4C85E41DF9AA9E0038DC85 /* TipsSwift.swift in Sources */,
+				0B08E88E1E216868009ED6BF /* MultAddViewController.swift in Sources */,
 				0B151D061E01C7C300593729 /* DescHelpViewController.swift in Sources */,
 				0BD676611E029F490061B77C /* CallLogViewController.swift in Sources */,
 				0B4C85E21DF962230038DC85 /* AddClassNameViewController.swift in Sources */,
