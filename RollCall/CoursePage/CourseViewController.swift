@@ -13,7 +13,7 @@ import Firebase
 class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
 
-    @IBOutlet weak var bannerView: GADBannerView!
+    
     override func viewWillAppear(_ animated: Bool) {
 
         getCoreData()
@@ -30,10 +30,8 @@ class CourseViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
+
         
-        bannerView.adUnitID = "ca-app-pub-7431883824117566/3596152133"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
         
         // add
         let mSearchButtonRight = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(CourseViewController.addClassCoursePage))

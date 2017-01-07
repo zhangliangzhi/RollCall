@@ -8,6 +8,5 @@ target 'RollCall' do
 	pod 'Charts'
 	pod 'UMengAnalytics-NO-IDFA'
 	pod 'Firebase/Core'
-	pod 'Firebase/AdMob'
 	pod 'Toaster', '~> 2.0'
 end

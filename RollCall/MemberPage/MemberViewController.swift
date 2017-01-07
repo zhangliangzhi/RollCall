@@ -13,7 +13,7 @@ import Firebase
 
 
 class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var bannerView: GADBannerView!
+
     @IBOutlet weak var tableView: UITableView!
     
     var arrMemCount = [Int32:Int]()
@@ -36,10 +36,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
-        
-        bannerView.adUnitID = "ca-app-pub-7431883824117566/5072885331"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+
         
         // add
         let mSearchButtonRight = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(MemberViewController.addClassMemberPage))

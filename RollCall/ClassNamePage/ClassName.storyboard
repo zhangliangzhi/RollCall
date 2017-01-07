@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,18 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="YPb-3g-Hev" customClass="GADBannerView">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                            <color key="backgroundColor" red="0.90018612146377563" green="0.96085089445114136" blue="0.97356754541397095" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </view>
                         <connections>
                             <outlet property="dataSource" destination="8eM-Uh-JwO" id="SnJ-kk-fkh"/>
                             <outlet property="delegate" destination="8eM-Uh-JwO" id="Pxi-kT-auI"/>
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="bannerView" destination="YPb-3g-Hev" id="9HG-FN-sjT"/>
                         <outlet property="cnTableView" destination="Jcl-wp-1BU" id="hdE-DP-7Bs"/>
                     </connections>
                 </tableViewController>

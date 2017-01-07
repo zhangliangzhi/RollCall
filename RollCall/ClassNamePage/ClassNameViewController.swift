@@ -10,16 +10,12 @@ import UIKit
 import Firebase
 
 class ClassNameViewController: UITableViewController {
-    @IBOutlet weak var bannerView: GADBannerView!
 
     @IBOutlet weak var cnTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        bannerView.adUnitID = "ca-app-pub-7431883824117566/5631288533"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

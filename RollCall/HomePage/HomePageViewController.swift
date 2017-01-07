@@ -10,7 +10,6 @@ import Foundation
 import  UIKit
 import SwiftDate
 import CoreData
-import GoogleMobileAds
 import Toaster
 
 // coreData数据库操作接口
@@ -28,7 +27,6 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var curCoursePage: UILabel!
     @IBOutlet weak var ranNameLabel: UILabel!
-    @IBOutlet weak var gdaBannerView: GADBannerView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var justLogLabel: UILabel!
     @IBOutlet weak var curNameLabel: UILabel!
@@ -36,12 +34,6 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         
 
-        
-        gdaBannerView.adUnitID = "ca-app-pub-7431883824117566/2677822130"
-        gdaBannerView.rootViewController = self
-        let request = GADRequest()
-        request.testDevices = ["2c0b4bd55bcbb0ec0d881329ce52a8b3"]
-        gdaBannerView.load(request)
         
         
         tableView.delegate = self

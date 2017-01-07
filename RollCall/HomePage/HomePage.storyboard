@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fjG-4n-nOT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fjG-4n-nOT">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +37,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyv-es-fSX">
-                                <rect key="frame" x="147" y="616" width="120" height="70"/>
+                                <rect key="frame" x="147" y="646" width="120" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="5RR-Nv-f26"/>
                                     <constraint firstAttribute="width" constant="120" id="Lgg-8B-DJ6"/>
@@ -68,14 +68,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mlh-dX-0jV">
-                                <rect key="frame" x="0.0" y="107" width="414" height="499"/>
+                                <rect key="frame" x="0.0" y="107" width="414" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="homecell" id="nDm-sy-ufP" customClass="HomeTableViewCell" customModule="RollCall" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDm-sy-ufP" id="cfZ-sb-v9y">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uB0-Pu-Wgv" userLabel="mLabel">
@@ -97,7 +97,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I64-qw-sQ7">
-                                <rect key="frame" x="275" y="636" width="62" height="30"/>
+                                <rect key="frame" x="275" y="666" width="62" height="30"/>
                                 <state key="normal" title="设置时间"/>
                                 <connections>
                                     <action selector="goSetTimePage:" destination="fjG-4n-nOT" eventType="touchUpInside" id="cva-PE-YRP"/>
@@ -116,7 +116,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="随机公平点名，确保点名公平公正" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxq-O3-zdH">
-                                <rect key="frame" x="0.0" y="606" width="414" height="15.666666666666629"/>
+                                <rect key="frame" x="0.0" y="636" width="414" height="15.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="fWN-Lh-RmP"/>
                                 </constraints>
@@ -125,22 +125,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7a-Ja-PbN">
-                                <rect key="frame" x="77" y="636" width="62" height="30"/>
+                                <rect key="frame" x="77" y="666" width="62" height="30"/>
                                 <state key="normal" title="点名记录"/>
                                 <connections>
                                     <action selector="goCallLogPage:" destination="fjG-4n-nOT" eventType="touchUpInside" id="P72-eI-dXE"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7OD-Ds-B6z" customClass="GADBannerView">
-                                <rect key="frame" x="47" y="686" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="13t-Gp-gWy"/>
-                                    <constraint firstAttribute="height" constant="50" id="p1t-7X-RIB"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公平点名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g63-6z-2Xz">
-                                <rect key="frame" x="147" y="622.66666666666652" width="120" height="19.333333333333371"/>
+                                <rect key="frame" x="147" y="652.66666666666652" width="120" height="19.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -151,13 +143,11 @@
                             <constraint firstItem="fyv-es-fSX" firstAttribute="leading" secondItem="Q7a-Ja-PbN" secondAttribute="trailing" constant="8" id="09Q-ir-w4L"/>
                             <constraint firstItem="fyv-es-fSX" firstAttribute="top" secondItem="g63-6z-2Xz" secondAttribute="bottom" constant="-25" id="CNe-2A-8x8"/>
                             <constraint firstItem="uvJ-5M-9kq" firstAttribute="centerX" secondItem="CLl-k4-y6x" secondAttribute="centerX" id="FJa-tu-S3F"/>
-                            <constraint firstItem="7OD-Ds-B6z" firstAttribute="centerX" secondItem="CLl-k4-y6x" secondAttribute="centerX" id="FKL-DG-DZe"/>
                             <constraint firstItem="Oxq-O3-zdH" firstAttribute="centerX" secondItem="fyv-es-fSX" secondAttribute="centerX" id="GbE-EQ-HEZ"/>
                             <constraint firstItem="QLa-7n-POW" firstAttribute="height" secondItem="kMc-mY-JAq" secondAttribute="height" id="Hfc-KY-Sph"/>
                             <constraint firstItem="1U2-WS-Am9" firstAttribute="centerX" secondItem="66r-Df-bTZ" secondAttribute="centerX" id="HlW-Mx-J1r"/>
                             <constraint firstItem="Mlh-dX-0jV" firstAttribute="leading" secondItem="CLl-k4-y6x" secondAttribute="leading" id="Hty-ab-IPN"/>
                             <constraint firstItem="ZSp-qq-aXR" firstAttribute="centerX" secondItem="66r-Df-bTZ" secondAttribute="centerX" id="Izz-ql-f2y"/>
-                            <constraint firstItem="L1W-Zp-8Zh" firstAttribute="top" secondItem="7OD-Ds-B6z" secondAttribute="bottom" id="JMh-e0-Kab"/>
                             <constraint firstItem="uvJ-5M-9kq" firstAttribute="top" secondItem="ceW-LJ-EXm" secondAttribute="bottom" constant="8" id="Lz9-wD-Vhn"/>
                             <constraint firstItem="uvJ-5M-9kq" firstAttribute="leading" secondItem="66r-Df-bTZ" secondAttribute="trailing" constant="-45" id="NPI-P5-cN5"/>
                             <constraint firstItem="QLa-7n-POW" firstAttribute="centerX" secondItem="kMc-mY-JAq" secondAttribute="centerX" id="O0y-8f-Phv"/>
@@ -177,7 +167,7 @@
                             <constraint firstItem="I64-qw-sQ7" firstAttribute="leading" secondItem="fyv-es-fSX" secondAttribute="trailing" constant="8" id="pfZ-Op-fEq"/>
                             <constraint firstItem="Oxq-O3-zdH" firstAttribute="leading" secondItem="CLl-k4-y6x" secondAttribute="leading" id="qBl-Wt-ln9"/>
                             <constraint firstItem="I64-qw-sQ7" firstAttribute="centerY" secondItem="fyv-es-fSX" secondAttribute="centerY" id="rZm-Qq-tA5"/>
-                            <constraint firstItem="L1W-Zp-8Zh" firstAttribute="top" secondItem="fyv-es-fSX" secondAttribute="bottom" constant="50" id="u8v-NR-xPU"/>
+                            <constraint firstItem="L1W-Zp-8Zh" firstAttribute="top" secondItem="fyv-es-fSX" secondAttribute="bottom" constant="20" id="u8v-NR-xPU"/>
                             <constraint firstItem="kMc-mY-JAq" firstAttribute="leading" secondItem="uvJ-5M-9kq" secondAttribute="trailing" constant="-45" id="uCJ-HS-Cw0"/>
                             <constraint firstAttribute="trailing" secondItem="Mlh-dX-0jV" secondAttribute="trailing" id="uOI-u6-GXS"/>
                             <constraint firstItem="Q7a-Ja-PbN" firstAttribute="centerY" secondItem="fyv-es-fSX" secondAttribute="centerY" id="vaF-1I-aef"/>
@@ -190,7 +180,6 @@
                     <connections>
                         <outlet property="curCoursePage" destination="QLa-7n-POW" id="dw0-Zf-Ln7"/>
                         <outlet property="curNameLabel" destination="1U2-WS-Am9" id="a7C-y7-0lO"/>
-                        <outlet property="gdaBannerView" destination="7OD-Ds-B6z" id="cWw-pf-G9S"/>
                         <outlet property="justLogLabel" destination="Oxq-O3-zdH" id="MIQ-FD-LTs"/>
                         <outlet property="ranNameLabel" destination="g63-6z-2Xz" id="LxG-Kz-Mzv"/>
                         <outlet property="tableView" destination="Mlh-dX-0jV" id="x2d-0S-NQP"/>
