@@ -68,14 +68,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mlh-dX-0jV">
-                                <rect key="frame" x="0.0" y="107" width="414" height="529"/>
+                                <rect key="frame" x="0.0" y="107" width="414" height="511"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="homecell" id="nDm-sy-ufP" customClass="HomeTableViewCell" customModule="RollCall" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDm-sy-ufP" id="cfZ-sb-v9y">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uB0-Pu-Wgv" userLabel="mLabel">
@@ -116,7 +116,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="随机公平点名，确保点名公平公正" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxq-O3-zdH">
-                                <rect key="frame" x="0.0" y="636" width="414" height="15.666666666666629"/>
+                                <rect key="frame" x="0.0" y="626" width="414" height="15.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="fWN-Lh-RmP"/>
                                 </constraints>
@@ -157,12 +157,12 @@
                             <constraint firstItem="1U2-WS-Am9" firstAttribute="height" secondItem="66r-Df-bTZ" secondAttribute="height" id="SqT-ed-CKi"/>
                             <constraint firstItem="66r-Df-bTZ" firstAttribute="top" secondItem="uvJ-5M-9kq" secondAttribute="bottom" constant="10" id="UDA-mq-MWP"/>
                             <constraint firstItem="g63-6z-2Xz" firstAttribute="centerX" secondItem="fyv-es-fSX" secondAttribute="centerX" id="Upb-yB-myR"/>
-                            <constraint firstItem="Oxq-O3-zdH" firstAttribute="top" secondItem="fyv-es-fSX" secondAttribute="bottom" constant="-80" id="UvT-Jb-kz5"/>
+                            <constraint firstItem="Oxq-O3-zdH" firstAttribute="top" secondItem="fyv-es-fSX" secondAttribute="bottom" constant="-90" id="UvT-Jb-kz5"/>
                             <constraint firstItem="Ahs-0O-8n3" firstAttribute="centerX" secondItem="kMc-mY-JAq" secondAttribute="centerX" id="Vnt-pM-TeY"/>
+                            <constraint firstItem="fyv-es-fSX" firstAttribute="top" secondItem="Mlh-dX-0jV" secondAttribute="bottom" constant="28" id="Z2B-YX-Sv4"/>
                             <constraint firstItem="fyv-es-fSX" firstAttribute="centerX" secondItem="CLl-k4-y6x" secondAttribute="centerX" id="a0s-WW-zCg"/>
                             <constraint firstItem="1U2-WS-Am9" firstAttribute="centerY" secondItem="66r-Df-bTZ" secondAttribute="centerY" id="avd-EI-Gpy"/>
                             <constraint firstItem="QLa-7n-POW" firstAttribute="width" secondItem="kMc-mY-JAq" secondAttribute="width" id="d5G-As-9Mj"/>
-                            <constraint firstItem="fyv-es-fSX" firstAttribute="top" secondItem="Mlh-dX-0jV" secondAttribute="bottom" constant="10" id="jFT-E6-wA3"/>
                             <constraint firstItem="QLa-7n-POW" firstAttribute="centerY" secondItem="kMc-mY-JAq" secondAttribute="centerY" id="pNk-2m-gx8"/>
                             <constraint firstItem="I64-qw-sQ7" firstAttribute="leading" secondItem="fyv-es-fSX" secondAttribute="trailing" constant="8" id="pfZ-Op-fEq"/>
                             <constraint firstItem="Oxq-O3-zdH" firstAttribute="leading" secondItem="CLl-k4-y6x" secondAttribute="leading" id="qBl-Wt-ln9"/>

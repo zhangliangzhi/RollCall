@@ -177,7 +177,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         let logText:String = "当前点名:" + name + ", 学号:" + String(id) + ", 课程:" + arrClassData[gIndexClass].selCourse! + ", 班级:" + arrClassData[gIndexClass].classname!
         justLogLabel.text = logText
         
-        Toast(text: logText).show()
+//        Toast(text: logText).show()
 
         // 保存一条记录 时间，学号
 //        let nowdate = DateInRegion(absoluteDate: Date())
