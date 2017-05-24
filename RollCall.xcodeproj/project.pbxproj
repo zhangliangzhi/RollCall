@@ -19,13 +19,13 @@
 		0B152B111DF3E80400915B81 /* ClassName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B152B101DF3E80400915B81 /* ClassName.storyboard */; };
 		0B152B141DF3F02600915B81 /* ClassNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B152B121DF3F02600915B81 /* ClassNameTableViewCell.swift */; };
 		0B152B151DF3F02600915B81 /* ClassNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B152B131DF3F02600915B81 /* ClassNameTableViewCell.xib */; };
+		0B27BA811ED5B2C4005CAAD2 /* TipsSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B27BA801ED5B2C4005CAAD2 /* TipsSwift.swift */; };
 		0B4BAC1A1DE71CCA000636CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4BAC191DE71CCA000636CB /* AppDelegate.swift */; };
 		0B4BAC1C1DE71CCA000636CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4BAC1B1DE71CCA000636CB /* ViewController.swift */; };
 		0B4BAC1F1DE71CCA000636CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4BAC1D1DE71CCA000636CB /* Main.storyboard */; };
 		0B4BAC241DE71CCA000636CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4BAC221DE71CCA000636CB /* LaunchScreen.storyboard */; };
 		0B4C85DC1DF95C5E0038DC85 /* RollCall.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85DA1DF95C5E0038DC85 /* RollCall.xcdatamodeld */; };
 		0B4C85E21DF962230038DC85 /* AddClassNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85E11DF962230038DC85 /* AddClassNameViewController.swift */; };
-		0B4C85E41DF9AA9E0038DC85 /* TipsSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85E31DF9AA9E0038DC85 /* TipsSwift.swift */; };
 		0B4C85FF1DFBCDFA0038DC85 /* INSDataStackContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FB1DFBCDFA0038DC85 /* INSDataStackContainer.swift */; };
 		0B4C86001DFBCDFA0038DC85 /* INSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FC1DFBCDFA0038DC85 /* INSPersistentContainer.swift */; };
 		0B4C86011DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FD1DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift */; };
@@ -64,6 +64,7 @@
 		0B152B101DF3E80400915B81 /* ClassName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClassName.storyboard; sourceTree = "<group>"; };
 		0B152B121DF3F02600915B81 /* ClassNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassNameTableViewCell.swift; sourceTree = "<group>"; };
 		0B152B131DF3F02600915B81 /* ClassNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClassNameTableViewCell.xib; sourceTree = "<group>"; };
+		0B27BA801ED5B2C4005CAAD2 /* TipsSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsSwift.swift; sourceTree = "<group>"; };
 		0B4BAC161DE71CCA000636CB /* RollCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4BAC191DE71CCA000636CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B4BAC1B1DE71CCA000636CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		0B4BAC251DE71CCA000636CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B4C85DB1DF95C5E0038DC85 /* RollCall.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RollCall.xcdatamodel; sourceTree = "<group>"; };
 		0B4C85E11DF962230038DC85 /* AddClassNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassNameViewController.swift; sourceTree = "<group>"; };
-		0B4C85E31DF9AA9E0038DC85 /* TipsSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsSwift.swift; sourceTree = "<group>"; };
 		0B4C85FB1DFBCDFA0038DC85 /* INSDataStackContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSDataStackContainer.swift; sourceTree = "<group>"; };
 		0B4C85FC1DFBCDFA0038DC85 /* INSPersistentContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSPersistentContainer.swift; sourceTree = "<group>"; };
 		0B4C85FD1DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSPersistentStoreDescription.swift; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 				0BBBFFBF1DE93F6F00EFAE9E /* SwiftyJSON.swift */,
 				0BB4ACC81DF40E99003B1C91 /* BootstrapBtn.swift */,
 				0B4C85DA1DF95C5E0038DC85 /* RollCall.xcdatamodeld */,
-				0B4C85E31DF9AA9E0038DC85 /* TipsSwift.swift */,
+				0B27BA801ED5B2C4005CAAD2 /* TipsSwift.swift */,
 				0BD0F4D51DFC9B4400E49E4B /* ClassModel.swift */,
 				0B63F3361E03345700B41FAD /* RollCall-Bridging-Header.h */,
 				0B63F33C1E03385700B41FAD /* GoogleService-Info.plist */,
@@ -404,7 +404,6 @@
 				0B4BAC1C1DE71CCA000636CB /* ViewController.swift in Sources */,
 				0BD0F4EF1DFFF08600E49E4B /* MemberTableViewCell.swift in Sources */,
 				0BD0F4E61DFFD37800E49E4B /* MemberViewController.swift in Sources */,
-				0B4C85E41DF9AA9E0038DC85 /* TipsSwift.swift in Sources */,
 				0B08E88E1E216868009ED6BF /* MultAddViewController.swift in Sources */,
 				0B151D061E01C7C300593729 /* DescHelpViewController.swift in Sources */,
 				0BD676611E029F490061B77C /* CallLogViewController.swift in Sources */,
@@ -422,6 +421,7 @@
 				0B152B0F1DF3E7E700915B81 /* ClassNameViewController.swift in Sources */,
 				0BD676631E02A2F80061B77C /* CallLogTableViewCell.swift in Sources */,
 				0B4C86001DFBCDFA0038DC85 /* INSPersistentContainer.swift in Sources */,
+				0B27BA811ED5B2C4005CAAD2 /* TipsSwift.swift in Sources */,
 				0BD0F4EB1DFFD41000E49E4B /* AddCourseMemberViewController.swift in Sources */,
 				0B4C85DC1DF95C5E0038DC85 /* RollCall.xcdatamodeld in Sources */,
 				0BD0F4D91DFEB33300E49E4B /* HomeTableViewCell.swift in Sources */,
