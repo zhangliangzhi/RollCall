@@ -18,8 +18,8 @@ class DescHelpViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         numWc.delegate = self
-        bottomLabel.text = "2016@张良志 客服:521401@qq.com"
-        descLabel.text = "随机公平点名\n 1.随机点名 2.公平点名\n确保每个人点到的次数是一样多的，这次点到名了，下次就不会随机点到了。可设置随机点名人数误差范围，默认是1人误差。"
+        bottomLabel.text = "2018@西瓜点名"
+        descLabel.text = "随机公平点名\n 1.随机点名 \n2.公平点名\n\n确保每个人点到的次数是一样多的，这次点到名了，下次就不会随机点到了。可设置随机点名人数误差范围，默认是1人误差。"
         
         if arrClassData.count > 0 {
             numWc.text = String(arrClassData[gIndexClass].wc)

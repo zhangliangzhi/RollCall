@@ -33,6 +33,7 @@
 		0B63F3391E03372500B41FAD /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B63F3381E03372500B41FAD /* Shop.storyboard */; };
 		0B63F33B1E03373D00B41FAD /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B63F33A1E03373D00B41FAD /* ShopViewController.swift */; };
 		0B63F33D1E03385700B41FAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B63F33C1E03385700B41FAD /* GoogleService-Info.plist */; };
+		0B858AD92042C1C300236875 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B858AD82042C1C200236875 /* MyColor.swift */; };
 		0B881CCB1E006381008C30E4 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B881CCA1E006381008C30E4 /* CourseTableViewCell.swift */; };
 		0BB4ACC91DF40E99003B1C91 /* BootstrapBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB4ACC81DF40E99003B1C91 /* BootstrapBtn.swift */; };
 		0BBBFFC01DE93F6F00EFAE9E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBBFFBF1DE93F6F00EFAE9E /* SwiftyJSON.swift */; };
@@ -82,6 +83,7 @@
 		0B63F3381E03372500B41FAD /* Shop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
 		0B63F33A1E03373D00B41FAD /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		0B63F33C1E03385700B41FAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0B858AD82042C1C200236875 /* MyColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
 		0B881CCA1E006381008C30E4 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		0BB4ACC81DF40E99003B1C91 /* BootstrapBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapBtn.swift; sourceTree = "<group>"; };
 		0BBBFFBF1DE93F6F00EFAE9E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		0B4C85FA1DFBCDFA0038DC85 /* INSPersistentContainer */ = {
 			isa = PBXGroup;
 			children = (
+				0B858AD82042C1C200236875 /* MyColor.swift */,
 				0B4C85FB1DFBCDFA0038DC85 /* INSDataStackContainer.swift */,
 				0B4C85FC1DFBCDFA0038DC85 /* INSPersistentContainer.swift */,
 				0B4C85FD1DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift */,
@@ -297,11 +300,14 @@
 						DevelopmentTeam = ZNVH9D6AWM;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -353,13 +359,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RollCall-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AB8C7C9C7DC01F001D455411 /* [CP] Embed Pods Frameworks */ = {
@@ -368,9 +377,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RollCall/Pods-RollCall-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -412,6 +430,7 @@
 				0BB4ACC91DF40E99003B1C91 /* BootstrapBtn.swift in Sources */,
 				0BD0F4E41DFFD37800E49E4B /* AddClassMemberViewController.swift in Sources */,
 				0B881CCB1E006381008C30E4 /* CourseTableViewCell.swift in Sources */,
+				0B858AD92042C1C300236875 /* MyColor.swift in Sources */,
 				0B152AFE1DF2BA5200915B81 /* HomePageViewController.swift in Sources */,
 				0BD0F4ED1DFFD41000E49E4B /* CourseViewController.swift in Sources */,
 				0B4BAC1A1DE71CCA000636CB /* AppDelegate.swift in Sources */,
@@ -553,8 +572,9 @@
 			baseConfigurationReference = E7EB97CC5C353CD4744D4005 /* Pods-RollCall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = RollCall/RollCall.entitlements;
-				DEVELOPMENT_TEAM = ZNVH9D6AWM;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -564,6 +584,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xigk.RollCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RollCall/RollCall-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -574,8 +596,9 @@
 			baseConfigurationReference = B9C5CDD502C40C18E18A8FFD /* Pods-RollCall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = RollCall/RollCall.entitlements;
-				DEVELOPMENT_TEAM = ZNVH9D6AWM;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -585,6 +608,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xigk.RollCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RollCall/RollCall-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
