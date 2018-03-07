@@ -21,6 +21,7 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.0)
   - GoogleToolboxForMac/NSData+zlib (2.1.0):
     - GoogleToolboxForMac/Defines (= 2.1.0)
+  - SnapKit (3.2.0)
   - SwiftDate (4.0.8)
   - Toaster (2.0.1)
   - UMengAnalytics-NO-IDFA (4.1.5)
@@ -28,6 +29,7 @@ PODS:
 DEPENDENCIES:
   - Charts
   - Firebase/Core
+  - SnapKit (~> 3.2.0)
   - SwiftDate (~> 4.0)
   - Toaster (~> 2.0)
   - UMengAnalytics-NO-IDFA
@@ -41,10 +43,11 @@ SPEC CHECKSUMS:
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftDate: 9aa3259d8850d818bec02802f8f05aa9a8c26fdb
   Toaster: be65cd48e93a525b2a9cc4bd25a2bfc900e02d9f
   UMengAnalytics-NO-IDFA: f1b08b540eba6ebad044a574cae6d988cf40cfda
 
-PODFILE CHECKSUM: a6565c1d4d32b13d9cf3ef8d68efa7815ee41ac0
+PODFILE CHECKSUM: 8a79e2428656c489a18a5b50e166a6196b21a26a
 
 COCOAPODS: 1.4.0.beta.2

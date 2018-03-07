@@ -11,6 +11,7 @@ import  UIKit
 import SwiftDate
 import CoreData
 import Toaster
+import SnapKit
 
 // coreData数据库操作接口
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -31,6 +32,8 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var justLogLabel: UILabel!
     @IBOutlet weak var curNameLabel: UILabel!
     
+    var btnNormal:UIButton!
+    
     override func viewDidLoad() {
         
 
@@ -44,6 +47,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         let mRightButton = UIBarButtonItem(title: "帮助", style: .plain, target: self, action: #selector(HomePageViewController.goDescHelpPage))
         self.navigationItem.rightBarButtonItem = mRightButton
         
+        createGddm()
     }
     
     // 第一级目录不显示导航按钮
@@ -320,4 +324,74 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         navigationController?.pushViewController(mPage, animated: true)
     }
     
+    // 固定点名
+    func createGddm() {
+        btnNormal = BootstrapBtn(frame: CGRect(x: 100, y: 30, width: 100, height: 30), btButtonType: .Warning)
+        self.view.addSubview(btnNormal)
+        
+        btnNormal.snp.makeConstraints { (make) in
+            make.width.equalTo(110)
+            make.height.equalTo(30)
+            make.right.equalTo(self.view).offset(-5)
+            make.bottom.equalTo(self.view.snp.bottom).offset(-58)
+        }
+        
+        btnNormal.setTitle("固定点名", for: .normal)
+        btnNormal.addTarget(self, action: #selector(callbackNormalDm), for: .touchUpInside)
+        btnNormal.layer.cornerRadius = 15
+    }
+    
+    // 点击固定点名
+    func callbackNormalDm() {
+        print("hi click, I'm back.")
+        
+        // 设置返回文字,不然太长了
+        let item = UIBarButtonItem(title: "西瓜点名", style: .plain, target: self, action: nil)
+        self.navigationItem.backBarButtonItem = item
+        
+        // 固定点名
+        let mPage = UIStoryboard(name: "Member", bundle: nil).instantiateViewController(withIdentifier: "Member2") as! Member2ViewController
+        mPage.homeView = self
+        navigationController?.pushViewController(mPage, animated: true)
+        
+    }
+    
+    // 固定点名
+    func callbackGddm(_ id:Int32, _ name:String) {
+        // umeng统计观
+        MobClick.event("UMRANDOM")
+        
+        // 指定点名
+        if arrClassData.count == 0 {
+            return
+        }
+        // 没有成员
+        let strMembers:String = arrClassData[gIndexClass].member!
+        let membersJsonData = strMembers.data(using: .utf8)
+        let arrMembers = JSON(data:membersJsonData!)
+        let iCount = arrMembers.count
+        if iCount == 0 {
+            return
+        }
+        
+        ranNameLabel.text = name
+        TipsSwift.showCenterWithText("点名：" + name)
+        let logText:String = "当前点名:" + name + ", 学号:" + String(id) + ", 课程:" + arrClassData[gIndexClass].selCourse! + ", 班级:" + arrClassData[gIndexClass].classname!
+        justLogLabel.text = logText
+        
+        //        Toast(text: logText).show()
+        
+        // 保存一条记录 时间，学号
+        //        let nowdate = DateInRegion(absoluteDate: Date())
+        //        let strDate = nowdate.string(format: DateFormat.custom("yyyy-MM-dd HH:mm:ss"))
+        let oneCallFair = NSEntityDescription.insertNewObject(forEntityName: "CallFair", into: contextData) as! CallFair
+        oneCallFair.classname = arrClassData[gIndexClass].classname
+        oneCallFair.course = arrClassData[gIndexClass].selCourse
+        oneCallFair.date = NSDate()
+        oneCallFair.memID = id
+        oneCallFair.memName = name
+        //        contextData.insert(oneCallFair)
+        arrCallFair.append(oneCallFair)
+        appDelegate.saveContext()
+    }
 }

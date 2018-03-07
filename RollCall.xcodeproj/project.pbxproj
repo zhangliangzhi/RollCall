@@ -30,6 +30,7 @@
 		0B4C86001DFBCDFA0038DC85 /* INSPersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FC1DFBCDFA0038DC85 /* INSPersistentContainer.swift */; };
 		0B4C86011DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FD1DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift */; };
 		0B4C86021DFBCDFA0038DC85 /* NSManagedObjectContext+iOS10Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4C85FE1DFBCDFA0038DC85 /* NSManagedObjectContext+iOS10Additions.swift */; };
+		0B5CBBAD204E8F850081CAC3 /* Member2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5CBBAC204E8F850081CAC3 /* Member2ViewController.swift */; };
 		0B63F3391E03372500B41FAD /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B63F3381E03372500B41FAD /* Shop.storyboard */; };
 		0B63F33B1E03373D00B41FAD /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B63F33A1E03373D00B41FAD /* ShopViewController.swift */; };
 		0B63F33D1E03385700B41FAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B63F33C1E03385700B41FAD /* GoogleService-Info.plist */; };
@@ -79,6 +80,7 @@
 		0B4C85FD1DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INSPersistentStoreDescription.swift; sourceTree = "<group>"; };
 		0B4C85FE1DFBCDFA0038DC85 /* NSManagedObjectContext+iOS10Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+iOS10Additions.swift"; sourceTree = "<group>"; };
 		0B5B58FD1DED97B10075E267 /* RollCall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RollCall.entitlements; sourceTree = "<group>"; };
+		0B5CBBAC204E8F850081CAC3 /* Member2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member2ViewController.swift; sourceTree = "<group>"; };
 		0B63F3361E03345700B41FAD /* RollCall-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RollCall-Bridging-Header.h"; sourceTree = "<group>"; };
 		0B63F3381E03372500B41FAD /* Shop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
 		0B63F33A1E03373D00B41FAD /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				0BD0F4E31DFFD37800E49E4B /* MemberViewController.swift */,
+				0B5CBBAC204E8F850081CAC3 /* Member2ViewController.swift */,
 				0BD0F4E11DFFD37800E49E4B /* AddClassMemberViewController.swift */,
 				0BD0F4E21DFFD37800E49E4B /* Member.storyboard */,
 				0BD0F4EE1DFFF08600E49E4B /* MemberTableViewCell.swift */,
@@ -380,6 +383,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-RollCall/Pods-RollCall-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 			);
@@ -387,6 +391,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 			);
@@ -445,6 +450,7 @@
 				0B4C85DC1DF95C5E0038DC85 /* RollCall.xcdatamodeld in Sources */,
 				0BD0F4D91DFEB33300E49E4B /* HomeTableViewCell.swift in Sources */,
 				0BD0F4DF1DFF9DE400E49E4B /* DateSetEndViewController.swift in Sources */,
+				0B5CBBAD204E8F850081CAC3 /* Member2ViewController.swift in Sources */,
 				0B4C86011DFBCDFA0038DC85 /* INSPersistentStoreDescription.swift in Sources */,
 				0BD0F4DB1DFEEC4100E49E4B /* DateSetStartViewController.swift in Sources */,
 				0B4C85FF1DFBCDFA0038DC85 /* INSDataStackContainer.swift in Sources */,
