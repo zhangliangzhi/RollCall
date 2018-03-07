@@ -31,6 +31,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var justLogLabel: UILabel!
     @IBOutlet weak var curNameLabel: UILabel!
+    @IBOutlet weak var outDmName: UILabel!
     
     var btnNormal:UIButton!
     
@@ -182,6 +183,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         let name:String = fairMemId.name
         let id:Int32 = fairMemId.id
         
+        outDmName.text = name
         ranNameLabel.text = name
         TipsSwift.showCenterWithText("点名：" + name)
         let logText:String = "当前点名:" + name + ", 学号:" + String(id) + ", 课程:" + arrClassData[gIndexClass].selCourse! + ", 班级:" + arrClassData[gIndexClass].classname!
@@ -374,6 +376,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             return
         }
         
+        outDmName.text = name
         ranNameLabel.text = name
         TipsSwift.showCenterWithText("点名：" + name)
         let logText:String = "当前点名:" + name + ", 学号:" + String(id) + ", 课程:" + arrClassData[gIndexClass].selCourse! + ", 班级:" + arrClassData[gIndexClass].classname!
@@ -394,4 +397,5 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         arrCallFair.append(oneCallFair)
         appDelegate.saveContext()
     }
+    
 }
