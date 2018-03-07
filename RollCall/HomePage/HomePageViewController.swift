@@ -338,14 +338,14 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             make.bottom.equalTo(self.view.snp.bottom).offset(-58)
         }
         
-        btnNormal.setTitle("固定点名", for: .normal)
+        btnNormal.setTitle("指定点名", for: .normal)
         btnNormal.addTarget(self, action: #selector(callbackNormalDm), for: .touchUpInside)
         btnNormal.layer.cornerRadius = 15
     }
     
     // 点击固定点名
     func callbackNormalDm() {
-        print("hi click, I'm back.")
+//        print("hi click, I'm back.")
         
         // 设置返回文字,不然太长了
         let item = UIBarButtonItem(title: "西瓜点名", style: .plain, target: self, action: nil)

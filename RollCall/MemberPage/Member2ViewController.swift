@@ -217,7 +217,7 @@ class Member2ViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let index = indexPath.row
-        print("select me ", index)
+//        print("select me ", index)
         
         let strMembers:String = arrClassData[gIndexClass].member!
         let membersJsonData = strMembers.data(using: .utf8)
